@@ -60,6 +60,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\FactoryServiceTests\AddAirportShould.cs" />
     <Compile Include="Services\FactoryServiceTests\AddCityShould.cs" />
     <Compile Include="Services\FactoryServiceTests\AddCountryShould.cs" />
     <Compile Include="Services\FactoryServiceTests\ConstructorShould.cs" />
