@@ -10,7 +10,6 @@ namespace TelerikColours.Data
             : base("TelerikColoursDatabase")
         {
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<TelerikColoursDbContext>());
-
         }
 
         public virtual DbSet<Airport> Airports { get; set; }
@@ -22,6 +21,8 @@ namespace TelerikColours.Data
         public virtual DbSet<Country> Countries { get; set; }
 
         public virtual DbSet<Flight> Flights { get; set; }
+
+        public virtual DbSet<Job> Jobs { get; set; }
 
         public new void SaveChanges()
         {
@@ -41,15 +42,15 @@ namespace TelerikColours.Data
         {
             //    modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-            //modelBuilder.Entity<Airport>()
-            //    .HasMany(x => x.Arrival)
-            //    .WithRequired(x => x.AirportArrival)
-            //    .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Airport>()
+                .HasMany(x => x.Arrival)
+                .WithRequired(x => x.AirportArrival)
+                .WillCascadeOnDelete(false);
 
-            //modelBuilder.Entity<Airport>()
-            //   .HasMany(x => x.Arrival)
-            //   .WithRequired(x => x.AirportDeparture)
-            //   .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Airport>()
+               .HasMany(x => x.Arrival)
+               .WithRequired(x => x.AirportDeparture)
+               .WillCascadeOnDelete(false);
 
             base.OnModelCreating(modelBuilder);
         }

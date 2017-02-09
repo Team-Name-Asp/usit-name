@@ -1,0 +1,77 @@
+﻿header {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+header .home-link {
+    float: left;
+}
+
+header .home-link:hover {
+    float: left;
+    height: 24px;
+}
+
+    header .home-link a {
+        text-decoration: none;
+    }
+
+
+aside {
+    display: block;
+    margin-bottom: 10px;
+}
+
+aside.users-sidebar {
+    float: left;
+    width: 100px;
+}
+
+aside.admin-sidebar {
+    float: right;
+    width: 190px;
+}
+
+aside ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+aside ul li {
+    padding: 5px;
+}
+
+aside a {
+    text-decoration: none;
+}
+
+.content {
+    float: left;
+    margin-left: 10px;
+}
+
+.content:after {
+    clear: both;
+}
+
+#welcome-text {
+    font-size: 24px;
+    margin: 15px 15px 0px 15px;
+    font-weight: normal;
+}
+
+
+footer {
+    display: block;
+    text-align: center;
+    background-color: #afccd3;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 10px;
+    clear: both;
+}

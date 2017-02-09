@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikColours", "TelerikColours\TelerikColours.csproj", "{44E7B366-4810-48D1-AAE2-ACC7A4005C85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikColours.Tests", "TelerikColours.Tests\TelerikColours.Tests.csproj", "{54B4C7AF-EA90-4372-8CA7-50F0FF69842E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{D591B07B-05CB-489E-9C01-30A1945A4A4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{5CA1DFED-7152-4867-8577-961CACA1CE7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikColours.Mvp", "TelerikColours.Mvp\TelerikColours.Mvp.csproj", "{584D9079-3315-4259-910F-E74D28589C00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikColours.Data", "TelerikColours.Data\TelerikColours.Data.csproj", "{EAD017EA-F8CB-48F6-BBF7-86E7D0551808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikColours.Services", "TelerikColours.Services\TelerikColours.Services.csproj", "{3654CF7A-8B5D-462B-BA8A-9EAE5F10D640}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44E7B366-4810-48D1-AAE2-ACC7A4005C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E7B366-4810-48D1-AAE2-ACC7A4005C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E7B366-4810-48D1-AAE2-ACC7A4005C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E7B366-4810-48D1-AAE2-ACC7A4005C85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B4C7AF-EA90-4372-8CA7-50F0FF69842E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B4C7AF-EA90-4372-8CA7-50F0FF69842E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B4C7AF-EA90-4372-8CA7-50F0FF69842E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B4C7AF-EA90-4372-8CA7-50F0FF69842E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D591B07B-05CB-489E-9C01-30A1945A4A4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D591B07B-05CB-489E-9C01-30A1945A4A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D591B07B-05CB-489E-9C01-30A1945A4A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D591B07B-05CB-489E-9C01-30A1945A4A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA1DFED-7152-4867-8577-961CACA1CE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA1DFED-7152-4867-8577-961CACA1CE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA1DFED-7152-4867-8577-961CACA1CE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA1DFED-7152-4867-8577-961CACA1CE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584D9079-3315-4259-910F-E74D28589C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584D9079-3315-4259-910F-E74D28589C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584D9079-3315-4259-910F-E74D28589C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584D9079-3315-4259-910F-E74D28589C00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAD017EA-F8CB-48F6-BBF7-86E7D0551808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD017EA-F8CB-48F6-BBF7-86E7D0551808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD017EA-F8CB-48F6-BBF7-86E7D0551808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD017EA-F8CB-48F6-BBF7-86E7D0551808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3654CF7A-8B5D-462B-BA8A-9EAE5F10D640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3654CF7A-8B5D-462B-BA8A-9EAE5F10D640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3654CF7A-8B5D-462B-BA8A-9EAE5F10D640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3654CF7A-8B5D-462B-BA8A-9EAE5F10D640}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

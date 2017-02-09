@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="TelerikColours.AdminMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <header id="users-area">Admin Area</header>
+
+    <aside class="users-sidebar">
+        <ul>
+            <li><a href="AddCity.aspx">Add city</a></li>
+            <li><a href="AddCountry.aspx">Add country</a></li>
+            <li><a href="AddAirport.aspx">Add airport</a></li>
+            <li><a href="AddAirline.aspx">Add airline</a></li>
+            <li><a href="AddFlight.aspx">Add flight</a></li>
+        </ul>
+    </aside>
+    <div class="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderAdminArea" runat="server" />
+    </div>
+
+</asp:Content>
