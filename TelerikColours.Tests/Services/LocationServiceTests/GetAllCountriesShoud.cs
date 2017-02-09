@@ -2,11 +2,7 @@
 using Moq;
 using NUnit.Framework;
 using Repositories.Contracts;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TelerikColours.Services;
 
 namespace TelerikColours.Tests.Services.LocationServiceTests

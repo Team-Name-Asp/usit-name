@@ -26,6 +26,8 @@ namespace TelerikColours.Tests.Services.LocationServiceTests
             var expectedCollection = new List<City> { new City() { Id = 1, Name = "First", CountryId = 1}, new City() { Id = 2, Name = "I dont know", CountryId = 2}, new City() { Id = 44, Name = "Test", CountryId = 2} };
 
             Expression<Func<City, bool>> expectedFilter = x => x.Id == id;
+            Expression<Func<City, string>> expectedSort = x => x.Name;
+
 
             Expression<Func<City, bool>> actual = null;
             cityRepositoryMock.Setup(x => x.GetAll(It.IsAny<Expression<Func<City, bool>>>())).Callback<Expression<Func<City, bool>>>(x => actual = x);
@@ -35,7 +37,8 @@ namespace TelerikColours.Tests.Services.LocationServiceTests
 
             var actualCollection = expectedCollection.Where(x => actual.Compile()(x));
             var myExpectCollection = expectedCollection.Where(x => expectedFilter.Compile()(x));
-
+            //  myExpectCollection = myExpectCollection.OrderBy(x => expectedSort.Compile()(x));
+             //myExpectCollection = myExpectCollection.OrderBy(x => x.Name);
 
             CollectionAssert.AreEquivalent(actualCollection, myExpectCollection);
             // Assert

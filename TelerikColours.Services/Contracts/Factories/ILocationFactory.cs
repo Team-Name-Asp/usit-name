@@ -4,8 +4,8 @@ namespace TelerikColours.Services.Contracts.Factories
 {
     public interface ILocationFactory
     {
-        Country CreateCountry();
+        Country CreateCountry(string name);
 
-        City CreateCity();
+        City CreateCity(string name, int countryId);
     }
 }

@@ -13,6 +13,13 @@ namespace Models
             this.arrivals = new HashSet<Flight>();
         }
 
+        public Airport(string name, int cityId)
+            :base()
+        {
+            this.Name = name;
+            this.CityId = cityId;
+        }
+
         public int Id { get; set; }
 
         public string Name { get; set; }

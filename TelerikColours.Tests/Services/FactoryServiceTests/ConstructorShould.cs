@@ -20,7 +20,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
         private Mock<ILocationFactory> locationFactory;
         private Mock<IAirportFactory> airportFactory;
 
-        [OneTimeSetUp]
+        [SetUp]
         public void Init()
         {
             this.countryRepositry = new Mock<IRepository<Country>>();

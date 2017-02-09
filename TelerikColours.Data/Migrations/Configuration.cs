@@ -14,69 +14,69 @@ namespace TelerikColours.Data.Migrations
 
         protected override void Seed(TelerikColours.Data.TelerikColoursDbContext context)
         {
-            var bulgaria = new Country() { Name = "Bulgaria" };
-            var germany = new Country() { Name = "Germany" };
-            var ireland = new Country() { Name = "Ireland" };
+            //var bulgaria = new Country() { Name = "Bulgaria" };
+            //var germany = new Country() { Name = "Germany" };
+            //var ireland = new Country() { Name = "Ireland" };
 
 
-            context.Countries.Add(bulgaria);
-            context.Countries.Add(germany);
-            context.Countries.Add(ireland);
+            //context.Countries.Add(bulgaria);
+            //context.Countries.Add(germany);
+            //context.Countries.Add(ireland);
 
-            var city = new City() { Name = "Sofia" };
-            city.Country = bulgaria;
+            //var city = new City() { Name = "Sofia" };
+            //city.Country = bulgaria;
 
-            var plovdiv = new City() { Name = "Plovdiv" };
-            plovdiv.Country = bulgaria;
+            //var plovdiv = new City() { Name = "Plovdiv" };
+            //plovdiv.Country = bulgaria;
 
-            var berlin = new City() { Name = "Berlin" };
-            berlin.Country = germany;
+            //var berlin = new City() { Name = "Berlin" };
+            //berlin.Country = germany;
 
-            context.Cities.Add(city);
-            context.Cities.Add(plovdiv);
-            context.Cities.Add(berlin);
-
-
-            var firstAirport = new Airport() { Name = "Sofia Airport" };
-            firstAirport.City = city;
-
-            var secondAirport = new Airport() { Name = "Second Airport" };
-            secondAirport.City = plovdiv;
-
-            var thirdAirport = new Airport() { Name = "Berlin Airport" };
-            thirdAirport.City = berlin;
-
-            context.Airports.Add(firstAirport);
-            context.Airports.Add(secondAirport);
-            context.Airports.Add(thirdAirport);
+            //context.Cities.Add(city);
+            //context.Cities.Add(plovdiv);
+            //context.Cities.Add(berlin);
 
 
-            var bgAir = new Airline() { Name = "BgAir" };
-            bgAir.Cities.Add(city);
-            bgAir.Cities.Add(plovdiv);
-            bgAir.Cities.Add(berlin);
+            //var firstAirport = new Airport() { Name = "Sofia Airport" };
+            //firstAirport.City = city;
 
-            context.Airlines.Add(bgAir);
+            //var secondAirport = new Airport() { Name = "Second Airport" };
+            //secondAirport.City = plovdiv;
 
-            var newDate = DateTime.UtcNow;
-            newDate.AddHours(3);
+            //var thirdAirport = new Airport() { Name = "Berlin Airport" };
+            //thirdAirport.City = berlin;
 
-            var firstFlight = new Flight() { DateOfDeparture = DateTime.UtcNow, DateOfArrival = newDate, Price = 30 };
-            firstFlight.Airline = bgAir;
-            firstFlight.AirportDeparture = firstAirport;
-            firstFlight.AirportArrival = thirdAirport;
+            //context.Airports.Add(firstAirport);
+            //context.Airports.Add(secondAirport);
+            //context.Airports.Add(thirdAirport);
 
 
-            bgAir.Flights.Add(firstFlight);
+            //var bgAir = new Airline() { Name = "BgAir" };
+            //bgAir.Cities.Add(city);
+            //bgAir.Cities.Add(plovdiv);
+            //bgAir.Cities.Add(berlin);
+
+            //context.Airlines.Add(bgAir);
+
+            //var newDate = DateTime.UtcNow;
+            //newDate.AddHours(3);
+
+            //var firstFlight = new Flight() { DateOfDeparture = DateTime.UtcNow, DateOfArrival = newDate, Price = 30 };
+            //firstFlight.Airline = bgAir;
+            //firstFlight.AirportDeparture = firstAirport;
+            //firstFlight.AirportArrival = thirdAirport;
 
 
-            context.Flights.Add(firstFlight);
-
-            firstAirport.Departure.Add(firstFlight);
-            thirdAirport.Arrival.Add(firstFlight);
+            //bgAir.Flights.Add(firstFlight);
 
 
-            context.SaveChanges();
+            //context.Flights.Add(firstFlight);
+
+            //firstAirport.Departure.Add(firstFlight);
+            //thirdAirport.Arrival.Add(firstFlight);
+
+
+            //context.SaveChanges();
 
             //  This method will be called after migrating to the latest version.
 

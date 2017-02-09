@@ -12,6 +12,13 @@ namespace Models
             this.Jobs = new HashSet<Job>();
             this.airports = new HashSet<Airport>();
         }
+        public City(string name, int countryId)
+            : base()
+        {
+         
+            this.Name = name;
+            this.CountryId = countryId;
+        }
     
         public string Name { get; set; }
 

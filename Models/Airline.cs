@@ -13,6 +13,11 @@ namespace Models
             this.flights = new HashSet<Flight>();
         }
 
+        public Airline(string name)
+            : base()
+        {
+            this.Name = name;
+        }
         public int Id { get; set; }
 
         public string Name { get; set; }

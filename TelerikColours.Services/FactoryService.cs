@@ -76,8 +76,7 @@ namespace TelerikColours.Services
         {
             using (this.unitOfWork)
             {
-                Country newCountry = this.locationFactory.CreateCountry();
-                newCountry.Name = country;
+                Country newCountry = this.locationFactory.CreateCountry(country);
 
                 this.countryRepositry.Add(newCountry);
 
@@ -89,11 +88,7 @@ namespace TelerikColours.Services
         {
             using (this.unitOfWork)
             {
-                City newCity = this.locationFactory.CreateCity();
-                newCity.Name = city;
-
-                //Country country = this.countryRepositry.GetById(countryId);
-                newCity.CountryId = countryId;
+                City newCity = this.locationFactory.CreateCity(city, countryId);
 
                 this.cityRepository.Add(newCity);
 
@@ -103,10 +98,7 @@ namespace TelerikColours.Services
 
         public void AddAirport(int cityId, string name)
         {
-            Airport airport = this.airportFactory.CreateAirport();
-
-            airport.CityId = cityId;
-            airport.Name = name;
+            Airport airport = this.airportFactory.CreateAirport(name, cityId);
 
             this.airportRepository.Add(airport);
 
@@ -115,14 +107,7 @@ namespace TelerikColours.Services
 
         public void AddFlight(int airportArrivalId, int airportDepartureId, DateTime departureDate, DateTime arrivalDate, decimal price, int airlineId)
         {
-            Flight flight = this.airportFactory.CreateFlight();
-
-            flight.AirlineId = airlineId;
-            flight.AirportArrivalId = airportArrivalId;
-            flight.AirportDepartureId = airportDepartureId;
-            flight.DateOfArrival = arrivalDate;
-            flight.DateOfDeparture = departureDate;
-            flight.Price = price;
+            Flight flight = this.airportFactory.CreateFlight(airlineId, airportArrivalId, airportDepartureId, arrivalDate, departureDate, price);
 
             using (this.unitOfWork)
             {
@@ -146,8 +131,7 @@ namespace TelerikColours.Services
 
         public void AddAirline(string name)
         {
-            Airline airline = this.airportFactory.CreateAirline();
-            airline.Name = name;
+            Airline airline = this.airportFactory.CreateAirline(name);
 
             using (this.unitOfWork)
             {

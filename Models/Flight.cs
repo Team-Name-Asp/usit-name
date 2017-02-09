@@ -4,6 +4,21 @@ namespace Models
 {
     public class Flight
     {
+
+        public Flight()
+        {
+
+        }
+
+        public Flight(int airlineId, int airportArrivalId, int airportDepartureId, DateTime arrivalDate, DateTime departureDate, decimal price)
+            : base()
+        {
+            this.AirlineId = airlineId;
+            this.AirportArrivalId = airportArrivalId;
+            this.AirportDepartureId = airportDepartureId;
+          //  this.a
+
+        }
         public int Id { get; set; }
 
         public decimal Price { get; set; }

@@ -1,13 +1,16 @@
 ﻿using Models;
+using System;
 
 namespace TelerikColours.Services.Contracts.Factories
 {
     public interface IAirportFactory
     {
-        Airport CreateAirport();
+        Airport CreateAirport(string name, int cityId);
 
-        Flight CreateFlight();
+        Flight CreateFlight(int airlineId, int airportArrivalId, int airportDepartureId, DateTime arrivalDate, DateTime departureDate, decimal price);
 
-        Airline CreateAirline();
+        Airline CreateAirline(string name);
     }
 }
+
+
