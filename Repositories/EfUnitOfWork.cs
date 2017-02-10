@@ -20,7 +20,16 @@ namespace Repositories
 
         public void Commit()
         {
-                this.context.SaveChanges();        
+            try
+            {
+                this.context.SaveChanges();
+
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
         }
 
         public void Dispose()

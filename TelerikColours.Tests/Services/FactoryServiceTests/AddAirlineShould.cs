@@ -2,13 +2,18 @@
 using Moq;
 using NUnit.Framework;
 using Repositories.Contracts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using TelerikColours.Services;
 using TelerikColours.Services.Contracts.Factories;
 
 namespace TelerikColours.Tests.Services.FactoryServiceTests
 {
     [TestFixture]
-    public class AddCountryShould
+    public class AddAirlineShould
     {
 
         private Mock<IRepository<Country>> countryRepositry;
@@ -33,35 +38,36 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             this.airportFactory = new Mock<IAirportFactory>();
         }
 
+    
+        [TestCase("Airline 1")]
+        [TestCase("Airline 2")]
 
-        [TestCase("Country 1")]
-        [TestCase("Country 2")]
-
-        public void Call_CreateCountry_OnLocationFactory_WithProvidedParameter(string countryName)
+        public void Call_CreateAirline_OnAirportFactory_WithProvidedParameter(string airlineName)
         {
             // Arrange
             var factoryService = new FactoryService(this.countryRepositry.Object, this.cityRepository.Object, this.flightRepository.Object, this.airportRepository.Object, this.airlineRepository.Object, this.unitOfWork.Object, this.airportFactory.Object, this.locationFactory.Object);
 
             // Act
-            factoryService.AddCountry(countryName);
+            factoryService.AddAirline(airlineName);
 
             // Assert
-            this.locationFactory.Verify(x => x.CreateCountry(It.Is<string>(par => par == countryName)));
+            this.airportFactory.Verify(x => x.CreateAirline(It.Is<string>(par => par == airlineName)));
         }
 
         [Test]
-        public void ShouddCall_Add_OnCountryRepository_WithExpectedCountry()
+        public void ShouddCall_Add_OnAirlineRepository_WithExpectedAirline()
         {
             // Arrange
             var factoryService = new FactoryService(this.countryRepositry.Object, this.cityRepository.Object, this.flightRepository.Object, this.airportRepository.Object, this.airlineRepository.Object, this.unitOfWork.Object, this.airportFactory.Object, this.locationFactory.Object);
 
-            var expectedCountry = new Mock<Country>();
-            this.locationFactory.Setup(x => x.CreateCountry(It.IsAny<string>())).Returns(expectedCountry.Object);
+            var expectedAirline = new Mock<Airline>();
+            this.airportFactory.Setup(x => x.CreateAirline(It.IsAny<string>())).Returns(expectedAirline.Object);
+
             // Act
-            factoryService.AddCountry(It.IsAny<string>());
+            factoryService.AddAirline(It.IsAny<string>());
 
             // Assert
-            this.countryRepositry.Verify(x => x.Add(It.Is<Country>(c => c == expectedCountry.Object)));
+            this.airlineRepository.Verify(x => x.Add(It.Is<Airline>(c => c == expectedAirline.Object)));
         }
 
         [Test]
@@ -71,11 +77,10 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             var factoryService = new FactoryService(this.countryRepositry.Object, this.cityRepository.Object, this.flightRepository.Object, this.airportRepository.Object, this.airlineRepository.Object, this.unitOfWork.Object, this.airportFactory.Object, this.locationFactory.Object);
 
             // Act
-            factoryService.AddCountry(It.IsAny<string>());
+            factoryService.AddAirline(It.IsAny<string>());
 
             // Assert
             this.unitOfWork.Verify(x => x.Commit(), Times.Once);
         }
-
     }
 }

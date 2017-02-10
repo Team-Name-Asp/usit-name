@@ -7,7 +7,6 @@ namespace Models
 
         public Flight()
         {
-
         }
 
         public Flight(int airlineId, int airportArrivalId, int airportDepartureId, DateTime arrivalDate, DateTime departureDate, decimal price)
@@ -16,7 +15,8 @@ namespace Models
             this.AirlineId = airlineId;
             this.AirportArrivalId = airportArrivalId;
             this.AirportDepartureId = airportDepartureId;
-          //  this.a
+            this.DateOfArrival = arrivalDate;
+            this.DateOfDeparture = departureDate;
 
         }
         public int Id { get; set; }

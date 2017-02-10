@@ -113,18 +113,17 @@ namespace TelerikColours.Services
             {
                 this.flightRepository.Add(flight);
 
-                var airline = this.airlineRepository.GetById(airlineId);
-                airline.Flights.Add(flight);
+                //var airline = this.airlineRepository.GetById(airlineId);
+                //airline.Flights.Add(flight);
 
-                var departureAirport = this.airportRepository.GetById(airportDepartureId);
-                departureAirport.Departure.Add(flight);
+                //var departureAirport = this.airportRepository.GetById(airportDepartureId);
+                //departureAirport.Departure.Add(flight);
 
-                var arrivalAirport = this.airportRepository.GetById(airportArrivalId);
-                arrivalAirport.Arrival.Add(flight);
+                //var arrivalAirport = this.airportRepository.GetById(airportArrivalId);
+                //arrivalAirport.Arrival.Add(flight);
 
-                airline.Cities.Add(departureAirport.City);
-                airline.Cities.Add(arrivalAirport.City);
-
+                //airline.Cities.Add(departureAirport.City);
+                //airline.Cities.Add(arrivalAirport.City);
                 this.unitOfWork.Commit();
             }
         }
