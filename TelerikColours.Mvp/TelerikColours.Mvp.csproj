@@ -49,6 +49,7 @@
     <Compile Include="Admin\AddAirport\AddAirportPresenter.cs" />
     <Compile Include="Admin\AddAirport\AddAirportViewModel.cs" />
     <Compile Include="Admin\AddAirport\IAddAirportView.cs" />
+    <Compile Include="Admin\AddJob\AddJobPresenter.cs" />
     <Compile Include="Admin\AddJob\AddJobViewModel.cs" />
     <Compile Include="Admin\AddJob\IAddJobView.cs" />
     <Compile Include="CustomEventArgs\AddAirlineCustomEventArgs.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="CustomEventArgs\AddCountryCustomEventArgs.cs" />
     <Compile Include="Admin\AddCountry\AddCountryPresenter.cs" />
     <Compile Include="Admin\AddCountry\IAddCountryView.cs" />
+    <Compile Include="CustomEventArgs\AddJobCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\AirportsCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\CitiesCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\CreateFlightCustomEventArgs.cs" />
