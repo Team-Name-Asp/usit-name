@@ -42,8 +42,6 @@
                     </ContentTemplate>
                 </asp:UpdatePanel>
 
-
-
                 <asp:UpdatePanel ID="UpdatePanel1" UpdateMode="Conditional"
                     runat="server" class="panel">
                     <ContentTemplate>
@@ -107,20 +105,16 @@
             </div>
             <asp:ListView runat="server" ID="Flights" ItemType="TelerikColours.Services.Models.PresentationFlight">
                 <LayoutTemplate>
-
                     <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                    <asp:Button ID="Buy" runat="server" CssClass="button btn-success" Text="Book ticket" />
+                    <asp:HyperLink runat="server" NavigateUrl ="~/TicketDetails.aspx" CssClass="button btn-success">More Info</asp:HyperLink>
                 </LayoutTemplate>
 
                 <ItemTemplate>
                     <div class="row">
                         <span class="col-md-2"><%#: Item.AirlineName %></span>
                         <div class="col-md-3">
-                            <span><%#: Item.DepartureDate %></span>
-                            </br>
-                       <span><%#: Item.AirportDepartureName %></span>
+                            <span><%#: Item.AirportDepartureName %></span>
                         </div>
-                        <span class="col-md-3"><%#: Item.ArivalDate %></span>
                         </br>
                        <span><%#: Item.AirportArivalName %></span>
                     </div>

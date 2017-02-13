@@ -70,7 +70,6 @@ namespace TelerikColours.Services
             return this.airlineRepository.GetAll(null, x => x.Name);
         }
 
-
         public IEnumerable<PresentationFlight> GetFlights(int currentAirportId, int destinationAirportId, DateTime travelDate, int count)
         {
             var airports = this.airportRepository.GetAll();

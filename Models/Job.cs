@@ -7,7 +7,6 @@ namespace Models
 
         public Job()
         {
-
         }
 
         public Job(int cityId, string jobTitle, string jobDescription, int slots,
