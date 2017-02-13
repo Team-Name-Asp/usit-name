@@ -13,7 +13,7 @@ namespace TelerikColours.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201702101631265_Initial"; }
+            get { return "201702131147586_Initial"; }
         }
         
         string IMigrationMetadata.Source

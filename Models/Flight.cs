@@ -18,6 +18,7 @@ namespace Models
             this.DateOfArrival = arrivalDate;
             this.DateOfDeparture = departureDate;
             this.AvailableSeats = availableSeats;
+            this.Price = price;
 
         }
         public int Id { get; set; }

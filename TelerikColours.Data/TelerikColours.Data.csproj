@@ -49,13 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201702101631265_Initial.cs" />
-    <Compile Include="Migrations\201702101631265_Initial.Designer.cs">
-      <DependentUpon>201702101631265_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702120046087_Initial1.cs" />
-    <Compile Include="Migrations\201702120046087_Initial1.Designer.cs">
-      <DependentUpon>201702120046087_Initial1.cs</DependentUpon>
+    <Compile Include="Migrations\201702131147586_Initial.cs" />
+    <Compile Include="Migrations\201702131147586_Initial.Designer.cs">
+      <DependentUpon>201702131147586_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="TelerikColoursDbContext.cs" />
@@ -74,11 +70,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702101631265_Initial.resx">
-      <DependentUpon>201702101631265_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702120046087_Initial1.resx">
-      <DependentUpon>201702120046087_Initial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702131147586_Initial.resx">
+      <DependentUpon>201702131147586_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

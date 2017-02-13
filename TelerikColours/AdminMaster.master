@@ -15,7 +15,7 @@
                         <li><a href="AddAirport.aspx"><i class="glyphicon glyphicon-plus"></i> Add airport</a></li>
                         <li><a href="AddAirline.aspx"><i class="glyphicon glyphicon-plus"></i> Add airline</a></li>
                         <li><a href="AddFlight.aspx"><i class="glyphicon glyphicon-plus"></i> Add flight</a></li>
-                        <li><a href="EditFlight.aspx"><i class="glyphicon glyphicon-plus"></i> Edit flight</a></li>
+                        <li><a href="EditFlights.aspx"><i class="glyphicon glyphicon-plus"></i> Edit flight</a></li>
                         <li><a href="AddJob.aspx"><i class="glyphicon glyphicon-plus"></i> Add Job</a></li>
                     </ul>
                 </div>
