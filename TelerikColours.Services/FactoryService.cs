@@ -105,25 +105,13 @@ namespace TelerikColours.Services
             this.unitOfWork.Commit();
         }
 
-        public void AddFlight(int airportArrivalId, int airportDepartureId, DateTime departureDate, DateTime arrivalDate, decimal price, int airlineId)
+        public void AddFlight(int airportArrivalId, int airportDepartureId, DateTime departureDate, DateTime arrivalDate, decimal price, int airlineId, int availableSeats)
         {
-            Flight flight = this.airportFactory.CreateFlight(airlineId, airportArrivalId, airportDepartureId, arrivalDate, departureDate, price);
+            Flight flight = this.airportFactory.CreateFlight(airlineId, airportArrivalId, airportDepartureId, arrivalDate, departureDate, price, availableSeats);
 
             using (this.unitOfWork)
             {
                 this.flightRepository.Add(flight);
-
-                //var airline = this.airlineRepository.GetById(airlineId);
-                //airline.Flights.Add(flight);
-
-                //var departureAirport = this.airportRepository.GetById(airportDepartureId);
-                //departureAirport.Departure.Add(flight);
-
-                //var arrivalAirport = this.airportRepository.GetById(airportArrivalId);
-                //arrivalAirport.Arrival.Add(flight);
-
-                //airline.Cities.Add(departureAirport.City);
-                //airline.Cities.Add(arrivalAirport.City);
                 this.unitOfWork.Commit();
             }
         }

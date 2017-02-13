@@ -51,6 +51,9 @@
     <Compile Include="Admin\AddAirport\IAddAirportView.cs" />
     <Compile Include="Admin\AddJob\AddJobViewModel.cs" />
     <Compile Include="Admin\AddJob\IAddJobView.cs" />
+    <Compile Include="Admin\EditFlight\EditFlightPresenter.cs" />
+    <Compile Include="Admin\EditFlight\EditFlightViewModel.cs" />
+    <Compile Include="Admin\EditFlight\IEditFlightView.cs" />
     <Compile Include="CustomEventArgs\AddAirlineCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\AddAirportCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\AddCityCustomEventArgs.cs" />
@@ -66,7 +69,10 @@
     <Compile Include="Admin\CreateFlight\CreateFlightPresenter.cs" />
     <Compile Include="Admin\CreateFlight\FlightViewModel.cs" />
     <Compile Include="Admin\CreateFlight\ICreateFlightVliew.cs" />
+    <Compile Include="CustomEventArgs\FlightEditCustomEventArgs.cs" />
+    <Compile Include="CustomEventArgs\FlightSortCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\SearchCitiesForFlightCustomEventArgs.cs" />
+    <Compile Include="CustomEventArgs\SearchFlightCustomEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public\SearchFlight\ISearchFlightView.cs" />
     <Compile Include="Public\SearchFlight\SearchFlightPresenter.cs" />

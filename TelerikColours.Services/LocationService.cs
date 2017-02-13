@@ -42,10 +42,9 @@ namespace TelerikColours.Services
 
         public IEnumerable<City> GetCityInCountry(int countryId)
         {
-            //var a = this.cityRepository.GetAll(x=> x.Id == countryId, x => x.Name, x => new {Name = x.Name, Id = x.Id});
             
-            var cities = this.cityRepository.GetAll(x => x.CountryId == countryId, x => x.Name);
-           // var cities = this.cityRepository.GetAll(x => x.CountryId == countryId);
+           // var cities = this.cityRepository.GetAll(x => x.CountryId == countryId, x => x.Name);
+            var cities = this.cityRepository.GetAll(x => x.CountryId == countryId);
 
             return cities;
         }

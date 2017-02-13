@@ -10,7 +10,7 @@ namespace TelerikColours.Services.Contracts
 
         void AddAirport(int cityId, string name);
 
-        void AddFlight(int airportArrivalId, int airportDepartureId, DateTime departureDate, DateTime arrivalDate, decimal price, int airlineId);
+        void AddFlight(int airportArrivalId, int airportDepartureId, DateTime departureDate, DateTime arrivalDate, decimal price, int airlineId, int availableSeats);
 
         void AddAirline(string name);
 

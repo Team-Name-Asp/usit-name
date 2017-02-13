@@ -40,6 +40,15 @@ namespace TelerikColours {
         protected global::System.Web.UI.WebControls.DropDownList CityFromList;
         
         /// <summary>
+        /// DepartureAirport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DepartureAirport;
+        
+        /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace TelerikColours {
         protected global::System.Web.UI.WebControls.DropDownList CityToList;
         
         /// <summary>
+        /// ArivalAirport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ArivalAirport;
+        
+        /// <summary>
         /// DateDeparture control.
         /// </summary>
         /// <remarks>
@@ -76,13 +94,13 @@ namespace TelerikColours {
         protected global::System.Web.UI.WebControls.TextBox DateDeparture;
         
         /// <summary>
-        /// ArrivalDate control.
+        /// Count control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ArrivalDate;
+        protected global::System.Web.UI.WebControls.TextBox Count;
         
         /// <summary>
         /// Submit control.
@@ -92,5 +110,32 @@ namespace TelerikColours {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Submit;
+        
+        /// <summary>
+        /// LabelTotalPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl LabelTotalPrice;
+        
+        /// <summary>
+        /// TotalPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl TotalPrice;
+        
+        /// <summary>
+        /// Flights control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView Flights;
     }
 }

@@ -16,7 +16,9 @@ namespace TelerikColours.CustomEventArgs
 
         public int AirlineId { get; set; }
 
-        public CreateFlightCustomEventArgs(int departureAirportId, int arrivalAirportId, decimal price, DateTime departureDate, DateTime arrivalDate, int airlineId)
+        public int AvailableSeats { get; set; }
+
+        public CreateFlightCustomEventArgs(int departureAirportId, int arrivalAirportId, decimal price, DateTime departureDate, DateTime arrivalDate, int airlineId, int availableSeats)
         {
             this.DepartureAirportId = departureAirportId;
             this.ArrivalAirportId = arrivalAirportId;
@@ -24,6 +26,7 @@ namespace TelerikColours.CustomEventArgs
             this.DepartureDate = departureDate;
             this.ArrivalDate = arrivalDate;
             this.AirlineId = airlineId;
+            this.AvailableSeats = availableSeats;
         }
     }
 }

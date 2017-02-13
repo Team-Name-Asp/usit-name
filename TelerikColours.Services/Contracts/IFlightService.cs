@@ -1,5 +1,8 @@
 ﻿using Models;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using TelerikColours.Services.Models;
 
 namespace TelerikColours.Services.Contracts
 {
@@ -9,7 +12,12 @@ namespace TelerikColours.Services.Contracts
 
         IEnumerable<Airline> GetAllAirlines();
 
+        IEnumerable<PresentationFlight> GetFlights(int airlineId, int airlineDestId, DateTime travelDate, int passangersCount);
 
-        IEnumerable<Flight> GetFlights(int airlineId, int airlineDestId);
+        IEnumerable<Flight> FilterFlights(string type, string filterExpression);
+
+        Flight GetFlightForUpdate(int id);
+
+        void SaveUpdatedFlight();
     }
 }

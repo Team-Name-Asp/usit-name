@@ -71,8 +71,9 @@ namespace TelerikColours
             DateTime departureDate = DateTime.Parse(this.DateDeparture.Text);
             DateTime arrivalDate = DateTime.Parse(this.ArrivalDate.Text);
             int airlineId = int.Parse(this.AirlineList.SelectedValue);
+            int availableSeats = int.Parse(this.Seats.Text);
 
-            this.CreateFlight?.Invoke(sender, new CreateFlightCustomEventArgs(departureAirportId, arrivalAirportId, price, departureDate, arrivalDate, airlineId));
+            this.CreateFlight?.Invoke(sender, new CreateFlightCustomEventArgs(departureAirportId, arrivalAirportId, price, departureDate, arrivalDate, airlineId, availableSeats));
         }
 
         protected void CountryFromList_SelectedIndexChanged(object sender, EventArgs e)

@@ -96,6 +96,13 @@
                 CssClass="form-control" />
         </div>
 
+        <div>
+            <span>AvailableSeats </span>
+            <asp:TextBox ID="Seats" runat="server"
+                TextMode="Number"
+                CssClass="form-control" />
+        </div>
+
         <asp:Button ID="Submit" Text="Submit" runat="server" OnClick ="Submit_Click" CssClass ="btn btn-md btn-success" />
     </div>
 </asp:Content>

@@ -9,7 +9,7 @@ namespace Models
         {
         }
 
-        public Flight(int airlineId, int airportArrivalId, int airportDepartureId, DateTime arrivalDate, DateTime departureDate, decimal price)
+        public Flight(int airlineId, int airportArrivalId, int airportDepartureId, DateTime arrivalDate, DateTime departureDate, decimal price, int availableSeats)
             : base()
         {
             this.AirlineId = airlineId;
@@ -17,11 +17,14 @@ namespace Models
             this.AirportDepartureId = airportDepartureId;
             this.DateOfArrival = arrivalDate;
             this.DateOfDeparture = departureDate;
+            this.AvailableSeats = availableSeats;
 
         }
         public int Id { get; set; }
 
         public decimal Price { get; set; }
+
+        public int AvailableSeats { get; set; }
 
         public DateTime DateOfDeparture { get; set; }
 

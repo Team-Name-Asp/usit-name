@@ -20,7 +20,7 @@ namespace TelerikColours.Mvp.Admin.AddAirline
             this.View.SubmitAddAirline += View_SubmitAddAirline;
         }
 
-        private void View_SubmitAddAirline(object sender, CustomEventArgs.AddAirlineCustomEventArgs e)
+        public void View_SubmitAddAirline(object sender, CustomEventArgs.AddAirlineCustomEventArgs e)
         {
             string airlineName = e.Name;
 

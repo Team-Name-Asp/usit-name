@@ -6,8 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using TelerikColours.Services;
 
 namespace TelerikColours.Tests.Services.LocationServiceTests
@@ -44,25 +42,6 @@ namespace TelerikColours.Tests.Services.LocationServiceTests
             // Assert
           //  Assert.AreEqual(2, actualCollection.Count);
         }
-
-        //[Test]
-        //public void CallGetAll_OfCityRepository_WithProvidedParameter()
-        //{
-        //    // Arrange
-        //    var countryRepositoryStub = new Mock<IRepository<Country>>().Object;
-        //    var cityRepositoryMock = new Mock<IRepository<City>>();
-        //    var locationService = new LocationService(countryRepositoryStub, cityRepositoryMock.Object);
-        //    var expectedCollection = new List<City> { new City() { Id = 1, Name = "First", CountryId = 1 }, new City() { Id = 2, Name = "I dont know", CountryId = 2 } };
-
-        //    cityRepositoryMock.Setup(x => x.GetAll()).Returns(expectedCollection);
-
-        //    // Act
-        //    var actualCollection = locationService.GetCityInCountry(It.IsAny<int>());
-
-        //    // Assert
-        //    cityRepositoryMock.Verify(x => x.GetAll())
-        //    Assert.AreEqual(expectedCollection, actualCollection);
-        //}
     }
 }
 

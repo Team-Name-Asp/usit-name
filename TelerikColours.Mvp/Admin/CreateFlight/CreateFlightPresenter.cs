@@ -44,7 +44,7 @@ namespace TelerikColours.Mvp.Admin.CreateFlight
 
         private void View_CreateFlight(object sender, CreateFlightCustomEventArgs e)
         {
-            this.factoryService.AddFlight(e.DepartureAirportId, e.ArrivalAirportId, e.DepartureDate, e.ArrivalDate, e.Price, e.AirlineId);
+            this.factoryService.AddFlight(e.ArrivalAirportId, e.DepartureAirportId, e.DepartureDate, e.ArrivalDate, e.Price, e.AirlineId, e.AvailableSeats);
         }
 
         private void View_GetAllAirportsTo(object sender, AirportsCustomEventArgs e)

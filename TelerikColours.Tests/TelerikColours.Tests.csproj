@@ -58,14 +58,30 @@
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebFormsMvp, Version=1.4.5.0, Culture=neutral, PublicKeyToken=537f18701145dff0" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenters\AddAirlinePresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\AddAirlinePresenterTests\ViewSubmitAddAirlineShould.cs" />
+    <Compile Include="Presenters\EditFlightPresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\EditFlightPresenterTests\ViewCommitChangesShould.cs" />
+    <Compile Include="Presenters\EditFlightPresenterTests\ViewInitFlightsShould.cs" />
+    <Compile Include="Presenters\EditFlightPresenterTests\VIewUpdateFlightShould.cs" />
+    <Compile Include="Presenters\SearchFlightPresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\SearchFlightPresenterTests\View_InitAirportArivalShould.cs" />
+    <Compile Include="Presenters\SearchFlightPresenterTests\View_InitAirportDepartureShould.cs" />
+    <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCitiesFromShould.cs" />
+    <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCitiesToShould.cs" />
+    <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCountriesShould.cs" />
+    <Compile Include="Presenters\SearchFlightPresenterTests\View_InitSubmitShould.cs" />
     <Compile Include="Services\FactoryServiceTests\AddAirlineShould.cs" />
     <Compile Include="Services\FactoryServiceTests\AddAirportShould.cs" />
     <Compile Include="Services\FactoryServiceTests\AddCityShould.cs" />
     <Compile Include="Services\FactoryServiceTests\AddCountryShould.cs" />
     <Compile Include="Services\FactoryServiceTests\AddFlightShould.cs" />
     <Compile Include="Services\FactoryServiceTests\ConstructorShould.cs" />
+    <Compile Include="Services\FlightServiceTests\ConstructorShould.cs" />
+    <Compile Include="Services\FlightServiceTests\GetFlightsShould.cs" />
     <Compile Include="Services\LocationServiceTests\ConstructorShoud.cs" />
     <Compile Include="Services\LocationServiceTests\GetAllCountriesShoud.cs" />
     <Compile Include="Services\LocationServiceTests\GetCitiesInCountryShoud.cs" />
@@ -102,6 +118,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

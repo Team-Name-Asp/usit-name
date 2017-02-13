@@ -19,7 +19,7 @@ namespace TelerikColours.App_Start.NinjectModules
             this.Bind<IFlightService>().To<FlightService>().InRequestScope();
             this.Bind<ILocationService>().To<LocationService>().InRequestScope();
             this.Bind<IFactoryService>().To<FactoryService>().InRequestScope();
-
+            
             Kernel.Bind(typeof(IRepository<>)).To(typeof(EfRepository<>)).InRequestScope();
 
             this.Bind<IUnitOfWork>().To<EfUnitOfWork>().InRequestScope();
@@ -27,6 +27,7 @@ namespace TelerikColours.App_Start.NinjectModules
             this.Bind<ILocationFactory>().ToFactory().InRequestScope();
             this.Bind<IAirportFactory>().ToFactory().InRequestScope();
             this.Bind<IJobFactory>().ToFactory().InRequestScope();
+            this.Bind<IMappedClassFactory>().ToFactory().InRequestScope();
         }
     }
 }
