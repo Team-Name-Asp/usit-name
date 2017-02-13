@@ -15,9 +15,11 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
         private Mock<IRepository<City>> cityRepository;
         private Mock<IRepository<Airport>> airportRepository;
         private Mock<IRepository<Airline>> airlineRepository;
+        private Mock<IRepository<Job>> jobRepository;
         private Mock<IUnitOfWork> unitOfWork;
         private Mock<ILocationFactory> locationFactory;
         private Mock<IAirportFactory> airportFactory;
+        private Mock<IJobFactory> jobFactory;
 
         [SetUp]
         public void Init()
@@ -27,9 +29,11 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             this.cityRepository = new Mock<IRepository<City>>();
             this.airportRepository = new Mock<IRepository<Airport>>();
             this.airlineRepository = new Mock<IRepository<Airline>>();
+            this.jobRepository = new Mock<IRepository<Job>>();
             this.unitOfWork = new Mock<IUnitOfWork>();
             this.locationFactory = new Mock<ILocationFactory>();
             this.airportFactory = new Mock<IAirportFactory>();
+            this.jobFactory = new Mock<IJobFactory>();
         }
 
 
@@ -39,7 +43,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
         public void Call_CreateCity_OnLocationFactory_WithProvidedParameters(string cityName, int countryId)
         {
             // Arrange
-            var factoryService = new FactoryService(this.countryRepositry.Object, this.cityRepository.Object, this.flightRepository.Object, this.airportRepository.Object, this.airlineRepository.Object, this.unitOfWork.Object, this.airportFactory.Object, this.locationFactory.Object);
+            var factoryService = new FactoryService(this.countryRepositry.Object, this.cityRepository.Object, this.flightRepository.Object, this.airportRepository.Object, this.airlineRepository.Object, this.unitOfWork.Object, this.airportFactory.Object, this.locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object);
 
             // Act
             factoryService.AddCity(countryId, cityName);
@@ -52,7 +56,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
         public void ShouddCall_Add_OnCountryRepository_WithExpectedCountry()
         {
             // Arrange
-            var factoryService = new FactoryService(this.countryRepositry.Object, this.cityRepository.Object, this.flightRepository.Object, this.airportRepository.Object, this.airlineRepository.Object, this.unitOfWork.Object, this.airportFactory.Object, this.locationFactory.Object);
+            var factoryService = new FactoryService(this.countryRepositry.Object, this.cityRepository.Object, this.flightRepository.Object, this.airportRepository.Object, this.airlineRepository.Object, this.unitOfWork.Object, this.airportFactory.Object, this.locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object);
 
             var expectedCity = new Mock<City>();
             this.locationFactory.Setup(x => x.CreateCity(It.IsAny<string>(), It.IsAny<int>())).Returns(expectedCity.Object);
@@ -67,7 +71,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
         public void ShoudCall_Commit_On_UnitOfWork_Once()
         {
             // Arrange
-            var factoryService = new FactoryService(this.countryRepositry.Object, this.cityRepository.Object, this.flightRepository.Object, this.airportRepository.Object, this.airlineRepository.Object, this.unitOfWork.Object, this.airportFactory.Object, this.locationFactory.Object);
+            var factoryService = new FactoryService(this.countryRepositry.Object, this.cityRepository.Object, this.flightRepository.Object, this.airportRepository.Object, this.airlineRepository.Object, this.unitOfWork.Object, this.airportFactory.Object, this.locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object);
 
             // Act
             factoryService.AddCity(It.IsAny<int>(), It.IsAny<string>());

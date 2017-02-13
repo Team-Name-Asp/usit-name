@@ -2,18 +2,31 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <header id="users-area">Admin Area</header>
-
-    <aside class="users-sidebar">
-        <ul>
-            <li><a href="AddCity.aspx">Add city</a></li>
-            <li><a href="AddCountry.aspx">Add country</a></li>
-            <li><a href="AddAirport.aspx">Add airport</a></li>
-            <li><a href="AddAirline.aspx">Add airline</a></li>
-            <li><a href="AddFlight.aspx">Add flight</a></li>
-        </ul>
-    </aside>
-    <div class="content">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolderAdminArea" runat="server" />
+    <asp:ContentPlaceHolder ID="Stylesheets" runat="server">
+        <link rel="stylesheet" href="/Content/admin-menu-style.css" type="text/css" />
+    </asp:ContentPlaceHolder>
+    <div class="page-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sidebar content-box" style="display: block;">
+                    <ul class="nav">
+                        <li><a href="AddCity.aspx"><i class="glyphicon glyphicon-plus"></i> Add city</a></li>
+                        <li><a href="AddCountry.aspx"><i class="glyphicon glyphicon-plus"></i> Add country</a></li>
+                        <li><a href="AddAirport.aspx"><i class="glyphicon glyphicon-plus"></i> Add airport</a></li>
+                        <li><a href="AddAirline.aspx"><i class="glyphicon glyphicon-plus"></i> Add airline</a></li>
+                        <li><a href="AddFlight.aspx"><i class="glyphicon glyphicon-plus"></i> Add flight</a></li>
+                        <li><a href="EditFlight.aspx"><i class="glyphicon glyphicon-plus"></i> Edit flight</a></li>
+                        <li><a href="AddJob.aspx"><i class="glyphicon glyphicon-plus"></i> Add Job</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderAdminArea" runat="server" />
+                </div>
+            </div>
+        </div>
     </div>
+
 
 </asp:Content>

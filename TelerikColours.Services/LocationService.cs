@@ -48,5 +48,10 @@ namespace TelerikColours.Services
 
             return cities;
         }
+
+        public IEnumerable<City> GetAllCities()
+        {
+            return this.cityRepository.GetAll();
+        }
     }
 }

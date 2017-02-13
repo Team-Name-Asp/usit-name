@@ -13,14 +13,24 @@ namespace TelerikColours.Services
         private IRepository<City> cityRepository;
         private IRepository<Airport> airportRepository;
         private IRepository<Airline> airlineRepository;
+        private IRepository<Job> jobRepository;
         private IUnitOfWork unitOfWork;
         private ILocationFactory locationFactory;
         private IAirportFactory airportFactory;
         private IJobFactory jobFactory;
 
         public FactoryService(IRepository<Country> countryRepositry, IRepository<City> cityRepository,
-              IRepository<Flight> flightRepository, IRepository<Airport> airportRepository, IRepository<Airline> airlineRepository, IUnitOfWork unitOfWork, IAirportFactory airportFactory, ILocationFactory locationFactory)
+              IRepository<Flight> flightRepository, IRepository<Airport> airportRepository,
+              IRepository<Airline> airlineRepository, 
+              IUnitOfWork unitOfWork, IAirportFactory airportFactory, 
+              ILocationFactory locationFactory,
+              IRepository<Job> jobRepository, IJobFactory jobFactory)
         {
+            if (jobRepository == null)
+            {
+                throw new NullReferenceException("JobRepository");
+            }
+
             if (countryRepositry == null)
             {
                 throw new NullReferenceException("CountryRepository");
@@ -31,12 +41,12 @@ namespace TelerikColours.Services
                 throw new NullReferenceException("CityRepository");
             }
 
-            if(flightRepository == null)
+            if (flightRepository == null)
             {
                 throw new NullReferenceException("FlightRepository");
             }
 
-            if(airportRepository == null)
+            if (airportRepository == null)
             {
                 throw new NullReferenceException("AirportRepository");
             }
@@ -52,14 +62,19 @@ namespace TelerikColours.Services
                 throw new NullReferenceException("UnitOfWorkS");
             }
 
-            if(airportFactory == null)
+            if (airportFactory == null)
             {
                 throw new NullReferenceException("AirportFactory");
             }
 
-            if(locationFactory == null)
+            if (locationFactory == null)
             {
                 throw new NullReferenceException("LocationFactory");
+            }
+
+            if (jobFactory == null)
+            {
+                throw new NullReferenceException("JobFactory");
             }
 
             this.countryRepositry = countryRepositry;
@@ -70,6 +85,8 @@ namespace TelerikColours.Services
             this.locationFactory = locationFactory;
             this.airportFactory = airportFactory;
             this.airlineRepository = airlineRepository;
+            this.jobRepository = jobRepository;
+            this.jobFactory = jobFactory;
         }
 
         public void AddCountry(string country)
@@ -128,9 +145,16 @@ namespace TelerikColours.Services
             }
         }
 
-        public void AddJob(string jobTitle, string jobDescription, int slots, string description, DateTime startDate, DateTime endDate, decimal wage, string companyName, int cityId)
+        public void AddJob(string jobTitle, string jobDescription, int slots, DateTime startDate, DateTime endDate, decimal wage, string companyName, int cityId)
         {
-            throw new NotImplementedException();
+            Job job = this.jobFactory.CreateJob(cityId, jobTitle, jobDescription, slots, startDate, endDate, wage, companyName);
+
+            using (this.unitOfWork)
+            {
+                this.jobRepository.Add(job);
+
+                this.unitOfWork.Commit();
+            }
         }
     }
 }

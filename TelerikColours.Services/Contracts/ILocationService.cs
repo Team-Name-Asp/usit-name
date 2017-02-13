@@ -8,5 +8,7 @@ namespace TelerikColours.Services.Contracts
         IEnumerable<Country> GetAllCountries();
 
         IEnumerable<City> GetCityInCountry(int countryId);
+
+        IEnumerable<City> GetAllCities();
     }
 }

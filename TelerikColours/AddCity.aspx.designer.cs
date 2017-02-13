@@ -22,15 +22,6 @@ namespace TelerikColours {
         protected global::System.Web.UI.WebControls.DropDownList CountriesList;
         
         /// <summary>
-        /// ListSearchExtender control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ListSearchExtender ListSearchExtender;
-        
-        /// <summary>
         /// CityName control.
         /// </summary>
         /// <remarks>

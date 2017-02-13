@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace TelerikColours.Services.Contracts
-{ 
+{
     public interface IFactoryService
     {
         void AddCountry(string country);
@@ -14,7 +14,7 @@ namespace TelerikColours.Services.Contracts
 
         void AddAirline(string name);
 
-        void AddJob(string jobTitle, string jobDescription, int slots, string description, DateTime startDate, DateTime endDate, decimal wage, string companyName, int cityId);
+        void AddJob(string jobTitle, string jobDescription, int slots, DateTime startDate, DateTime endDate, decimal wage, string companyName, int cityId);
     }
 }
 

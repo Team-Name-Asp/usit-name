@@ -16,9 +16,11 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
         private Mock<IRepository<City>> cityRepository;
         private Mock<IRepository<Airport>> airportRepository;
         private Mock<IRepository<Airline>> airlineRepository;
+        private Mock<IRepository<Job>> jobRepository;
         private Mock<IUnitOfWork> unitOfWork;
         private Mock<ILocationFactory> locationFactory;
         private Mock<IAirportFactory> airportFactory;
+        private Mock<IJobFactory> jobFactory;
 
         [SetUp]
         public void Init()
@@ -28,9 +30,11 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             this.cityRepository = new Mock<IRepository<City>>();
             this.airportRepository = new Mock<IRepository<Airport>>();
             this.airlineRepository = new Mock<IRepository<Airline>>();
+            this.jobRepository = new Mock<IRepository<Job>>();
             this.unitOfWork = new Mock<IUnitOfWork>();
             this.locationFactory = new Mock<ILocationFactory>();
             this.airportFactory = new Mock<IAirportFactory>();
+            this.jobFactory = new Mock<IJobFactory>();
         }
 
 
@@ -41,7 +45,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             string expectedMessageContains = "CountryRepository";
 
             // Act and Assert
-            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(null, cityRepository.Object, flightRepository.Object, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, locationFactory.Object)).Message;
+            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(null, cityRepository.Object, flightRepository.Object, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object)).Message;
 
             StringAssert.Contains(expectedMessageContains, actualMessage);
         }
@@ -53,7 +57,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             string expectedMessageContains = "CityRepository";
 
             // Act and Assert
-            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, null, flightRepository.Object, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, locationFactory.Object)).Message;
+            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, null, flightRepository.Object, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object)).Message;
 
             StringAssert.Contains(expectedMessageContains, actualMessage);
         }
@@ -65,7 +69,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             string expectedMessageContains = "FlightRepository";
 
             // Act and Assert
-            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, null, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, locationFactory.Object)).Message;
+            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, null, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object)).Message;
 
             StringAssert.Contains(expectedMessageContains, actualMessage);
         }
@@ -78,7 +82,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             string expectedMessageContains = "AirportRepository";
 
             // Act and Assert
-            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, null, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, locationFactory.Object)).Message;
+            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, null, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object)).Message;
 
             StringAssert.Contains(expectedMessageContains, actualMessage);
         }
@@ -90,7 +94,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             string expectedMessageContains = "AirlineRepository";
 
             // Act and Assert
-            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, airportRepository.Object, null, unitOfWork.Object, airportFactory.Object, locationFactory.Object)).Message;
+            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, airportRepository.Object, null, unitOfWork.Object, airportFactory.Object, locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object)).Message;
 
             StringAssert.Contains(expectedMessageContains, actualMessage);
         }
@@ -102,7 +106,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             string expectedMessageContains = "UnitOfWork";
 
             // Act and Assert
-            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, airportRepository.Object, airlineRepository.Object, null, airportFactory.Object, locationFactory.Object)).Message;
+            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, airportRepository.Object, airlineRepository.Object, null, airportFactory.Object, locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object)).Message;
 
             StringAssert.Contains(expectedMessageContains, actualMessage);
         }
@@ -114,7 +118,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             string expectedMessageContains = "AirportFactory";
 
             // Act and Assert
-            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, null, locationFactory.Object)).Message;
+            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, null, locationFactory.Object, this.jobRepository.Object, this.jobFactory.Object)).Message;
 
             StringAssert.Contains(expectedMessageContains, actualMessage);
         }
@@ -126,7 +130,7 @@ namespace TelerikColours.Tests.Services.FactoryServiceTests
             string expectedMessageContains = "LocationFactory";
 
             // Act and Assert
-            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, null)).Message;
+            var actualMessage = Assert.Throws<NullReferenceException>(() => new FactoryService(countryRepositry.Object, cityRepository.Object, flightRepository.Object, airportRepository.Object, airlineRepository.Object, unitOfWork.Object, airportFactory.Object, null, this.jobRepository.Object, this.jobFactory.Object)).Message;
 
             StringAssert.Contains(expectedMessageContains, actualMessage);
         }
