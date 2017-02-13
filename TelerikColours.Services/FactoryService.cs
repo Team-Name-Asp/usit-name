@@ -148,7 +148,7 @@ namespace TelerikColours.Services
         public void AddJob(string jobTitle, string jobDescription, int slots, DateTime startDate, DateTime endDate, decimal wage, string companyName, int cityId)
         {
             Job job = this.jobFactory.CreateJob(cityId, jobTitle, jobDescription, slots, startDate, endDate, wage, companyName);
-
+        
             using (this.unitOfWork)
             {
                 this.jobRepository.Add(job);

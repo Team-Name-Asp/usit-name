@@ -4,6 +4,26 @@ namespace Models
 {
     public class Job
     {
+
+        public Job()
+        {
+
+        }
+
+        public Job(int cityId, string jobTitle, string jobDescription, int slots,
+            DateTime startDate, DateTime endDate, decimal wage, string companyName)
+            : base()
+        {
+            this.CityId = cityId;
+            this.JobTitle = JobTitle;
+            this.JobDescription = jobDescription;
+            this.Slots = slots;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.Wage = wage;
+            this.CompanyName = companyName;
+        }
+
         public int Id { get; set; }
 
         public string JobTitle { get; set; }

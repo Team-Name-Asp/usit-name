@@ -28,8 +28,8 @@ namespace TelerikColours.Mvp.CustomEventArgs
             DateTime startDate, DateTime endDate, decimal wage, string companyName)
         {
             this.CityId = cityId;
-            this.JobTitle = JobTitle;
-            this.JobDescription = JobDescription;
+            this.JobTitle = jobTitle;
+            this.JobDescription = jobDescription;
             this.Slots = slots;
             this.StartDate = startDate;
             this.EndDate = endDate;
