@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TelerikColours.Mvp.CustomEventArgs
 {
-    public class AddJobCustomEventArgs
+    public class AddJobCustomEventArgs : EventArgs
     {
         public int CityId { get; set; }
 

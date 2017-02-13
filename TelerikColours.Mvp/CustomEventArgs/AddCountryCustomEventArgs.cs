@@ -1,6 +1,8 @@
-﻿namespace TelerikColours.CustomEventArgs
+﻿using System;
+
+namespace TelerikColours.CustomEventArgs
 {
-    public class AddCountryCustomEventArgs
+    public class AddCountryCustomEventArgs : EventArgs
     {
         public string Name { get; set; }
 

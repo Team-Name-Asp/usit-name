@@ -3,6 +3,7 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolderAdminArea" runat="server">
+
     <div class="container">
         <asp:Label AssociatedControlID="JobDescription" Text="Job Description:" runat="server" />
         <CKEditor:CKEditorControl ID="JobDescription" BasePath="~/Scripts/ckeditor/" runat="server"></CKEditor:CKEditorControl>

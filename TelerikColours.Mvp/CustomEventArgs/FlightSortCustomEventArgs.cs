@@ -1,6 +1,8 @@
-﻿namespace TelerikColours.Mvp.CustomEventArgs
+﻿using System;
+
+namespace TelerikColours.Mvp.CustomEventArgs
 {
-    public class FlightSortCustomEventArgs
+    public class FlightSortCustomEventArgs : EventArgs
     {
         public FlightSortCustomEventArgs(string sortType, string sortExpression)
         {

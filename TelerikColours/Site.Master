@@ -11,15 +11,15 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <link rel="stylesheet" href ="Content/admin.css" type ="text/css" />
+    <link rel="stylesheet" href="Content/admin.css" type="text/css" />
 
 </head>
-    
+
 <body>
     <form runat="server">
-        <asp:ScriptManager runat="server">
+        <asp:ScriptManager EnablePageMethods="true" runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
@@ -55,12 +55,8 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><a runat="server" href="~/AddFlight">AddFlight</a></li>
-                        <li><a runat="server" href="~/AddCountry">AddCountry</a></li>
-                        <li><a runat="server" href="~/AddCity">AddCity</a></li>
-                        <li><a runat="server" href="~/AddAirport">AddAirport</a></li>
                         <li><a runat="server" href="~/SearchFlight">SearchFlight</a></li>
-
+                        <li><a runat="server" href="~/SearchJob">Search Job</a></li>
                         <li><a runat="server" href="~/AdminLanding">Admin</a></li>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
