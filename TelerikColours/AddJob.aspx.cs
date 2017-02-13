@@ -1,21 +1,44 @@
 ﻿using System;
 using System.Web.UI.WebControls;
 using TelerikColours.Mvp.Admin.AddJob;
+using TelerikColours.Mvp.CustomEventArgs;
 using WebFormsMvp;
+using WebFormsMvp.Web;
 
 namespace TelerikColours
 {
     [PresenterBinding(typeof(AddJobPresenter))]
-    public partial class AddJob : System.Web.UI.Page
+    public partial class AddJob : MvpPage<AddJobViewModel>, IAddJobView
     {
+        public event EventHandler InitCities;
+        public event EventHandler<AddJobCustomEventArgs> SubmitAddJob;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                this.InitCities?.Invoke(sender, e);
 
+                this.CityList.DataSource = this.Model.Cities;
+                this.CityList.DataBind();
+            }
         }
 
         protected void Submit_Click(object sender, EventArgs e)
         {
             this.Page.Validate("ValidationGroupRequired");
+            int cityId = int.Parse(this.CityList.SelectedValue);
+            string jobTitle = this.JobTitle.Text;
+            string jobDescription = this.JobDescription.Text;
+            int slots = int.Parse(this.AvailableSlots.Text);
+            var startDate = DateTime.Parse(this.StartDate.Text);
+            var endDate = DateTime.Parse(this.EndDate.Text);
+            decimal wage = decimal.Parse(this.Wage.Text);
+            string companyName = this.CompanyName.Text;
+
+
+            this.SubmitAddJob?.Invoke(sender, new AddJobCustomEventArgs(cityId, jobTitle, jobDescription, slots,
+                startDate, endDate, wage, companyName));
         }
 
         protected void ValidateDateRange_ServerValidate(object source, ServerValidateEventArgs args)

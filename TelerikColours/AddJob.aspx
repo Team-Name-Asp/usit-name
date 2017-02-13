@@ -72,8 +72,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <asp:Label AssociatedControlID="City" Text="City:" runat="server" />
-                        <asp:DropDownList ID="City" runat="server"
+                        <asp:Label AssociatedControlID="CityList" Text="City:" runat="server" />
+                        <asp:DropDownList ID="CityList" runat="server"
                             DataTextField="Name"
                             DataValueField="Id" />
                     </div>

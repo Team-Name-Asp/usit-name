@@ -94,13 +94,13 @@ namespace TelerikColours {
         protected global::System.Web.UI.WebControls.TextBox CompanyName;
         
         /// <summary>
-        /// City control.
+        /// CityList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList City;
+        protected global::System.Web.UI.WebControls.DropDownList CityList;
         
         /// <summary>
         /// Submit control.
