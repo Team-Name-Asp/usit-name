@@ -67,6 +67,9 @@ namespace TelerikColours
 
             this.TotalPrice.InnerText = this.Model.Flights.Sum(x => x.Price).ToString();
             this.LabelTotalPrice.InnerText = "Total Price";
+
+            Session["TicketOffer"] = this.Model.Flights;
+            Session["PassangerCount"] = this.Count.Text;
         }
 
         protected void CityFromList_SelectedIndexChanged(object sender, EventArgs e)

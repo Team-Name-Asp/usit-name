@@ -15,7 +15,6 @@ namespace Models
         public City(string name, int countryId)
             : base()
         {
-         
             this.Name = name;
             this.CountryId = countryId;
         }
