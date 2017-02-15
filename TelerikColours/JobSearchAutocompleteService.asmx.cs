@@ -8,14 +8,14 @@ using System.Web.Services;
 namespace TelerikColours
 {
     /// <summary>
-    /// Summary description for WebService1
+    /// Summary description for JobSearchAutocompleteService
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     [System.Web.Script.Services.ScriptService]
-    public class WebService1 : System.Web.Services.WebService
+    public class JobSearchAutocompleteService : System.Web.Services.WebService
     {
 
         [WebMethod]
@@ -26,7 +26,7 @@ namespace TelerikColours
 
         [WebMethod]
         [ScriptMethod(ResponseFormat= System.Web.Script.Services.ResponseFormat.Json)]
-        public string[] GetAuto(string prefixText, int count)
+        public string[] GetAutocompleteList(string prefixText, int count)
         {
 
             var text = new List<string>();
