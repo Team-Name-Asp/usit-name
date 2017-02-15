@@ -1,14 +1,14 @@
 ﻿using Repositories.Contracts;
 using System;
-using System.Data.Entity;
+using TelerikColours.Data.Contracts;
 
 namespace Repositories
 {
     public class EfUnitOfWork: IUnitOfWork
     {
-        private readonly DbContext context;
+        private readonly IDbContext context;
 
-        public EfUnitOfWork(DbContext context)
+        public EfUnitOfWork(IDbContext context)
         {
             if (context == null)
             {

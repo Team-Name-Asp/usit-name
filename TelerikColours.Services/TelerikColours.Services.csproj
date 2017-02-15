@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AirlineService.cs" />
+    <Compile Include="AirportService.cs" />
     <Compile Include="Contracts\Factories\IAirportFactory.cs" />
     <Compile Include="Contracts\Factories\IJobFactory.cs" />
     <Compile Include="Contracts\Factories\ILocationFactory.cs" />
@@ -59,6 +61,8 @@
     <Compile Include="FactoryService.cs" />
     <Compile Include="FlightService.cs" />
     <Compile Include="Contracts\IFactoryService.cs" />
+    <Compile Include="Contracts\IAirportService.cs" />
+    <Compile Include="Contracts\IAirlineService.cs" />
     <Compile Include="LocationService.cs" />
     <Compile Include="Models\FlightNode.cs" />
     <Compile Include="Models\PresentationFlight.cs" />

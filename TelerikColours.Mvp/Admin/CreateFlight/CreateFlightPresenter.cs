@@ -10,8 +10,10 @@ namespace TelerikColours.Mvp.Admin.CreateFlight
         private readonly ILocationService locationService;
         private readonly IFactoryService factoryService;
         private readonly IFlightService flightService;
+        private readonly IAirportService airportService;
+        private readonly IAirlineService airlineService;
 
-        public CreateFlightPresenter(ICreateFlightVliew view, ILocationService locatonService, IFactoryService factoryService, IFlightService flightService)
+        public CreateFlightPresenter(ICreateFlightVliew view, ILocationService locatonService, IFactoryService factoryService, IFlightService flightService, IAirportService airportService, IAirlineService airlineService)
             :base(view)
         {
             if(locatonService == null)
@@ -30,9 +32,21 @@ namespace TelerikColours.Mvp.Admin.CreateFlight
 
             }
 
+            if(airportService == null)
+            {
+                throw new NullReferenceException("IAirportService");
+            }
+
+            if(airlineService == null)
+            {
+                throw new NullReferenceException("IAirlineService");
+            }
+
             this.locationService = locatonService;
             this.factoryService = factoryService;
             this.flightService = flightService;
+            this.airportService = airportService;
+            this.airlineService = airlineService;
 
             this.View.InitialLoad += View_InitialLoad;
             this.View.GetAllCitiesFrom += View_GetAllCitiesFrom;
@@ -49,14 +63,14 @@ namespace TelerikColours.Mvp.Admin.CreateFlight
 
         private void View_GetAllAirportsTo(object sender, AirportsCustomEventArgs e)
         {
-            var airports = this.flightService.GetAllAirportsInCity(e.CityId);
+            var airports = this.airportService.GetAllAirportsInCity(e.CityId);
 
             this.View.Model.AirportToList = airports;
         }
 
         private void View_GetAllAirportsFrom(object sender, AirportsCustomEventArgs e)
         {
-            var airports = this.flightService.GetAllAirportsInCity(e.CityId);
+            var airports = this.airportService.GetAllAirportsInCity(e.CityId);
 
             this.View.Model.AirportFromList = airports;
         }
@@ -78,7 +92,7 @@ namespace TelerikColours.Mvp.Admin.CreateFlight
         private void View_InitialLoad(object sender, EventArgs e)
         {
             var countries = this.locationService.GetAllCountries();
-            var airlines = this.flightService.GetAllAirlines();
+            var airlines = this.airlineService.GetAllAirlines();
 
             this.View.Model.CountryFromList = countries;
             this.View.Model.CountryToList = countries;

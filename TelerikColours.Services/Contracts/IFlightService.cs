@@ -8,9 +8,9 @@ namespace TelerikColours.Services.Contracts
 {
     public interface IFlightService
     {
-        IEnumerable<Airport> GetAllAirportsInCity(int cityId);
+      //  IEnumerable<Airport> GetAllAirportsInCity(int cityId);
 
-        IEnumerable<Airline> GetAllAirlines();
+       // IEnumerable<Airline> GetAllAirlines();
 
         IEnumerable<PresentationFlight> GetFlights(int airlineId, int airlineDestId, DateTime travelDate, int passangersCount);
 

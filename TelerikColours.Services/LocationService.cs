@@ -3,7 +3,6 @@ using Repositories.Contracts;
 using System;
 using System.Collections.Generic;
 using TelerikColours.Services.Contracts;
-using TelerikColours.Services.Contracts.Factories;
 
 namespace TelerikColours.Services
 {
@@ -11,7 +10,6 @@ namespace TelerikColours.Services
     {
         private IRepository<Country> countryRepositry;
         private IRepository<City> cityRepository;
-        //private IUnitOfWork unitOfWork;
 
         public LocationService(IRepository<Country> countryRepositry, IRepository<City> cityRepository)
         {
@@ -25,14 +23,8 @@ namespace TelerikColours.Services
                 throw new NullReferenceException("CityRepository");
             }
 
-            //if (unitOfWork == null)
-            //{
-            //    throw new NullReferenceException("UnitOfWork is null");
-            //}
-
             this.countryRepositry = countryRepositry;
             this.cityRepository = cityRepository;
-          //  this.unitOfWork = unitOfWork;
         }
 
         public IEnumerable<Country> GetAllCountries()
@@ -42,9 +34,7 @@ namespace TelerikColours.Services
 
         public IEnumerable<City> GetCityInCountry(int countryId)
         {
-            
-           // var cities = this.cityRepository.GetAll(x => x.CountryId == countryId, x => x.Name);
-            var cities = this.cityRepository.GetAll(x => x.CountryId == countryId);
+            var cities = this.cityRepository.GetAll(x => x.CountryId == countryId, x => x.Name);
 
             return cities;
         }

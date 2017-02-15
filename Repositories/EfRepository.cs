@@ -5,18 +5,19 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
+using TelerikColours.Data.Contracts;
 
 namespace Repositories
 {
     public class EfRepository<T> : IRepository<T> where T : class
     {
-        private readonly DbContext context;
+        private readonly IDbContext context;
 
-        public EfRepository(DbContext context)
+        public EfRepository(IDbContext context)
         {
             if (context == null)
             {
-                throw new NullReferenceException();
+                throw new NullReferenceException("DbContext");
             }
 
             this.context = context;

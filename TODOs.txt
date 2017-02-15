@@ -1,0 +1,1 @@
+- Company model with Sold Flights, and jobs, date of sale, price 

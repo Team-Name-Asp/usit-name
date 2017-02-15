@@ -20,7 +20,9 @@ namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
             var viewMock = new Mock<ISearchFlightView>();
             var locationServiceStub = new Mock<ILocationService>();
             var flightServiceStub = new Mock<IFlightService>();
-            var presenter = new SearchFlightPresenter(viewMock.Object, flightServiceStub.Object, locationServiceStub.Object);
+            var airportServicStub = new Mock<IAirportService>();
+
+            var presenter = new SearchFlightPresenter(viewMock.Object, flightServiceStub.Object, locationServiceStub.Object, airportServicStub.Object);
             viewMock.Setup(x => x.Model).Returns(new SearchFlightViewModel());
             locationServiceStub.Setup(x => x.GetAllCountries()).Returns(this.expectedCollection);
 
@@ -38,7 +40,10 @@ namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
             var viewMock = new Mock<ISearchFlightView>();
             var locationServiceStub = new Mock<ILocationService>();
             var flightServiceStub = new Mock<IFlightService>();
-            var presenter = new SearchFlightPresenter(viewMock.Object, flightServiceStub.Object, locationServiceStub.Object);
+            var airportServicStub = new Mock<IAirportService>();
+
+            var presenter = new SearchFlightPresenter(viewMock.Object, flightServiceStub.Object, locationServiceStub.Object, airportServicStub.Object);
+
             viewMock.Setup(x => x.Model).Returns(new SearchFlightViewModel());
             locationServiceStub.Setup(x => x.GetAllCountries()).Returns(this.expectedCollection);
 
@@ -56,7 +61,9 @@ namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
             var viewStub = new Mock<ISearchFlightView>();
             var locationServiceMock = new Mock<ILocationService>();
             var flightServiceStub = new Mock<IFlightService>();
-            var presenter = new SearchFlightPresenter(viewStub.Object, flightServiceStub.Object, locationServiceMock.Object);
+            var airportServicStub = new Mock<IAirportService>();
+
+            var presenter = new SearchFlightPresenter(viewStub.Object, flightServiceStub.Object, locationServiceMock.Object, airportServicStub.Object);
             viewStub.Setup(x => x.Model).Returns(new SearchFlightViewModel());
 
             // Act

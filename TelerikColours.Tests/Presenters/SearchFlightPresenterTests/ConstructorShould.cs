@@ -15,10 +15,10 @@ namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
             // Arrange
             var viewStub = new Mock<ISearchFlightView>();
             var locationServiceStub = new Mock<ILocationService>();
-
+            var airportServiceStub = new Mock<IAirportService>();
             // Act and Assert
             Assert.That(
-               () => new SearchFlightPresenter(viewStub.Object, null, locationServiceStub.Object),
+               () => new SearchFlightPresenter(viewStub.Object, null, locationServiceStub.Object, airportServiceStub.Object),
                Throws.InstanceOf<NullReferenceException>().With.Message.Contains("IFlightService"));
         }
 
@@ -28,11 +28,26 @@ namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
             // Arrange
             var viewStub = new Mock<ISearchFlightView>();
             var flightServiceStub = new Mock<IFlightService>();
+            var airportServiceStub = new Mock<IAirportService>();
 
             // Act and Assert
             Assert.That(
-               () => new SearchFlightPresenter(viewStub.Object, flightServiceStub.Object, null),
+               () => new SearchFlightPresenter(viewStub.Object, flightServiceStub.Object, null, airportServiceStub.Object),
                Throws.InstanceOf<NullReferenceException>().With.Message.Contains("ILocationService"));
+        }
+
+        [Test]
+        public void ThrowNullReference_WithMessageContaining_IAirportService_When_ILocationServiceIsNull()
+        {
+            // Arrange
+            var viewStub = new Mock<ISearchFlightView>();
+            var flightServiceStub = new Mock<IFlightService>();
+            var locationServiceStub = new Mock<ILocationService>();
+
+            // Act and Assert
+            Assert.That(
+               () => new SearchFlightPresenter(viewStub.Object, flightServiceStub.Object, locationServiceStub.Object, null),
+               Throws.InstanceOf<NullReferenceException>().With.Message.Contains("IAirportService"));
         }
     }
 }

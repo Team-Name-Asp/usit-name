@@ -18,7 +18,9 @@ namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
             var viewMock = new Mock<ISearchFlightView>();
             var locationServiceStub = new Mock<ILocationService>();
             var flightServiceStub = new Mock<IFlightService>();
-            var presenter = new SearchFlightPresenter(viewMock.Object, flightServiceStub.Object, locationServiceStub.Object);
+            var airportServicStub = new Mock<IAirportService>();
+
+            var presenter = new SearchFlightPresenter(viewMock.Object, flightServiceStub.Object, locationServiceStub.Object, airportServicStub.Object);
 
             viewMock.Setup(x => x.Model).Returns(new SearchFlightViewModel());
             var expectedCitiesCollection = new List<City>() { new City("CIty1", 22), new City("City2", 1) };
@@ -40,7 +42,9 @@ namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
             var viewStub = new Mock<ISearchFlightView>();
             var locationServiceMock = new Mock<ILocationService>();
             var flightServiceStub = new Mock<IFlightService>();
-            var presenter = new SearchFlightPresenter(viewStub.Object, flightServiceStub.Object, locationServiceMock.Object);
+            var airportServicStub = new Mock<IAirportService>();
+
+            var presenter = new SearchFlightPresenter(viewStub.Object, flightServiceStub.Object, locationServiceMock.Object, airportServicStub.Object);
             viewStub.Setup(x => x.Model).Returns(new SearchFlightViewModel());
             var cityEventArgs = new CitiesCustomEventArgs(countryId);
 

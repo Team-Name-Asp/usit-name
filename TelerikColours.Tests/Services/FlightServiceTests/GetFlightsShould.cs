@@ -28,12 +28,11 @@ namespace TelerikColours.Tests.Services.FlightServiceTests
         {
             this.airportRepository = new Mock<IRepository<Airport>>();
             this.unitOfWork = new Mock<IUnitOfWork>();
-            this.airlineRepository = new Mock<IRepository<Airline>>();
             this.flightRepository = new Mock<IRepository<Flight>>();
             this.cityRepository = new Mock<IRepository<City>>();
             this.mappedFactory = new Mock<IMappedClassFactory>();
 
-            this.service = new FlightService(this.airportRepository.Object, this.unitOfWork.Object, this.airlineRepository.Object, this.flightRepository.Object, this.cityRepository.Object, this.mappedFactory.Object);
+            this.service = new FlightService(this.airportRepository.Object, this.unitOfWork.Object, this.flightRepository.Object, this.cityRepository.Object, this.mappedFactory.Object);
         }
 
         [Test]

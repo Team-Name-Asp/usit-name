@@ -61,6 +61,12 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TelerikColours.Data\TelerikColours.Data.csproj">
+      <Project>{ead017ea-f8cb-48f6-bbf7-86e7d0551808}</Project>
+      <Name>TelerikColours.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
