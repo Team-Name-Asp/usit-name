@@ -22,12 +22,12 @@ namespace TelerikColours {
         protected global::System.Web.UI.WebControls.TextBox JobSearch;
         
         /// <summary>
-        /// AutoComplete1 control.
+        /// Autocomplete3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.AutoCompleteExtender AutoComplete1;
+        protected global::AjaxControlToolkit.AutoCompleteExtender Autocomplete3;
     }
 }

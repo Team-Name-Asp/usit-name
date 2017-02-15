@@ -13,7 +13,7 @@ namespace Models
             : base()
         {
             this.CityId = cityId;
-            this.JobTitle = JobTitle;
+            this.JobTitle = jobTitle;
             this.JobDescription = jobDescription;
             this.Slots = slots;
             this.StartDate = startDate;

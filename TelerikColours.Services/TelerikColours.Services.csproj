@@ -56,6 +56,7 @@
     <Compile Include="Contracts\Factories\ILocationFactory.cs" />
     <Compile Include="Contracts\Factories\IMappedClassFactory.cs" />
     <Compile Include="Contracts\IFlightService.cs" />
+    <Compile Include="Contracts\IJobService.cs" />
     <Compile Include="Contracts\ILocationService.cs" />
     <Compile Include="DataStructures\PriorityQueue.cs" />
     <Compile Include="FactoryService.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Contracts\IFactoryService.cs" />
     <Compile Include="Contracts\IAirportService.cs" />
     <Compile Include="Contracts\IAirlineService.cs" />
+    <Compile Include="JobService.cs" />
     <Compile Include="LocationService.cs" />
     <Compile Include="Models\FlightNode.cs" />
     <Compile Include="Models\PresentationFlight.cs" />

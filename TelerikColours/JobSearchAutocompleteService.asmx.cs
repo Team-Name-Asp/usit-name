@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Script.Services;
 using System.Web.Services;
+using Ninject;
+using TelerikColours.Services.Contracts;
 
 namespace TelerikColours
 {
@@ -17,23 +19,21 @@ namespace TelerikColours
     [System.Web.Script.Services.ScriptService]
     public class JobSearchAutocompleteService : System.Web.Services.WebService
     {
+        [Inject]
+        public IJobService JobService { get; set; }
 
         [WebMethod]
-        public string HelloWorld()
-        {
-            return "Hello World";
-        }
-
-        [WebMethod]
-        [ScriptMethod(ResponseFormat= System.Web.Script.Services.ResponseFormat.Json)]
+        [ScriptMethod(ResponseFormat = System.Web.Script.Services.ResponseFormat.Json)]
         public string[] GetAutocompleteList(string prefixText, int count)
         {
+            var todayDate = DateTime.Now;
+            var availableJobsTitles = this.JobService.GetAllJobs()
+                .Where(j => j.StartDate >= todayDate)
+                .Where(j => j.JobTitle.Contains(prefixText))
+                .Select(j => j.JobTitle)
+                .ToArray();
 
-            var text = new List<string>();
-            text.Add("test");
-            text.Add("test2");
-
-            return text.Where(t => t.Contains(prefixText)).ToArray();
+            return availableJobsTitles;
         }
     }
 }
