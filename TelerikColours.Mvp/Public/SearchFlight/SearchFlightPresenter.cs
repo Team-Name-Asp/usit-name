@@ -10,7 +10,9 @@ namespace TelerikColours.Mvp.Public.SearchFlight
     {
         private readonly IFlightService flightService;
         private readonly ILocationService locationService;
-        public SearchFlightPresenter(ISearchFlightView view, IFlightService flightService, ILocationService locationService)
+        private readonly IAirportService airportService;
+
+        public SearchFlightPresenter(ISearchFlightView view, IFlightService flightService, ILocationService locationService, IAirportService airportService)
             : base(view)
         {
             if(flightService == null)
@@ -23,8 +25,14 @@ namespace TelerikColours.Mvp.Public.SearchFlight
                 throw new NullReferenceException("ILocationService");
             }
 
+            if(airportService == null)
+            {
+                throw new NullReferenceException("IAirportService");
+            }
+
             this.flightService = flightService;
             this.locationService = locationService;
+            this.airportService = airportService;
 
             this.View.InitCountries += View_InitCountries;
             this.View.InitCitiesFrom += View_InitCitiesFrom;
@@ -41,12 +49,12 @@ namespace TelerikColours.Mvp.Public.SearchFlight
 
         public void View_InitAirportArival(object sender, AirportsCustomEventArgs e)
         {
-             this.View.Model.AirportArival = this.flightService.GetAllAirportsInCity(e.CityId);
+             this.View.Model.AirportArival = this.airportService.GetAllAirportsInCity(e.CityId);
         }
 
         public void View_InitAirportDeparture(object sender, AirportsCustomEventArgs e)
         {
-            this.View.Model.AirportsDeparture = this.flightService.GetAllAirportsInCity(e.CityId);
+            this.View.Model.AirportsDeparture = this.airportService.GetAllAirportsInCity(e.CityId);
         }
 
         public void View_InitSubmit(object sender, SearchFlightCustomEventArgs e)

@@ -4,7 +4,6 @@ namespace Models
 {
     public class Job
     {
-
         public Job()
         {
         }

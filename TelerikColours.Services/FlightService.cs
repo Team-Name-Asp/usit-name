@@ -13,29 +13,29 @@ namespace TelerikColours.Services
 {
     public class FlightService : IFlightService
     {
-        private IRepository<Airport> airportRepository;
+        private readonly IRepository<Airport> airportRepository;
 
-        private IRepository<Airline> airlineRepository;
+      //  private readonly IRepository<Airline> airlineRepository;
 
-        private IRepository<Flight> flightRepository;
+        private readonly IRepository<Flight> flightRepository;
 
-        private IRepository<City> cityRepository;
+        private readonly IRepository<City> cityRepository;
 
-        private IUnitOfWork unitOfWork;
+        private readonly IUnitOfWork unitOfWork;
 
-        private IMappedClassFactory mappedFlightFactory;
+        private readonly IMappedClassFactory mappedFlightFactory;
 
-        public FlightService(IRepository<Airport> airportRepository, IUnitOfWork unitOfWork, IRepository<Airline> airlineRepository, IRepository<Flight> flightRepository, IRepository<City> cityRepository, IMappedClassFactory mappedFlightFactory)
+        public FlightService(IRepository<Airport> airportRepository, IUnitOfWork unitOfWork,/* IRepository<Airline> airlineRepository,*/ IRepository<Flight> flightRepository, IRepository<City> cityRepository, IMappedClassFactory mappedFlightFactory)
         {
             if (airportRepository == null)
             {
                 throw new NullReferenceException("AirportRepository");
             }
 
-            if (airlineRepository == null)
-            {
-                throw new NullReferenceException("AirlineRepository");
-            }
+            //if (airlineRepository == null)
+            //{
+            //    throw new NullReferenceException("AirlineRepository");
+            //}
 
             if (flightRepository == null)
             {
@@ -53,22 +53,22 @@ namespace TelerikColours.Services
             }
 
             this.airportRepository = airportRepository;
-            this.airlineRepository = airlineRepository;
+           // this.airlineRepository = airlineRepository;
             this.unitOfWork = unitOfWork;
             this.flightRepository = flightRepository;
             this.cityRepository = cityRepository;
             this.mappedFlightFactory = mappedFlightFactory;
         }
 
-        public IEnumerable<Airport> GetAllAirportsInCity(int cityId)
-        {
-            return this.airportRepository.GetAll(x => x.CityId == cityId, x => x.Name);
-        }
+        //public IEnumerable<Airport> GetAllAirportsInCity(int cityId)
+        //{
+        //    return this.airportRepository.GetAll(x => x.CityId == cityId, x => x.Name);
+        //}
 
-        public IEnumerable<Airline> GetAllAirlines()
-        {
-            return this.airlineRepository.GetAll(null, x => x.Name);
-        }
+        //public IEnumerable<Airline> GetAllAirlines()
+        //{
+        //    return this.airlineRepository.GetAll(null, x => x.Name);
+        //}
 
         public IEnumerable<PresentationFlight> GetFlights(int currentAirportId, int destinationAirportId, DateTime travelDate, int count)
         {
@@ -166,11 +166,12 @@ namespace TelerikColours.Services
 
         public IEnumerable<Flight> FilterFlights(string type, string filterExpression)
         {
-            IQueryable<Flight> resultQuery = null;
+            IEnumerable<Flight> resultQuery = null;
+
             if(type == "date")
             {
                 var queryDate = DateTime.Parse(filterExpression);
-                resultQuery = this.flightRepository.All.Where(x => x.DateOfDeparture.DayOfYear == queryDate.DayOfYear);
+                resultQuery = this.flightRepository.GetAll(x => x.DateOfDeparture.DayOfYear == queryDate.DayOfYear);
             }
             else if (type == "airline")
             {

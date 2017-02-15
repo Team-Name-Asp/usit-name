@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IDbContext.cs" />
     <Compile Include="Migrations\201702131147586_Initial.cs" />
     <Compile Include="Migrations\201702131147586_Initial.Designer.cs">
       <DependentUpon>201702131147586_Initial.cs</DependentUpon>

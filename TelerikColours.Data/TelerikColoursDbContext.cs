@@ -1,10 +1,11 @@
 ﻿using Models;
 using System;
 using System.Data.Entity;
+using TelerikColours.Data.Contracts;
 
 namespace TelerikColours.Data
 {
-    public class TelerikColoursDbContext : DbContext
+    public class TelerikColoursDbContext : DbContext, IDbContext
     {
         public TelerikColoursDbContext()
             : base("TelerikColoursDatabase")

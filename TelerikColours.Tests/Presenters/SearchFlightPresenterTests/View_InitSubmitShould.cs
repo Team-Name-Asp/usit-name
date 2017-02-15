@@ -19,7 +19,9 @@ namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
             var viewMock = new Mock<ISearchFlightView>();
             var locationServiceStub = new Mock<ILocationService>();
             var flightServiceStub = new Mock<IFlightService>();
-            var presenter = new SearchFlightPresenter(viewMock.Object, flightServiceStub.Object, locationServiceStub.Object);
+            var airportServicStub = new Mock<IAirportService>();
+
+            var presenter = new SearchFlightPresenter(viewMock.Object, flightServiceStub.Object, locationServiceStub.Object, airportServicStub.Object);
 
             viewMock.Setup(x => x.Model).Returns(new SearchFlightViewModel());
 
@@ -44,7 +46,9 @@ namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
             var viewStub = new Mock<ISearchFlightView>();
             var locationServiceStub = new Mock<ILocationService>();
             var flightServiceMock = new Mock<IFlightService>();
-            var presenter = new SearchFlightPresenter(viewStub.Object, flightServiceMock.Object, locationServiceStub.Object);
+            var airportServicStub = new Mock<IAirportService>();
+
+            var presenter = new SearchFlightPresenter(viewStub.Object, flightServiceMock.Object, locationServiceStub.Object, airportServicStub.Object);
 
             viewStub.Setup(x => x.Model).Returns(new SearchFlightViewModel());
 
