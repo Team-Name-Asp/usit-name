@@ -5,7 +5,7 @@ namespace TelerikColours.Mvp.CustomEventArgs
     public class AddJobCustomEventArgs : EventArgs
     {
         public AddJobCustomEventArgs(int cityId, string jobTitle, string jobDescription, int slots,
-         DateTime startDate, DateTime endDate, decimal wage, string companyName)
+         DateTime startDate, DateTime endDate, decimal wage, string companyName, decimal price)
         {
             this.CityId = cityId;
             this.JobTitle = jobTitle;
@@ -15,6 +15,7 @@ namespace TelerikColours.Mvp.CustomEventArgs
             this.EndDate = endDate;
             this.Wage = wage;
             this.CompanyName = companyName;
+            this.Price = price;
         }
 
         public int CityId { get; set; }
@@ -32,5 +33,7 @@ namespace TelerikColours.Mvp.CustomEventArgs
         public decimal Wage { get; set; }
 
         public string CompanyName { get; set; }
+
+        public decimal Price { get; set; }
     }
 }

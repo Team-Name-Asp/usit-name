@@ -18,7 +18,7 @@
                         <asp:TextBox ID="JobSearch" CssClass="flipkart-navbar-input col-xs-11" placeholder="Search jobs" runat="server"></asp:TextBox>
                         <%--<input class="flipkart-navbar-input col-xs-11" type="" placeholder="Search jobs" name="">--%>
 
-                        <ajaxToolkit:AutoCompleteExtender runat="server" ServiceMethod="GetAutocompleteList" ServicePath="JobSearchAutocompleteService.asmx"
+                        <ajaxToolkit:AutoCompleteExtender runat="server" ServiceMethod="GetAutocompleteWords" 
                             MinimumPrefixLength="2" CompletionInterval="100" EnableCaching="true"
                             CompletionSetCount="10"
                             TargetControlID="JobSearch" ID="Autocomplete3" FirstRowSelected="true">

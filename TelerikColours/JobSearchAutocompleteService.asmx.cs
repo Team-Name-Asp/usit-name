@@ -5,7 +5,11 @@ using System.Web;
 using System.Web.Script.Services;
 using System.Web.Services;
 using Ninject;
+using TelerikColours.Mvp.CustomEventArgs;
+using TelerikColours.Mvp.Public.SearchJob;
 using TelerikColours.Services.Contracts;
+using WebFormsMvp;
+using WebFormsMvp.Web;
 
 namespace TelerikColours
 {
@@ -19,21 +23,15 @@ namespace TelerikColours
     [System.Web.Script.Services.ScriptService]
     public class JobSearchAutocompleteService : System.Web.Services.WebService
     {
-        [Inject]
-        public IJobService JobService { get; set; }
+        //[WebMethod]
+        //[ScriptMethod(ResponseFormat = System.Web.Script.Services.ResponseFormat.Json)]
+        //public string[] GetAutocompleteList(string prefixText, int count)
+        //{
+           
+        //        this.InitWords?.Invoke(null, e);
 
-        [WebMethod]
-        [ScriptMethod(ResponseFormat = System.Web.Script.Services.ResponseFormat.Json)]
-        public string[] GetAutocompleteList(string prefixText, int count)
-        {
-            var todayDate = DateTime.Now;
-            var availableJobsTitles = this.JobService.GetAllJobs()
-                .Where(j => j.StartDate >= todayDate)
-                .Where(j => j.JobTitle.Contains(prefixText))
-                .Select(j => j.JobTitle)
-                .ToArray();
-
-            return availableJobsTitles;
-        }
+        //        return this.Model.InitWords;
+              
+        //}
     }
 }

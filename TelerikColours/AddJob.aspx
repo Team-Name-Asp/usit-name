@@ -20,15 +20,12 @@
                             ValidationGroup="ValidationGroupRequired">Required field!</asp:RequiredFieldValidator>
                     </div>
                 </div>
-                <%-- <div class="col-md-6">
+                 <div class="col-md-6">
                     <div class="form-group">
-                        <asp:Label AssociatedControlID="JobDescription" Text="Job Description:" runat="server" />
-                        <asp:TextBox ID="JobDescription" ValidationGroup="ValidationGroupRequired" CssClass="form-control" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ForeColor="Red" ID="RequiredFieldValidator1" runat="server"
-                            ControlToValidate="JobTitle" ErrorMessage="RequiredFieldValidator"
-                            ValidationGroup="ValidationGroupRequired">Required field!</asp:RequiredFieldValidator>
+                        <asp:Label AssociatedControlID="Price" Text="Price:" runat="server" />
+                        <asp:TextBox ID="Price" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
-                </div>--%>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-6">

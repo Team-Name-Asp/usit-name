@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
@@ -21,24 +22,33 @@ namespace Models
             this.Price = price;
 
         }
+        [Key]
         public int Id { get; set; }
 
+        [Required]
         public decimal Price { get; set; }
 
+        [Required]
         public int AvailableSeats { get; set; }
 
+        [Required]
         public DateTime DateOfDeparture { get; set; }
 
+        [Required]
         public DateTime DateOfArrival { get; set; }
 
+        [Required]
         public int AirlineId { get; set; }
 
+        [Required]
         public virtual Airline Airline { get; set; }
 
+        [Required]
         public int AirportDepartureId { get; set; }
 
         public virtual Airport AirportDeparture { get; set; }
 
+        [Required]
         public int AirportArrivalId { get; set; }
 
         public virtual Airport AirportArrival { get; set; }

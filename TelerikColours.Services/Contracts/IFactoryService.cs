@@ -14,7 +14,7 @@ namespace TelerikColours.Services.Contracts
 
         void AddAirline(string name);
 
-        void AddJob(string jobTitle, string jobDescription, int slots, DateTime startDate, DateTime endDate, decimal wage, string companyName, int cityId);
+        void AddJob(string jobTitle, string jobDescription, int slots, DateTime startDate, DateTime endDate, decimal wage, string companyName, decimal price, int cityId);
     }
 }
 

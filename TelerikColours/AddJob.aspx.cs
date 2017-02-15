@@ -35,10 +35,11 @@ namespace TelerikColours
             var endDate = DateTime.Parse(this.EndDate.Text);
             decimal wage = decimal.Parse(this.Wage.Text);
             string companyName = this.CompanyName.Text;
+            decimal price = decimal.Parse(this.Price.Text);
 
 
             this.SubmitAddJob?.Invoke(sender, new AddJobCustomEventArgs(cityId, jobTitle, jobDescription, slots,
-                startDate, endDate, wage, companyName));
+                startDate, endDate, wage, companyName, price));
         }
 
         protected void ValidateDateRange_ServerValidate(object source, ServerValidateEventArgs args)

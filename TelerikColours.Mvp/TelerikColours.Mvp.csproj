@@ -66,6 +66,7 @@
     <Compile Include="Admin\AddCountry\IAddCountryView.cs" />
     <Compile Include="CustomEventArgs\AddJobCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\AirportsCustomEventArgs.cs" />
+    <Compile Include="CustomEventArgs\AutocompleteCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\CitiesCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\CreateFlightCustomEventArgs.cs" />
     <Compile Include="Admin\CreateFlight\CreateFlightPresenter.cs" />
@@ -79,6 +80,9 @@
     <Compile Include="Public\SearchFlight\ISearchFlightView.cs" />
     <Compile Include="Public\SearchFlight\SearchFlightPresenter.cs" />
     <Compile Include="Public\SearchFlight\SearchFlightViewModel.cs" />
+    <Compile Include="Public\SearchJob\AutocompletePresenter.cs" />
+    <Compile Include="Public\SearchJob\AutocompleteViewModel.cs" />
+    <Compile Include="Public\SearchJob\IAutocompleteView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

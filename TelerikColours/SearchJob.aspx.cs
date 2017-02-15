@@ -15,5 +15,12 @@ namespace TelerikColours
         {
 
         }
+
+        //[WebMethod]
+        //[ScriptMethod(ResponseFormat = System.Web.Script.Services.ResponseFormat.Json, UseHttpGet = true)]
+        //public string[] GetAutocompleteWords(string prefixText, int count)
+        //{
+        //    return new string[] { "hello", "hello" };
+        //}
     }
 }

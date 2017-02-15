@@ -21,8 +21,8 @@ namespace TelerikColours.Services
 
         public FactoryService(IRepository<Country> countryRepositry, IRepository<City> cityRepository,
               IRepository<Flight> flightRepository, IRepository<Airport> airportRepository,
-              IRepository<Airline> airlineRepository, 
-              IUnitOfWork unitOfWork, IAirportFactory airportFactory, 
+              IRepository<Airline> airlineRepository,
+              IUnitOfWork unitOfWork, IAirportFactory airportFactory,
               ILocationFactory locationFactory,
               IRepository<Job> jobRepository, IJobFactory jobFactory)
         {
@@ -145,10 +145,10 @@ namespace TelerikColours.Services
             }
         }
 
-        public void AddJob(string jobTitle, string jobDescription, int slots, DateTime startDate, DateTime endDate, decimal wage, string companyName, int cityId)
+        public void AddJob(string jobTitle, string jobDescription, int slots, DateTime startDate, DateTime endDate, decimal wage, string companyName, decimal price, int cityId)
         {
-            Job job = this.jobFactory.CreateJob(cityId, jobTitle, jobDescription, slots, startDate, endDate, wage, companyName);
-        
+            Job job = this.jobFactory.CreateJob(cityId, jobTitle, jobDescription, slots, startDate, endDate, wage, companyName, price);
+
             using (this.unitOfWork)
             {
                 this.jobRepository.Add(job);

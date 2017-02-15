@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using Models.Constants;
 
 namespace Models
 {
@@ -18,8 +20,12 @@ namespace Models
         {
             this.Name = name;
         }
+        [Key]
         public int Id { get; set; }
 
+        [Required]
+        [MinLength(ModelConstants.AirlineMinLength)]
+        [MaxLength(ModelConstants.AirlineMaxLength)]
         public string Name { get; set; }
 
         public virtual ICollection<City> Cities
