@@ -5,7 +5,7 @@
     border-radius: 5px;
 }
 
-.row1{
+.row1 {
     padding-top: 10px;
 }
 
@@ -31,14 +31,20 @@
     height: 43px;
     cursor: pointer;
 }
-.flipkart-navbar-button:hover {
-    background-color: #ffff33;
+
+    .flipkart-navbar-button:hover {
+        background-color: #ffff33;
+    }
+
+        .flipkart-navbar-button:hover > .glyphicon-search {
+            color: #2469d9;
+        }
+
+.glyphicon-search {
+    color: white;
+    font-size: 2:px;
 }
 
-.glyphicon.glyphicon-search {
-    color: white;
-    font-size: 15px;
-}
 
 .cart-button {
     background-color: #2469d9;
@@ -57,11 +63,11 @@
     outline: none;
 }
 
-.cart-button:hover{
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-}
+    .cart-button:hover {
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+    }
 
 .cart-svg {
     display: inline-block;
@@ -101,41 +107,41 @@
     margin-bottom: 0px;
 }
 
-.dropdown:hover {
-    background-color: #fff;
-}
+    .dropdown:hover {
+        background-color: #fff;
+    }
 
-.dropdown:hover .links {
-    color: #000;
-}
+        .dropdown:hover .links {
+            color: #000;
+        }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
 
-.dropdown .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    display: none;
-    background-color: #fff;
-    color: #333;
-    left: 0px;
-    border: 0;
-    border-radius: 0;
-    box-shadow: 0 4px 8px -3px #555454;
-    margin: 0;
-    padding: 0px;
-}
+    .dropdown .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        display: none;
+        background-color: #fff;
+        color: #333;
+        left: 0px;
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0 4px 8px -3px #555454;
+        margin: 0;
+        padding: 0px;
+    }
 
 .links {
     color: #fff;
     text-decoration: none;
 }
 
-.links:hover {
-    color: #fff;
-    text-decoration: none;
-}
+    .links:hover {
+        color: #fff;
+        text-decoration: none;
+    }
 
 .profile-links {
     font-size: 12px;
@@ -147,7 +153,7 @@
     line-height: 23px;
 }
 
-.profile-li{
+.profile-li {
     padding-top: 2px;
 }
 
@@ -155,16 +161,16 @@
     display: none;
 }
 
-.smallnav{
+.smallnav {
     display: block;
 }
 
-.smallsearch{
+.smallsearch {
     margin-left: 15px;
     margin-top: 15px;
 }
 
-.menu{
+.menu {
     cursor: pointer;
 }
 
@@ -172,10 +178,12 @@
     .largenav {
         display: block;
     }
-    .smallnav{
+
+    .smallnav {
         display: none;
     }
-    .smallsearch{
+
+    .smallsearch {
         margin: 0px;
     }
 }
@@ -195,29 +203,31 @@
     padding-top: 0px;
 }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    color: #fff;        
-}
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: #fff;
+    }
 
 @media screen and (max-height: 450px) {
-  .sidenav a {font-size: 18px;}
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
-.sidenav-heading{
+.sidenav-heading {
     font-size: 36px;
     color: #fff;
 }

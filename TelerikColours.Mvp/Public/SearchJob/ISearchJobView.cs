@@ -8,8 +8,8 @@ using WebFormsMvp;
 
 namespace TelerikColours.Mvp.Public.SearchJob
 {
-    public interface IAutocompleteView : IView<AutocompleteViewModel>
+    public interface ISearchJobView : IView<SearchJobViewModel>
     {
-        event EventHandler<AutocompleteCustomEventArgs> InitWords;
+        event EventHandler<SearchJobCustomEventArgs> InitSubmit;
     }
 }

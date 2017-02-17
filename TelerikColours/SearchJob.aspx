@@ -11,23 +11,61 @@
             </div>
             <div class="row row2">
                 <div class="col-sm-2">
-                    <h1 style="margin: 0px;"><span class="largenav">Find Job</span></h1>
+                    <h1 style="margin: 0px; font-size: 35px;"><span class="largenav">Find Job</span></h1>
                 </div>
                 <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                     <div class="row">
                         <asp:TextBox ID="JobSearch" CssClass="flipkart-navbar-input col-xs-11" placeholder="Search jobs" runat="server"></asp:TextBox>
-                        <%--<input class="flipkart-navbar-input col-xs-11" type="" placeholder="Search jobs" name="">--%>
-
-                        <ajaxToolkit:AutoCompleteExtender runat="server" ServiceMethod="GetAutocompleteWords" 
-                            MinimumPrefixLength="2" CompletionInterval="100" EnableCaching="true"
-                            CompletionSetCount="10"
-                            TargetControlID="JobSearch" ID="Autocomplete3" FirstRowSelected="true">
-                        </ajaxToolkit:AutoCompleteExtender>
-                        <button class="flipkart-navbar-button col-xs-1">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
+                        <asp:LinkButton ID="SearchJobButton"
+                            runat="server"
+                            CssClass="flipkart-navbar-button col-xs-1"
+                            OnClick="SearchJobButton_Click">
+                             <span class="glyphicon glyphicon-search col-xs-1"></span>
+                        </asp:LinkButton>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <asp:ListView ID="JobResults" runat="server" ItemType="Models.Job" SelectMethod="JobResults_GetData">
+
+                <ItemTemplate>
+                    <div class="well" style="float: left; margin-left: 50px; margin-top: 10px; width: 500px;">
+                        <div class="col-md-4">
+                            <h3><%# Item.JobTitle %></h3>
+                            Wage:
+                            <asp:Label ID="Label5" runat="server" Text='<%# Item.Wage %>' /></p>
+                        
+                        Price:
+                            <asp:Label ID="Label7" runat="server" Text='<%# Item.Price %>' /></p>
+
+                            City:
+                            <asp:Label ID="Label8" runat="server" Text='<%# Item.City.Name %>' />
+
+                        </div>
+                        <div class="col-md-8">
+                            <img src="http://sfdhr.org/sites/default/files/Job-Seekers.jpg" alt="Job" style="width: 300px; height: 150px; border-radius: 4px;" />
+                        </div>
+
+                    </div>
+                </ItemTemplate>
+
+
+            </asp:ListView>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-md-offset-4">
+                <asp:DataPager runat="server" PagedControlID="JobResults" ID="DataPager" PageSize="2">
+                    <Fields>
+                        <asp:NextPreviousPagerField ButtonCssClass="btn"
+                            ButtonType="Button"
+                            ShowFirstPageButton="true"
+                            ShowLastPageButton="true" ShowNextPageButton="true" ShowPreviousPageButton="true" />
+                        <asp:NumericPagerField />
+                    </Fields>
+                </asp:DataPager>
             </div>
         </div>
     </div>

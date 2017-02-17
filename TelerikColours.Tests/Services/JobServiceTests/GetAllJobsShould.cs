@@ -27,5 +27,21 @@ namespace TelerikColours.Tests.Services.JobServiceTests
             // Assert
             jobRepositoryStub.Verify(j => j.GetAll(), Times.Once());
         }
+
+        [Test]
+        public void ReturnCorrectResults_WhenCalled()
+        {
+            // Arrange
+            var jobRepositoryStub = new Mock<IRepository<Job>>();
+            var expectedCollection = new List<Job>() { new Job { Id = 1, CompanyName = "Company 1" }, new Job { Id = 2, CompanyName = "Company2" } };
+            jobRepositoryStub.Setup(j => j.GetAll()).Returns(expectedCollection);
+            var jobService = new JobService(jobRepositoryStub.Object);
+
+            // Act
+            var actualCollection = jobService.GetAllJobs();
+
+            // Assert
+            CollectionAssert.AreEqual(expectedCollection, actualCollection);
+        }
     }
 }

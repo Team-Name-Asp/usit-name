@@ -10,5 +10,7 @@ namespace TelerikColours.Services.Contracts
     public interface IJobService
     {
         IEnumerable<Job> GetAllJobs();
+
+        IQueryable<Job> GetAllJobsFromByTerm(string searchedTerm);
     }
 }
