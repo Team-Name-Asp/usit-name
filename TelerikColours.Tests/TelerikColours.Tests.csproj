@@ -74,11 +74,18 @@
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="WebFormsMvp, Version=1.4.5.0, Culture=neutral, PublicKeyToken=537f18701145dff0" />
+    <Reference Include="WebFormsMvp, Version=1.4.5.0, Culture=neutral, PublicKeyToken=537f18701145dff0, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebFormsMvp.1.4.5.0\lib\WebFormsMvp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Presenters\AddAirlinePresenterTests\ConstructorShould.cs" />
     <Compile Include="Presenters\AddAirlinePresenterTests\ViewSubmitAddAirlineShould.cs" />
+    <Compile Include="Presenters\Admin\AddAirportPresenterTests\Constructor_Should.cs" />
+    <Compile Include="Presenters\Admin\AddAirportPresenterTests\View_AddAIrport_Should.cs" />
+    <Compile Include="Presenters\Admin\AddAirportPresenterTests\View_InitCities_Should.cs" />
+    <Compile Include="Presenters\Admin\AddAirportPresenterTests\View_InitCountries_Should.cs" />
     <Compile Include="Presenters\EditFlightPresenterTests\ConstructorShould.cs" />
     <Compile Include="Presenters\EditFlightPresenterTests\ViewCommitChangesShould.cs" />
     <Compile Include="Presenters\EditFlightPresenterTests\ViewInitFlightsShould.cs" />
@@ -90,6 +97,7 @@
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCitiesToShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCountriesShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitSubmitShould.cs" />
+    <Compile Include="Presenters\TickertDetailsPresenterTests\View_BuyTIcket_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\ConstructorShould.cs" />
     <Compile Include="Services\AirlineServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\AirlineServiceTests\GetAllAirportsInCityShould.cs" />
