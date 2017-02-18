@@ -98,10 +98,10 @@
     <Compile Include="Presenters\Admin\AddFlightPresenterTests\View_GetAllCitiesFrom_Should.cs" />
     <Compile Include="Presenters\Admin\AddFlightPresenterTests\VIew_GetAllCitiesTo_Should.cs" />
     <Compile Include="Presenters\Admin\AddFlightPresenterTests\View_InitialLoad_Should.cs" />
-    <Compile Include="Presenters\EditFlightPresenterTests\ConstructorShould.cs" />
-    <Compile Include="Presenters\EditFlightPresenterTests\ViewCommitChangesShould.cs" />
-    <Compile Include="Presenters\EditFlightPresenterTests\ViewInitFlightsShould.cs" />
-    <Compile Include="Presenters\EditFlightPresenterTests\VIewUpdateFlightShould.cs" />
+    <Compile Include="Presenters\Admin\EditFlightPresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewCommitChangesShould.cs" />
+    <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewInitFlightsShould.cs" />
+    <Compile Include="Presenters\Admin\EditFlightPresenterTests\VIewUpdateFlightShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\ConstructorShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitAirportArivalShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitAirportDepartureShould.cs" />
@@ -123,6 +123,7 @@
     <Compile Include="Services\FactoryServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\FlightServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\FlightServiceTests\FliterFlightsShould.cs" />
+    <Compile Include="Services\FlightServiceTests\GetCheapestFlights_Should.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightForUpdateShould.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightsShould.cs" />
     <Compile Include="Services\FlightServiceTests\SaveUpdatedFlightShould.cs" />

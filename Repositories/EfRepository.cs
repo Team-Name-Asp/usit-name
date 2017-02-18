@@ -32,7 +32,6 @@ namespace Repositories
             get { return this.DbSet; }
         }
 
-
         public T GetById(object id)
         {
             return this.DbSet.Find(id);

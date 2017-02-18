@@ -57,6 +57,21 @@ namespace TelerikColours.Tests.Services.UserServiceTests
         }
 
         [Test]
+        public void ThrowNullReferenceExcepetion_WithMessageContainingIAirportFactory_WhenAirportFactoryIsNull()
+        {
+            // Arrange
+            var flightRepositoryStub = new Mock<IRepository<Flight>>();
+            var userRepositoryStub = new Mock<IRepository<ApplicationUser>>();
+            var ticketRepositoryStub = new Mock<IRepository<Ticket>>();
+            var unitOfWorkStub = new Mock<IUnitOfWork>();
+
+            // Act and Assert
+            Assert.That(
+                () => new UserService(userRepositoryStub.Object, flightRepositoryStub.Object, unitOfWorkStub.Object, null, ticketRepositoryStub.Object),
+             Throws.InstanceOf<NullReferenceException>().With.Message.Contains("AirportFactory"));
+        }
+
+        [Test]
         public void ThrowNullReferenceExcepetion_WithMessageContainingTicketRepository_WhenTicketRepositoryIsNull()
         {
             // Arrange

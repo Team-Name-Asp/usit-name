@@ -22,17 +22,17 @@ namespace TelerikColours.Mvp.Admin.EditFlight
             this.View.CommitChanges += View_CommitChanges;
         }
 
-        public void View_CommitChanges(object sender, EventArgs e)
+        private void View_CommitChanges(object sender, EventArgs e)
         {
             this.flightService.SaveUpdatedFlight();
         }
 
-        public void View_UpdateFlight(object sender, FlightEditCustomEventArgs e)
+        private void View_UpdateFlight(object sender, FlightEditCustomEventArgs e)
         {
             this.View.Model.UpdatedFlight = this.flightService.GetFlightForUpdate(e.FlightId);
         }
 
-        public void View_InitFlights(object sender, FlightFilterCustomEventArgs e)
+        private void View_InitFlights(object sender, FlightFilterCustomEventArgs e)
         {
             this.View.Model.Flights = this.flightService.FilterFlights(e.SortType, e.SortExpression);
         }
