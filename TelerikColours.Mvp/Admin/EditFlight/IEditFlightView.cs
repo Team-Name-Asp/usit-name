@@ -6,7 +6,7 @@ namespace TelerikColours.Mvp.Admin.EditFlight
 {
     public interface IEditFlightView: IView<EditFlightViewModel>
     {
-        event EventHandler<FlightSortCustomEventArgs> InitFlights;
+        event EventHandler<FlightFilterCustomEventArgs> InitFlights;
         event EventHandler<FlightEditCustomEventArgs> UpdateFlight;
         event EventHandler CommitChanges;
     }

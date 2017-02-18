@@ -66,6 +66,7 @@
     <Compile Include="Admin\AddCountry\IAddCountryView.cs" />
     <Compile Include="CustomEventArgs\AddJobCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\AirportsCustomEventArgs.cs" />
+    <Compile Include="CustomEventArgs\BuyTicketCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\CitiesCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\CreateFlightCustomEventArgs.cs" />
     <Compile Include="Admin\CreateFlight\CreateFlightPresenter.cs" />
@@ -77,12 +78,17 @@
     <Compile Include="CustomEventArgs\SearchFlightCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\SearchJobCustomEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\Home\HomePresenter.cs" />
+    <Compile Include="Public\Home\HomeViewModel.cs" />
+    <Compile Include="Public\Home\IHomeView.cs" />
     <Compile Include="Public\SearchFlight\ISearchFlightView.cs" />
     <Compile Include="Public\SearchFlight\SearchFlightPresenter.cs" />
     <Compile Include="Public\SearchFlight\SearchFlightViewModel.cs" />
     <Compile Include="Public\SearchJob\ISearchJobView.cs" />
     <Compile Include="Public\SearchJob\SearchJobPresenter.cs" />
     <Compile Include="Public\SearchJob\SearchJobViewModel.cs" />
+    <Compile Include="Public\TicketDetails\ITicketDetailsView.cs" />
+    <Compile Include="Public\TicketDetails\TicketPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

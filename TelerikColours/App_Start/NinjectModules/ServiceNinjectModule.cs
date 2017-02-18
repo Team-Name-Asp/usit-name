@@ -23,6 +23,7 @@ namespace TelerikColours.App_Start.NinjectModules
             this.Bind<IAirportService>().To<AirportService>().InRequestScope();
             this.Bind<IAirlineService>().To<AirlineService>().InRequestScope();
             this.Bind<IJobService>().To<JobService>().InRequestScope();
+            this.Bind<IUserService>().To<UserService>().InRequestScope();
 
             Kernel.Bind(typeof(IRepository<>)).To(typeof(EfRepository<>)).InRequestScope();
 

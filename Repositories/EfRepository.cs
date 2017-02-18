@@ -106,7 +106,6 @@ namespace Repositories
             }
             catch (Exception e)
             {
-
                 throw;
             }
 
@@ -125,5 +124,6 @@ namespace Repositories
 
             return entry;
         }
+
     }
 }

@@ -21,7 +21,7 @@
             <asp:ListView runat="server" ID="Flights" ItemType="TelerikColours.Services.Models.PresentationFlight">
                 <LayoutTemplate>
                     <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                    <asp:Button ID="Information" runat="server" CssClass="button btn-success" Text="More Information" />
+                    <asp:Button ID="Buy" runat="server" CssClass="button btn-success" Text="Buy" OnClick ="Information_Click" />
                 </LayoutTemplate>
 
                 <ItemTemplate>

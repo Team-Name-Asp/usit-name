@@ -13,7 +13,7 @@ namespace TelerikColours
     [PresenterBinding(typeof(EditFlightPresenter))]
     public partial class EditFlights : MvpPage<EditFlightViewModel>, IEditFlightView
     {
-        public event EventHandler<FlightSortCustomEventArgs> InitFlights;
+        public event EventHandler<FlightFilterCustomEventArgs> InitFlights;
         public event EventHandler<FlightEditCustomEventArgs> UpdateFlight;
         public event EventHandler CommitChanges;
 
@@ -26,7 +26,7 @@ namespace TelerikColours
         {
             var filterType = this.FilterExpression.SelectedValue;
             var filterQUery = this.FilterText.Text;
-            this.InitFlights?.Invoke(sender, new FlightSortCustomEventArgs(filterType, filterQUery));
+            this.InitFlights?.Invoke(sender, new FlightFilterCustomEventArgs(filterType, filterQUery));
 
             this.Flights.PageIndex = e.NewPageIndex;
            
@@ -91,7 +91,7 @@ namespace TelerikColours
                 return null;
             }
 
-            this.InitFlights?.Invoke(null, new FlightSortCustomEventArgs(filterType, filterQUery));
+            this.InitFlights?.Invoke(null, new FlightFilterCustomEventArgs(filterType, filterQUery));
 
             return this.Model.Flights.AsQueryable<Flight>();
         }

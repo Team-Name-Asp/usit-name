@@ -8,14 +8,13 @@ using TelerikColours.Services.Contracts;
 using TelerikColours.Services.Contracts.Factories;
 using TelerikColours.Services.DataStructures;
 using TelerikColours.Services.Models;
+using TelerikColours.Services.Utils;
 
 namespace TelerikColours.Services
 {
     public class FlightService : IFlightService
     {
         private readonly IRepository<Airport> airportRepository;
-
-      //  private readonly IRepository<Airline> airlineRepository;
 
         private readonly IRepository<Flight> flightRepository;
 
@@ -32,11 +31,6 @@ namespace TelerikColours.Services
                 throw new NullReferenceException("AirportRepository");
             }
 
-            //if (airlineRepository == null)
-            //{
-            //    throw new NullReferenceException("AirlineRepository");
-            //}
-
             if (flightRepository == null)
             {
                 throw new NullReferenceException("FlightRepository");
@@ -47,28 +41,17 @@ namespace TelerikColours.Services
                 throw new NullReferenceException("UnitOfWork");
             }
 
-            if(mappedFlightFactory == null)
+            if (mappedFlightFactory == null)
             {
                 throw new NullReferenceException("MappedFactory");
             }
 
             this.airportRepository = airportRepository;
-           // this.airlineRepository = airlineRepository;
             this.unitOfWork = unitOfWork;
             this.flightRepository = flightRepository;
             this.cityRepository = cityRepository;
             this.mappedFlightFactory = mappedFlightFactory;
         }
-
-        //public IEnumerable<Airport> GetAllAirportsInCity(int cityId)
-        //{
-        //    return this.airportRepository.GetAll(x => x.CityId == cityId, x => x.Name);
-        //}
-
-        //public IEnumerable<Airline> GetAllAirlines()
-        //{
-        //    return this.airlineRepository.GetAll(null, x => x.Name);
-        //}
 
         public IEnumerable<PresentationFlight> GetFlights(int currentAirportId, int destinationAirportId, DateTime travelDate, int count)
         {
@@ -164,25 +147,25 @@ namespace TelerikColours.Services
             return resultFlights;
         }
 
-        public IEnumerable<Flight> FilterFlights(string type, string filterExpression)
+        public IQueryable<Flight> FilterFlights(string type, string filterExpression)
         {
-            IEnumerable<Flight> resultQuery = null;
+            IQueryable<Flight> resultQuery = null;
 
-            if(type == "date")
+            if (type == "date")
             {
                 var queryDate = DateTime.Parse(filterExpression);
-                resultQuery = this.flightRepository.GetAll(x => x.DateOfDeparture.DayOfYear == queryDate.DayOfYear);
+                resultQuery = this.flightRepository.All.Where(x => x.DateOfDeparture.DayOfYear == queryDate.DayOfYear).OrderBy(x => x.DateOfDeparture);
             }
             else if (type == "airline")
             {
-                resultQuery = this.flightRepository.All.Include(x => x.Airline).Where(x => x.Airline.Name == filterExpression);
+                resultQuery = this.flightRepository.All.Include(x => x.Airline).Where(x => x.Airline.Name == filterExpression).OrderBy(x => x.DateOfDeparture);
             }
             else if (type == "airport")
             {
-                resultQuery = this.flightRepository.All.Include(x => x.AirportArrival).Include(x => x.AirportDeparture).Where(x => x.AirportDeparture.Name == filterExpression || x.AirportArrival.Name == filterExpression);
+                resultQuery = this.flightRepository.All.Include(x => x.AirportArrival).Include(x => x.AirportDeparture).Where(x => x.AirportDeparture.Name == filterExpression || x.AirportArrival.Name == filterExpression).OrderBy(x => x.DateOfDeparture);
             }
 
-            return resultQuery.ToList();
+            return resultQuery;
         }
 
         public Flight GetFlightForUpdate(int id)
@@ -197,5 +180,17 @@ namespace TelerikColours.Services
                 this.unitOfWork.Commit();
             }
         }
+
+        public IEnumerable<Flight> GetCheapestFlights()
+        {
+            var take = 10;
+            var date = TimeProvider.Current.GetDate();
+
+            var flights = this.flightRepository.All.Where(x => x.DateOfDeparture > date && x.AvailableSeats > 0).OrderBy(x => x.Price).Take(take);
+
+            return flights.ToList();
+        }
     }
 }
+
+/// Multiple acce

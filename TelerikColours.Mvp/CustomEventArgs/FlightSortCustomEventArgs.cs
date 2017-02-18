@@ -2,9 +2,9 @@
 
 namespace TelerikColours.Mvp.CustomEventArgs
 {
-    public class FlightSortCustomEventArgs : EventArgs
+    public class FlightFilterCustomEventArgs : EventArgs
     {
-        public FlightSortCustomEventArgs(string sortType, string sortExpression)
+        public FlightFilterCustomEventArgs(string sortType, string sortExpression)
         {
             this.SortExpression = sortExpression;
             this.SortType = sortType;
@@ -15,3 +15,4 @@ namespace TelerikColours.Mvp.CustomEventArgs
         public string SortExpression { get; set; }
     }
 }
+

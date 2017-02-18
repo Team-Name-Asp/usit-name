@@ -32,7 +32,7 @@ namespace TelerikColours.Mvp.Admin.EditFlight
             this.View.Model.UpdatedFlight = this.flightService.GetFlightForUpdate(e.FlightId);
         }
 
-        public void View_InitFlights(object sender, FlightSortCustomEventArgs e)
+        public void View_InitFlights(object sender, FlightFilterCustomEventArgs e)
         {
             this.View.Model.Flights = this.flightService.FilterFlights(e.SortType, e.SortExpression);
         }
