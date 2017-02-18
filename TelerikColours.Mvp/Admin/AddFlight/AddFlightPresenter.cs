@@ -3,9 +3,9 @@ using TelerikColours.CustomEventArgs;
 using TelerikColours.Services.Contracts;
 using WebFormsMvp;
 
-namespace TelerikColours.Mvp.Admin.CreateFlight
+namespace TelerikColours.Mvp.Admin.AddFlight
 {
-    public class CreateFlightPresenter : Presenter<ICreateFlightVliew>
+    public class AddFlightPresenter : Presenter<ICreateFlightVliew>
     {
         private readonly ILocationService locationService;
         private readonly IFactoryService factoryService;
@@ -13,7 +13,7 @@ namespace TelerikColours.Mvp.Admin.CreateFlight
         private readonly IAirportService airportService;
         private readonly IAirlineService airlineService;
 
-        public CreateFlightPresenter(ICreateFlightVliew view, ILocationService locatonService, IFactoryService factoryService, IFlightService flightService, IAirportService airportService, IAirlineService airlineService)
+        public AddFlightPresenter(ICreateFlightVliew view, ILocationService locatonService, IFactoryService factoryService, IFlightService flightService, IAirportService airportService, IAirlineService airlineService)
             :base(view)
         {
             if(locatonService == null)

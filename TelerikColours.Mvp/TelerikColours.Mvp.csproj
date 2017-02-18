@@ -69,9 +69,9 @@
     <Compile Include="CustomEventArgs\BuyTicketCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\CitiesCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\CreateFlightCustomEventArgs.cs" />
-    <Compile Include="Admin\CreateFlight\CreateFlightPresenter.cs" />
-    <Compile Include="Admin\CreateFlight\FlightViewModel.cs" />
-    <Compile Include="Admin\CreateFlight\ICreateFlightVliew.cs" />
+    <Compile Include="Admin\AddFlight\AddFlightPresenter.cs" />
+    <Compile Include="Admin\AddFlight\FlightViewModel.cs" />
+    <Compile Include="Admin\AddFlight\ICreateFlightVliew.cs" />
     <Compile Include="CustomEventArgs\FlightEditCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\FlightSortCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\SearchCitiesForFlightCustomEventArgs.cs" />

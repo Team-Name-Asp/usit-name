@@ -2,7 +2,7 @@
 using TelerikColours.CustomEventArgs;
 using WebFormsMvp;
 
-namespace TelerikColours.Mvp.Admin.CreateFlight
+namespace TelerikColours.Mvp.Admin.AddFlight
 {
     public interface ICreateFlightVliew : IView<FlightViewModel>
     {
