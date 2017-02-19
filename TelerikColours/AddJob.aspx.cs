@@ -15,6 +15,8 @@ namespace TelerikColours
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.RadioButtonDefault.Checked = true;
+
             if (!Page.IsPostBack)
             {
                 this.InitCities?.Invoke(sender, e);
@@ -22,6 +24,11 @@ namespace TelerikColours
                 this.CityList.DataSource = this.Model.Cities;
                 this.CityList.DataBind();
             }
+        }
+
+        protected void UploadButton_Click(object sender, EventArgs e)
+        {
+
         }
 
         protected void Submit_Click(object sender, EventArgs e)
@@ -52,5 +59,6 @@ namespace TelerikColours
                             && dt <= maxDate
                             && dt >= minDate);
         }
+
     }
 }

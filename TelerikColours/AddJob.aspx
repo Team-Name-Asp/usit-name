@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddJob.aspx.cs" Inherits="TelerikColours.AddJob" MasterPageFile="~/AdminMaster.master" %>
 
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
+<%@ Register Src="~/Controls/UploadJobImage.ascx" TagPrefix="cc" TagName="UploadJobPicture" %>
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolderAdminArea" runat="server">
 
@@ -20,7 +21,7 @@
                             ValidationGroup="ValidationGroupRequired">Required field!</asp:RequiredFieldValidator>
                     </div>
                 </div>
-                 <div class="col-md-6">
+                <div class="col-md-6">
                     <div class="form-group">
                         <asp:Label AssociatedControlID="Price" Text="Price:" runat="server" />
                         <asp:TextBox ID="Price" CssClass="form-control" runat="server"></asp:TextBox>
@@ -74,6 +75,28 @@
                         <asp:DropDownList ID="CityList" runat="server"
                             DataTextField="Name"
                             DataValueField="Id" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <asp:RadioButton ID="RadioButtonDefault" runat="server" GroupName="FileUpload" />
+                            <asp:Label Text="Use default image:" AssociatedControlID="RadioButtonDefault" runat="server" />
+                            <div class="row">
+                                <img src="/Images/job-default.jpg" width="200" height="100" style="border-radius: 8px;" alt="default job image" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <asp:RadioButton ID="RadioButtonCustom" runat="server" GroupName="FileUpload" />
+                                <asp:Label Text="Upload your image:" AssociatedControlID="RadioButtonCustom" runat="server" />
+                            </div>
+                            <cc:UploadJobPicture runat="server" />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -250,6 +250,7 @@
     <Content Include="Content\bootstrap-original.min.css" />
     <Content Include="AddFlight.aspx" />
     <Content Include="Controls\FlightTemplate.ascx" />
+    <Content Include="Controls\UploadJobImage.ascx" />
     <Content Include="EditFlights.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -763,6 +764,13 @@
     <Compile Include="Controls\FlightTemplate.ascx.designer.cs">
       <DependentUpon>FlightTemplate.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UploadJobImage.ascx.cs">
+      <DependentUpon>UploadJobImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UploadJobImage.ascx.designer.cs">
+      <DependentUpon>UploadJobImage.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -842,6 +850,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

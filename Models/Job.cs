@@ -22,7 +22,6 @@ namespace Models
             this.EndDate = endDate;
             this.Wage = wage;
             this.CompanyName = companyName;
-            this.Price = price;
         }
 
         [Key]
@@ -62,5 +61,6 @@ namespace Models
         public int CityId { get; set; }
 
         public virtual City City { get; set; }
+
     }
 }

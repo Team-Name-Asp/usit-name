@@ -112,6 +112,24 @@ namespace TelerikColours {
         protected global::System.Web.UI.WebControls.DropDownList CityList;
         
         /// <summary>
+        /// RadioButtonDefault control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonDefault;
+        
+        /// <summary>
+        /// RadioButtonCustom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonCustom;
+        
+        /// <summary>
         /// Submit control.
         /// </summary>
         /// <remarks>

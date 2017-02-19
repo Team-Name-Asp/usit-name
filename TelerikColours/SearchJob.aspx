@@ -46,7 +46,7 @@
 
                         </div>
                         <div class="col-md-8">
-                            <img src="http://sfdhr.org/sites/default/files/Job-Seekers.jpg" alt="Job" style="width: 300px; height: 150px; border-radius: 4px;" />
+                            <img src="/Images/job-default.jpg" alt="Job" style="width: 300px; height: 150px; border-radius: 4px;" />
                         </div>
 
                     </div>
