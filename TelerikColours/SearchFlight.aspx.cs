@@ -21,7 +21,7 @@ namespace TelerikColours
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
                 this.InitCountries?.Invoke(sender, e);
 
@@ -69,7 +69,6 @@ namespace TelerikColours
             this.LabelTotalPrice.InnerText = "Total Price";
 
             Session["TicketOffer"] = this.Model.Flights;
-            Session["PassangerCount"] = this.Count.Text;
         }
 
         protected void CityFromList_SelectedIndexChanged(object sender, EventArgs e)

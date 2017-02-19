@@ -1,17 +1,20 @@
-﻿using Models;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Models;
 using System;
 using System.Data.Entity;
 using TelerikColours.Data.Contracts;
 
 namespace TelerikColours.Data
 {
-    public class TelerikColoursDbContext : DbContext, IDbContext
+    public class TelerikColoursDbContext : IdentityDbContext<ApplicationUser>, IDbContext
     {
         public TelerikColoursDbContext()
             : base("TelerikColoursDatabase")
         {
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<TelerikColoursDbContext>());
         }
+
+        ///  public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         public virtual DbSet<Airport> Airports { get; set; }
 
@@ -24,6 +27,13 @@ namespace TelerikColours.Data
         public virtual DbSet<Flight> Flights { get; set; }
 
         public virtual DbSet<Job> Jobs { get; set; }
+
+        public virtual DbSet<Ticket> Tickets { get; set; }
+
+        public static TelerikColoursDbContext Create()
+        {
+            return new TelerikColoursDbContext();
+        }
 
         public new void SaveChanges()
         {

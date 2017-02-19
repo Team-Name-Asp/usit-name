@@ -1,12 +1,12 @@
 ﻿using System;
 using TelerikColours.CustomEventArgs;
-using TelerikColours.Mvp.Admin.CreateFlight;
+using TelerikColours.Mvp.Admin.AddFlight;
 using WebFormsMvp;
 using WebFormsMvp.Web;
 
 namespace TelerikColours
 {
-    [PresenterBinding(typeof(CreateFlightPresenter))]
+    [PresenterBinding(typeof(AddFlightPresenter))]
     public partial class AddFlight : MvpPage<FlightViewModel>, ICreateFlightVliew 
     {
         public event EventHandler<CreateFlightCustomEventArgs> CreateFlight;

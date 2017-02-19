@@ -44,7 +44,6 @@ namespace TelerikColours.Mvp.Admin.AddAirport
 
         private void View_InitCountries(object sender, EventArgs e)
         {
-          
             this.View.Model.Countries = this.locationService.GetAllCountries();
         }
     }

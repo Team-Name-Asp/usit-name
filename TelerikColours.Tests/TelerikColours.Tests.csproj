@@ -44,6 +44,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
     <Reference Include="Moq, Version=4.5.30.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
@@ -66,15 +74,34 @@
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="WebFormsMvp, Version=1.4.5.0, Culture=neutral, PublicKeyToken=537f18701145dff0" />
+    <Reference Include="WebFormsMvp, Version=1.4.5.0, Culture=neutral, PublicKeyToken=537f18701145dff0, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebFormsMvp.1.4.5.0\lib\WebFormsMvp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presenters\AddAirlinePresenterTests\ConstructorShould.cs" />
-    <Compile Include="Presenters\AddAirlinePresenterTests\ViewSubmitAddAirlineShould.cs" />
-    <Compile Include="Presenters\EditFlightPresenterTests\ConstructorShould.cs" />
-    <Compile Include="Presenters\EditFlightPresenterTests\ViewCommitChangesShould.cs" />
-    <Compile Include="Presenters\EditFlightPresenterTests\ViewInitFlightsShould.cs" />
-    <Compile Include="Presenters\EditFlightPresenterTests\VIewUpdateFlightShould.cs" />
+    <Compile Include="Presenters\Admin\AddAirlinePresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\Admin\AddAirlinePresenterTests\ViewSubmitAddAirlineShould.cs" />
+    <Compile Include="Presenters\Admin\AddAirportPresenterTests\Constructor_Should.cs" />
+    <Compile Include="Presenters\Admin\AddAirportPresenterTests\View_AddAIrport_Should.cs" />
+    <Compile Include="Presenters\Admin\AddAirportPresenterTests\View_InitCities_Should.cs" />
+    <Compile Include="Presenters\Admin\AddAirportPresenterTests\View_InitCountries_Should.cs" />
+    <Compile Include="Presenters\Admin\AddCityPresenterTests\Constructor_Should.cs" />
+    <Compile Include="Presenters\Admin\AddCityPresenterTests\View_InitCountries_Should.cs" />
+    <Compile Include="Presenters\Admin\AddCityPresenterTests\View_SubmitAddCity_Should.cs" />
+    <Compile Include="Presenters\Admin\AddCountryPresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\Admin\AddCountryPresenterTests\View_SubmitCountry_Should.cs" />
+    <Compile Include="Presenters\Admin\AddFlightPresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\Admin\AddFlightPresenterTests\View_CreateFlight_Should.cs" />
+    <Compile Include="Presenters\Admin\AddFlightPresenterTests\View_GetAllAirportsTo_Should.cs" />
+    <Compile Include="Presenters\Admin\AddFlightPresenterTests\View_GetAllAirpotsFrom_Should.cs" />
+    <Compile Include="Presenters\Admin\AddFlightPresenterTests\View_GetAllCitiesFrom_Should.cs" />
+    <Compile Include="Presenters\Admin\AddFlightPresenterTests\VIew_GetAllCitiesTo_Should.cs" />
+    <Compile Include="Presenters\Admin\AddFlightPresenterTests\View_InitialLoad_Should.cs" />
+    <Compile Include="Presenters\Admin\EditFlightPresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewCommitChangesShould.cs" />
+    <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewInitFlightsShould.cs" />
+    <Compile Include="Presenters\Admin\EditFlightPresenterTests\VIewUpdateFlightShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\ConstructorShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitAirportArivalShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitAirportDepartureShould.cs" />
@@ -82,6 +109,7 @@
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCitiesToShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCountriesShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitSubmitShould.cs" />
+    <Compile Include="Presenters\TickertDetailsPresenterTests\View_BuyTIcket_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\ConstructorShould.cs" />
     <Compile Include="Services\AirlineServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\AirlineServiceTests\GetAllAirportsInCityShould.cs" />
@@ -95,6 +123,7 @@
     <Compile Include="Services\FactoryServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\FlightServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\FlightServiceTests\FliterFlightsShould.cs" />
+    <Compile Include="Services\FlightServiceTests\GetCheapestFlights_Should.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightForUpdateShould.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightsShould.cs" />
     <Compile Include="Services\FlightServiceTests\SaveUpdatedFlightShould.cs" />
@@ -104,6 +133,8 @@
     <Compile Include="Services\LocationServiceTests\GetAllCitiesShould.cs" />
     <Compile Include="Services\LocationServiceTests\GetAllCountriesShoud.cs" />
     <Compile Include="Services\LocationServiceTests\GetCitiesInCountryShoud.cs" />
+    <Compile Include="Services\UserServiceTests\BuyTicket_Should.cs" />
+    <Compile Include="Services\UserServiceTests\Constructor_Should.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

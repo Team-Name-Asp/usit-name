@@ -2,7 +2,7 @@
 
 namespace TelerikColours.Mvp.CustomEventArgs
 {
-    public class SearchFlightCustomEventArgs: EventArgs
+    public class SearchFlightCustomEventArgs : EventArgs
     {
         public SearchFlightCustomEventArgs(int departureAirportId, int arrivalAirportId, DateTime dateOfDeparture, int passangersCount)
         {
@@ -11,6 +11,7 @@ namespace TelerikColours.Mvp.CustomEventArgs
             this.DateOfDeparture = dateOfDeparture;
             this.PassangersCount = passangersCount;
         }
+
         public int DepartureAirportId { get; set; }
 
         public int ArivalAirportId { get; set; }

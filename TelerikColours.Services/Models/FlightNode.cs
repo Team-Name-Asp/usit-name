@@ -15,6 +15,5 @@ namespace TelerikColours.Services.Models
         public DateTime ArrivalDate { get; set; }
 
         public decimal Price { get; set; }
-
     }
 }

@@ -38,7 +38,6 @@ namespace TelerikColours.Mvp.Admin.AddCity
         private void View_InitCountries(object sender, EventArgs e)
         {
            this.View.Model.Countries =  this.locationService.GetAllCountries();
-            
         }
     }
 }

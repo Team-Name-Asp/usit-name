@@ -1,7 +1,7 @@
 ﻿using Models;
 using System.Collections.Generic;
 
-namespace TelerikColours.Mvp.Admin.CreateFlight
+namespace TelerikColours.Mvp.Admin.AddFlight
 {
     public class FlightViewModel
     {

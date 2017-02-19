@@ -32,7 +32,6 @@ namespace Repositories
             get { return this.DbSet; }
         }
 
-
         public T GetById(object id)
         {
             return this.DbSet.Find(id);
@@ -106,7 +105,6 @@ namespace Repositories
             }
             catch (Exception e)
             {
-
                 throw;
             }
 
@@ -125,5 +123,6 @@ namespace Repositories
 
             return entry;
         }
+
     }
 }

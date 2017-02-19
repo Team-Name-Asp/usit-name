@@ -85,7 +85,7 @@
                 </div>
 
                 <div>
-                    <span>Passangers count: </span>
+                    <span>Needed available seats: </span>
                     <asp:TextBox ID="Count" runat="server"
                         TextMode="Number"
                         CssClass="form-control" />

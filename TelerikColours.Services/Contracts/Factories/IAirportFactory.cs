@@ -11,6 +11,8 @@ namespace TelerikColours.Services.Contracts.Factories
         Flight CreateFlight(int airlineId, int airportArrivalId, int airportDepartureId, DateTime arrivalDate, DateTime departureDate, decimal price, int availableSeats);
 
         Airline CreateAirline(string name);
+
+        Ticket CreateTicket(int flightId, string applicationUserId, DateTime boughtDate);
     }
 }
 
