@@ -13,19 +13,33 @@ namespace TelerikColours
         public event EventHandler InitCities;
         public event EventHandler<AddJobCustomEventArgs> SubmitAddJob;
 
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!Page.IsPostBack)
             {
+                this.RadioButtonDefault.Checked = true;
+
                 this.InitCities?.Invoke(sender, e);
 
                 this.CityList.DataSource = this.Model.Cities;
-                this.CityList.DataBind();
+                //this.CityList.DataBind();
             }
+        }
+
+        protected void UploadButton_Click(object sender, EventArgs e)
+        {
+
         }
 
         protected void Submit_Click(object sender, EventArgs e)
         {
+            var imagePath = "/Images/job-default.jpg";
+            if (RadioButtonCustom.Checked == true)
+            {
+                imagePath = this.UploadJobPicture.HiddenInputValue;
+            }
             this.Page.Validate("ValidationGroupRequired");
             int cityId = int.Parse(this.CityList.SelectedValue);
             string jobTitle = this.JobTitle.Text;
@@ -52,5 +66,6 @@ namespace TelerikColours
                             && dt <= maxDate
                             && dt >= minDate);
         }
+
     }
 }

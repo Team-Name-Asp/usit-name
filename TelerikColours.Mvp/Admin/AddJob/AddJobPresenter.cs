@@ -42,7 +42,6 @@ namespace TelerikColours.Mvp.Admin.AddJob
         private void View_InitCities(object sender, EventArgs e)
         {
             this.View.Model.Cities = this.locationService.GetAllCities();
-
         }
     }
 }

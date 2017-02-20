@@ -250,6 +250,7 @@
     <Content Include="Content\bootstrap-original.min.css" />
     <Content Include="AddFlight.aspx" />
     <Content Include="DetailFlight.aspx" />
+    <Content Include="Controls\UploadJobImage.ascx" />
     <Content Include="EditFlights.aspx" />
     <Content Include="FlightList.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -262,6 +263,9 @@
     </Content>
     <Content Include="AdminMaster.master" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\job-default.jpg" />
+    <Content Include="Images\wing.jpg" />
+    <Content Include="JobDetails.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\CHANGES.html" />
@@ -759,6 +763,13 @@
     <Compile Include="AddFlight.aspx.designer.cs">
       <DependentUpon>AddFlight.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UploadJobImage.ascx.cs">
+      <DependentUpon>UploadJobImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UploadJobImage.ascx.designer.cs">
+      <DependentUpon>UploadJobImage.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -796,6 +807,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobDetails.aspx.cs">
+      <DependentUpon>JobDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobDetails.aspx.designer.cs">
+      <DependentUpon>JobDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Profile.aspx.cs">
@@ -866,7 +884,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

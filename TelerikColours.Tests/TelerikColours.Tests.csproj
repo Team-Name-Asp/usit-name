@@ -98,6 +98,9 @@
     <Compile Include="Presenters\Admin\AddFlightPresenterTests\View_GetAllCitiesFrom_Should.cs" />
     <Compile Include="Presenters\Admin\AddFlightPresenterTests\VIew_GetAllCitiesTo_Should.cs" />
     <Compile Include="Presenters\Admin\AddFlightPresenterTests\View_InitialLoad_Should.cs" />
+    <Compile Include="Presenters\Admin\AddJobPresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\Admin\AddJobPresenterTests\View_InitCities_Should.cs" />
+    <Compile Include="Presenters\Admin\AddJobPresenterTests\View_SubmitAddJob_Should.cs" />
     <Compile Include="Presenters\Admin\EditFlightPresenterTests\ConstructorShould.cs" />
     <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewCommitChangesShould.cs" />
     <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewInitFlightsShould.cs" />
@@ -112,6 +115,8 @@
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCitiesToShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCountriesShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitSubmitShould.cs" />
+    <Compile Include="Presenters\SearchJobPresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\SearchJobPresenterTests\View_InitSubmit_Should.cs" />
     <Compile Include="Presenters\TickertDetailsPresenterTests\View_BuyTIcket_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\Constructor_Should.cs" />
     <Compile Include="Repositories\Mocks\Dummy.cs" />

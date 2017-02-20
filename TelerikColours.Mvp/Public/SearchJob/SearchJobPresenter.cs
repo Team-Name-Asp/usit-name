@@ -18,7 +18,7 @@ namespace TelerikColours.Mvp.Public.SearchJob
         {
             if (jobService == null)
             {
-                throw new NullReferenceException("JobService");
+                throw new NullReferenceException("IJobService");
             }
 
             this.jobService = jobService;
@@ -26,7 +26,7 @@ namespace TelerikColours.Mvp.Public.SearchJob
             this.View.InitSubmit += View_InitSubmit;
         }
 
-        private void View_InitSubmit(object sender, SearchJobCustomEventArgs e)
+        public void View_InitSubmit(object sender, SearchJobCustomEventArgs e)
         {
             var foundJobs = this.jobService.GetAllJobsFromByTerm(e.SearchedTerm);
 
