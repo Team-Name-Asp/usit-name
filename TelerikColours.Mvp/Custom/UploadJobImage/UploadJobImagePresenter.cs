@@ -24,7 +24,9 @@ namespace TelerikColours.Mvp.Custom.UploadJobImage
 
             try
             {
-                if (uploadedFile.ContentType == "image/jpeg")
+                if (uploadedFile.ContentType == "image/jpeg" 
+                    || uploadedFile.ContentType == "image/jpg"
+                    || uploadedFile.ContentType == "image/png")
                 {
                     if (uploadedFile.ContentLength < 102400)
                     {
@@ -33,6 +35,7 @@ namespace TelerikColours.Mvp.Custom.UploadJobImage
                             // string filename = Path.GetFileName(uploadedFile.FileName);
                             uploadedFile.SaveAs(Server.MapPath(path) + fileName);
                             this.View.Model.SuccessMessage = "Upload status: File uploaded!";
+                            this.View.Model.FilePath = path;
                         }
                         catch (Exception ex)
                         {

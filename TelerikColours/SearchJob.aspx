@@ -35,6 +35,10 @@
                     <div class="well" style="float: left; margin-left: 50px; margin-top: 10px; width: 500px;">
                         <div class="col-md-4">
                             <h3><%# Item.JobTitle %></h3>
+                            <p>
+                                <asp:HyperLink runat="server" ID="DetailedJobLInk" Text="Click" NavigateUrl='<%# string.Format("/JobDetails.aspx?id={0}", Item.Id) %>' />
+                                for more details.
+                            </p>
                             Wage:
                             <asp:Label ID="Label5" runat="server" Text='<%# Item.Wage %>' /></p>
                         

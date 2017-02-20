@@ -262,7 +262,9 @@
     </Content>
     <Content Include="AdminMaster.master" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\job-default.jpg" />
     <Content Include="Images\wing.jpg" />
+    <Content Include="JobDetails.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="Scripts\ckeditor\adapters\jquery.js" />
     <Content Include="Scripts\ckeditor\CHANGES.html" />
@@ -795,6 +797,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobDetails.aspx.cs">
+      <DependentUpon>JobDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobDetails.aspx.designer.cs">
+      <DependentUpon>JobDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Profile.aspx.cs">

@@ -22,6 +22,7 @@ namespace Models
             this.EndDate = endDate;
             this.Wage = wage;
             this.CompanyName = companyName;
+            this.Price = price;
         }
 
         [Key]

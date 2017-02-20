@@ -12,7 +12,7 @@ namespace Models.Constants
         public const int JobTitleMaxLength = 50;
 
         public const int JobDescriptionMinLength = 10;
-        public const int JobDescriptionMaxLength = 1000;
+        public const int JobDescriptionMaxLength = 100000;
 
         public const int CompanyMinLength = 2;
         public const int CompanyMaxLength = 100;

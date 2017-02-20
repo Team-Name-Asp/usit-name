@@ -74,7 +74,10 @@
                         <asp:Label AssociatedControlID="CityList" Text="City:" runat="server" />
                         <asp:DropDownList ID="CityList" runat="server"
                             DataTextField="Name"
-                            DataValueField="Id" />
+                            DataValueField="Id"
+                             AppendDataBoundItems="true" >
+                            <asp:ListItem Selected="True" Text="Select City"/>
+                        </asp:DropDownList>
                     </div>
                 </div>
             </div>
@@ -95,7 +98,7 @@
                                 <asp:RadioButton ID="RadioButtonCustom" runat="server" GroupName="FileUpload" />
                                 <asp:Label Text="Upload your image:" AssociatedControlID="RadioButtonCustom" runat="server" />
                             </div>
-                            <cc:UploadJobPicture runat="server" />
+                            <cc:UploadJobPicture ID="UploadJobPicture" runat="server" />
                         </div>
                     </div>
                 </div>

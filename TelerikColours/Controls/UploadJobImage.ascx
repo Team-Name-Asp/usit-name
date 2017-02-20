@@ -15,6 +15,7 @@
                 <asp:Label runat="server" ID="StatusLabel" Text="Upload status: " />
             </div>
         </div>
+        <asp:HiddenField ID="HiddenField" runat="server" />
     </ContentTemplate>
     <Triggers>
         <asp:PostBackTrigger ControlID="UploadButton" />

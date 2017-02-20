@@ -130,6 +130,15 @@ namespace TelerikColours {
         protected global::System.Web.UI.WebControls.RadioButton RadioButtonCustom;
         
         /// <summary>
+        /// UploadJobPicture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::TelerikColours.Controls.UploadJobImage UploadJobPicture;
+        
+        /// <summary>
         /// Submit control.
         /// </summary>
         /// <remarks>
