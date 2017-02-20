@@ -40,7 +40,6 @@ namespace TelerikColours.Tests.Repositories.EfRepositoryTests
 
         //    mockedDbContext.Setup(c => c.Set<Dummy>()).Returns(dbSetMock);
         //    // Act
-
         //}
     }
 }

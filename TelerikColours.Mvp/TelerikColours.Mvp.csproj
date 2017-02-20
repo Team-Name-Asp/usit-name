@@ -55,6 +55,12 @@
     <Compile Include="Admin\EditFlight\EditFlightPresenter.cs" />
     <Compile Include="Admin\EditFlight\EditFlightViewModel.cs" />
     <Compile Include="Admin\EditFlight\IEditFlightView.cs" />
+    <Compile Include="Admin\FlightDetails\IFlightView.cs" />
+    <Compile Include="Admin\FlightDetails\FlightDetailsPresenter.cs" />
+    <Compile Include="Admin\FlightDetails\FlightDetailsViewModel.cs" />
+    <Compile Include="Admin\TicketSales\ITIcketsSalesView.cs" />
+    <Compile Include="Admin\TicketSales\TicketSalesPresenter.cs" />
+    <Compile Include="Admin\TicketSales\TicketSalesViewModel.cs" />
     <Compile Include="CustomEventArgs\AddAirlineCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\AddAirportCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\AddCityCustomEventArgs.cs" />
@@ -72,11 +78,13 @@
     <Compile Include="Admin\AddFlight\AddFlightPresenter.cs" />
     <Compile Include="Admin\AddFlight\FlightViewModel.cs" />
     <Compile Include="Admin\AddFlight\ICreateFlightVliew.cs" />
+    <Compile Include="CustomEventArgs\DetailsFlightCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\FlightEditCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\FlightSortCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\SearchCitiesForFlightCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\SearchFlightCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\SearchJobCustomEventArgs.cs" />
+    <Compile Include="CustomEventArgs\TicketSalesCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\UserCustomEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public\Home\HomePresenter.cs" />

@@ -7,7 +7,6 @@ using TelerikColours.Services.Contracts;
 using TelerikColours.Services.Contracts.Factories;
 using TelerikColours.Services.Models;
 using TelerikColours.Services.Utils;
-using System.Data.Entity;
 
 namespace TelerikColours.Services
 {

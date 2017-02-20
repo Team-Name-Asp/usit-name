@@ -31,6 +31,7 @@ namespace Models
         [Required]
         public decimal Price { get; set; }
 
+
         [Required]
         public int AvailableSeats { get; set; }
 
