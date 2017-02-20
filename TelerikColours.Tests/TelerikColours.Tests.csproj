@@ -112,6 +112,8 @@
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCitiesToShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCountriesShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitSubmitShould.cs" />
+    <Compile Include="Presenters\SearchJobPresenterTests\ConstructorShould.cs" />
+    <Compile Include="Presenters\SearchJobPresenterTests\View_InitSubmit_Should.cs" />
     <Compile Include="Presenters\TickertDetailsPresenterTests\View_BuyTIcket_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\ConstructorShould.cs" />
     <Compile Include="Services\AirlineServiceTests\ConstructorShould.cs" />
