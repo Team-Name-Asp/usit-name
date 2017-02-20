@@ -102,6 +102,9 @@
     <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewCommitChangesShould.cs" />
     <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewInitFlightsShould.cs" />
     <Compile Include="Presenters\Admin\EditFlightPresenterTests\VIewUpdateFlightShould.cs" />
+    <Compile Include="Presenters\Public\ProfilePresenterTests\Constructor_Should.cs" />
+    <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitFlightHistory_Should.cs" />
+    <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitUpcommingFlights_Should.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\ConstructorShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitAirportArivalShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitAirportDepartureShould.cs" />
@@ -110,7 +113,9 @@
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitCountriesShould.cs" />
     <Compile Include="Presenters\SearchFlightPresenterTests\View_InitSubmitShould.cs" />
     <Compile Include="Presenters\TickertDetailsPresenterTests\View_BuyTIcket_Should.cs" />
-    <Compile Include="Repositories\EfRepositoryTests\ConstructorShould.cs" />
+    <Compile Include="Repositories\EfRepositoryTests\Constructor_Should.cs" />
+    <Compile Include="Repositories\Mocks\Dummy.cs" />
+    <Compile Include="Repositories\Mocks\QueryableDbSetMock.cs" />
     <Compile Include="Services\AirlineServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\AirlineServiceTests\GetAllAirportsInCityShould.cs" />
     <Compile Include="Services\AirportServiceTests\ConstructorShould.cs" />
@@ -135,8 +140,9 @@
     <Compile Include="Services\LocationServiceTests\GetCitiesInCountryShoud.cs" />
     <Compile Include="Services\UserServiceTests\BuyTicket_Should.cs" />
     <Compile Include="Services\UserServiceTests\Constructor_Should.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\UserServiceTests\GetFlightHistory_Should.cs" />
+    <Compile Include="Services\UserServiceTests\GetUpcommingFlights_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

@@ -77,10 +77,14 @@
     <Compile Include="CustomEventArgs\SearchCitiesForFlightCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\SearchFlightCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\SearchJobCustomEventArgs.cs" />
+    <Compile Include="CustomEventArgs\UserCustomEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Public\Home\HomePresenter.cs" />
     <Compile Include="Public\Home\HomeViewModel.cs" />
     <Compile Include="Public\Home\IHomeView.cs" />
+    <Compile Include="Public\Profile\IProfileView.cs" />
+    <Compile Include="Public\Profile\ProfileViewModel.cs" />
+    <Compile Include="Public\Profile\ProfilePresenter.cs" />
     <Compile Include="Public\SearchFlight\ISearchFlightView.cs" />
     <Compile Include="Public\SearchFlight\SearchFlightPresenter.cs" />
     <Compile Include="Public\SearchFlight\SearchFlightViewModel.cs" />

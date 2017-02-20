@@ -18,7 +18,7 @@ namespace Models
 
         public decimal Money { get; set; }
 
-        public ICollection<Ticket> Tickets
+        public virtual ICollection<Ticket> Tickets
         {
             get
             {

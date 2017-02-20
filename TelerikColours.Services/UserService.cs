@@ -7,6 +7,7 @@ using TelerikColours.Services.Contracts;
 using TelerikColours.Services.Contracts.Factories;
 using TelerikColours.Services.Models;
 using TelerikColours.Services.Utils;
+using System.Data.Entity;
 
 namespace TelerikColours.Services
 {
@@ -71,6 +72,8 @@ namespace TelerikColours.Services
                     var flightToReduceSeat = this.flightRepository.GetById(flight.Id);
                     flightToReduceSeat.AvailableSeats -= 1;
 
+                    user.Tickets.Add(ticket);
+
                     this.ticketRepository.Add(ticket);
                     this.flightRepository.Update(flightToReduceSeat);
                 }
@@ -81,6 +84,21 @@ namespace TelerikColours.Services
             }
 
             return true;
+        }
+
+        public IEnumerable<Flight> GetFlightHistory(string userId)
+        {
+            var flights = this.userRepository.All.Where(u => u.Id == userId).SelectMany(p => p.Tickets).Select(t => t.Flight).OrderBy(t => t.DateOfDeparture);
+
+            return flights.ToList();
+        }
+
+        public IEnumerable<Flight> GetUpcommingFlights(string userId)
+        {
+            var currentDate = TimeProvider.Current.GetDate();
+            var flights = this.userRepository.All.Where(u => u.Id == userId).SelectMany(p => p.Tickets).Select(t => t.Flight).Where(f => f.DateOfDeparture > currentDate).OrderBy(t => t.DateOfDeparture);
+
+            return flights.ToList();
         }
     }
 }

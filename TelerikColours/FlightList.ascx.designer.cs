@@ -10,42 +10,33 @@
 namespace TelerikColours {
     
     
-    public partial class Profile {
+    public partial class FlightHistory {
         
         /// <summary>
-        /// FlightHistory control.
+        /// UpdatePanelCountriesTowns control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton FlightHistory;
+        protected global::System.Web.UI.UpdatePanel UpdatePanelCountriesTowns;
         
         /// <summary>
-        /// UpFlights control.
+        /// Type control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton UpFlights;
+        protected global::System.Web.UI.WebControls.Label Type;
         
         /// <summary>
-        /// TheFlightHistory control.
+        /// Flights control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::TelerikColours.FlightHistory TheFlightHistory;
-        
-        /// <summary>
-        /// UpcommingFlights control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::TelerikColours.FlightHistory UpcommingFlights;
+        protected global::System.Web.UI.WebControls.ListView Flights;
     }
 }

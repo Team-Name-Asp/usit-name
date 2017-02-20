@@ -250,7 +250,9 @@
     <Content Include="Content\bootstrap-original.min.css" />
     <Content Include="AddFlight.aspx" />
     <Content Include="Controls\FlightTemplate.ascx" />
+    <Content Include="DetailFlight.aspx" />
     <Content Include="EditFlights.aspx" />
+    <Content Include="FlightList.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -770,12 +772,26 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DetailFlight.aspx.cs">
+      <DependentUpon>DetailFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailFlight.aspx.designer.cs">
+      <DependentUpon>DetailFlight.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditFlights.aspx.cs">
       <DependentUpon>EditFlights.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EditFlights.aspx.designer.cs">
       <DependentUpon>EditFlights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlightList.ascx.cs">
+      <DependentUpon>FlightList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlightList.ascx.designer.cs">
+      <DependentUpon>FlightList.ascx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

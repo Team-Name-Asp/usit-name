@@ -22,6 +22,7 @@ namespace Models
 
         public virtual Flight Flight { get; set; }
 
+
         public Guid ApplicationUserId { get; set; }
 
         public virtual ApplicationUser ApplicationUser { get; set; }
