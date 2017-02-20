@@ -190,5 +190,12 @@ namespace TelerikColours.Services
 
             return flights.ToList();
         }
+
+        public Flight GetDetailedFlight(int id)
+        {
+            var flight = this.flightRepository.GetById(id);
+
+            return flight;
+        }
     }
 }

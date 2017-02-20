@@ -91,7 +91,7 @@ namespace TelerikColours.Tests.Services.UserServiceTests
             flightRepositoryStub.Setup(x => x.GetById(It.IsAny<int>())).Returns(mockedFlight.Object);
 
             var appUser = new ApplicationUser();
-
+            
             appUser.Money = userMoney;
 
             userRepositoryStub.Setup(x => x.GetById(It.IsAny<string>())).Returns(appUser);

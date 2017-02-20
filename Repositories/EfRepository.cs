@@ -25,7 +25,7 @@ namespace Repositories
             this.DbSet = this.context.Set<T>();
         }
 
-        protected IDbSet<T> DbSet { get; set; }
+        protected DbSet<T> DbSet { get; set; }
 
         public IQueryable<T> All
         {

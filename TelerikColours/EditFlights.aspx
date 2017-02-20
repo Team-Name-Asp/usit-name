@@ -21,8 +21,6 @@
         ItemType="Models.Flight"
         DataKeyNames="Id"
         OnPageIndexChanging="Flights_PageIndexChanging"
-        OnSelectedIndexChanged ="Flights_SelectedIndexChanged"
-        OnRowDataBound ="Flights_RowDataBound"
          AllowPaging="true" PageSize ="2"
          UpdateMethod ="Flights_UpdateItem"
          SelectMethod ="Flights_GetData">

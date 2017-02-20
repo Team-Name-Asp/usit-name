@@ -249,8 +249,10 @@
     <Content Include="Content\bootstrap-original.css" />
     <Content Include="Content\bootstrap-original.min.css" />
     <Content Include="AddFlight.aspx" />
+    <Content Include="DetailFlight.aspx" />
     <Content Include="Controls\UploadJobImage.ascx" />
     <Content Include="EditFlights.aspx" />
+    <Content Include="FlightList.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -556,7 +558,9 @@
     <Content Include="SearchFlight.aspx" />
     <Content Include="SearchJob.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="Statistics.ascx" />
     <Content Include="TicketDetails.aspx" />
+    <Content Include="TicketSales.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -773,12 +777,26 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DetailFlight.aspx.cs">
+      <DependentUpon>DetailFlight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetailFlight.aspx.designer.cs">
+      <DependentUpon>DetailFlight.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditFlights.aspx.cs">
       <DependentUpon>EditFlights.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EditFlights.aspx.designer.cs">
       <DependentUpon>EditFlights.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FlightList.ascx.cs">
+      <DependentUpon>FlightList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlightList.ascx.designer.cs">
+      <DependentUpon>FlightList.ascx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -835,12 +853,26 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Statistics.ascx.cs">
+      <DependentUpon>Statistics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statistics.ascx.designer.cs">
+      <DependentUpon>Statistics.ascx</DependentUpon>
+    </Compile>
     <Compile Include="TicketDetails.aspx.cs">
       <DependentUpon>TicketDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TicketDetails.aspx.designer.cs">
       <DependentUpon>TicketDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TicketSales.aspx.cs">
+      <DependentUpon>TicketSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TicketSales.aspx.designer.cs">
+      <DependentUpon>TicketSales.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

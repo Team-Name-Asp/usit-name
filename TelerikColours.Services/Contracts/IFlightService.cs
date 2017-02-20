@@ -17,5 +17,7 @@ namespace TelerikColours.Services.Contracts
         void SaveUpdatedFlight();
 
         IEnumerable<Flight> GetCheapestFlights();
+
+        Flight GetDetailedFlight(int id);
     }
 }

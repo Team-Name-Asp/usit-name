@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Models
@@ -6,8 +8,10 @@ namespace Models
     public class Flight
     {
 
+        private ICollection<Ticket> tickets;
         public Flight()
         {
+            this.tickets = new HashSet<Ticket>();
         }
 
         public Flight(int airlineId, int airportArrivalId, int airportDepartureId, DateTime arrivalDate, DateTime departureDate, decimal price, int availableSeats)
@@ -20,13 +24,13 @@ namespace Models
             this.DateOfDeparture = departureDate;
             this.AvailableSeats = availableSeats;
             this.Price = price;
-
         }
         [Key]
         public int Id { get; set; }
 
         [Required]
         public decimal Price { get; set; }
+
 
         [Required]
         public int AvailableSeats { get; set; }
@@ -40,7 +44,6 @@ namespace Models
         [Required]
         public int AirlineId { get; set; }
 
-        [Required]
         public virtual Airline Airline { get; set; }
 
         [Required]
@@ -52,5 +55,17 @@ namespace Models
         public int AirportArrivalId { get; set; }
 
         public virtual Airport AirportArrival { get; set; }
+
+        public virtual ICollection<Ticket> Tickets
+        {
+            get
+            {
+                return this.tickets;
+            }
+            set
+            {
+                this.tickets = value;
+            }
+        }
     }
 }

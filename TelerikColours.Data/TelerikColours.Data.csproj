@@ -58,9 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IDbContext.cs" />
-    <Compile Include="Migrations\201702131147586_Initial.cs" />
-    <Compile Include="Migrations\201702131147586_Initial.Designer.cs">
-      <DependentUpon>201702131147586_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201702191525449_Inital.cs" />
+    <Compile Include="Migrations\201702191525449_Inital.Designer.cs">
+      <DependentUpon>201702191525449_Inital.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="TelerikColoursDbContext.cs" />
@@ -79,8 +79,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702131147586_Initial.resx">
-      <DependentUpon>201702131147586_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201702191525449_Inital.resx">
+      <DependentUpon>201702191525449_Inital.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

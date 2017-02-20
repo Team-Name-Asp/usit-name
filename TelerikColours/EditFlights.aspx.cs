@@ -17,11 +17,6 @@ namespace TelerikColours
         public event EventHandler<FlightEditCustomEventArgs> UpdateFlight;
         public event EventHandler CommitChanges;
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         protected void Flights_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             var filterType = this.FilterExpression.SelectedValue;
@@ -31,16 +26,6 @@ namespace TelerikColours
             this.Flights.PageIndex = e.NewPageIndex;
            
             this.Flights_GetData();
-        }
-
-        protected void Flights_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-
-        }
-
-        protected void Flights_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         protected void Submit_Click(object sender, EventArgs e)
