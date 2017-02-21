@@ -145,9 +145,9 @@ namespace TelerikColours.Services
             }
         }
 
-        public void AddJob(string jobTitle, string jobDescription, int slots, DateTime startDate, DateTime endDate, decimal wage, string companyName, decimal price, int cityId)
+        public void AddJob(string jobTitle, string jobDescription, int slots, DateTime startDate, DateTime endDate, decimal wage, string companyName, decimal price, int cityId, string imagePath)
         {
-            Job job = this.jobFactory.CreateJob(cityId, jobTitle, jobDescription, slots, startDate, endDate, wage, companyName, price);
+            Job job = this.jobFactory.CreateJob(cityId, jobTitle, jobDescription, slots, startDate, endDate, wage, companyName, price, imagePath);
 
             using (this.unitOfWork)
             {

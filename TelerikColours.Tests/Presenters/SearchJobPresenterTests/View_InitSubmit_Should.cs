@@ -28,8 +28,8 @@ namespace TelerikColours.Tests.Presenters.SearchJobPresenterTests
 
             var expectedCollection = new List<Job>()
             {
-                new Job(1, "Job Title 1", "Job Description 1", 1, new DateTime(2020, 10, 10), new DateTime(2020, 11, 10), 10m, "Company Name 1" , 10.00m),
-                new Job(1, "Job Title 2", "Job Description 2", 2, new DateTime(2020, 12, 10), new DateTime(2021, 01, 10), 10m, "Company Name 2" , 20.00m),
+                new Job(1, "Job Title 1", "Job Description 1", 1, new DateTime(2020, 10, 10), new DateTime(2020, 11, 10), 10m, "Company Name 1" , 10.00m, "/imagePath"),
+                new Job(1, "Job Title 2", "Job Description 2", 2, new DateTime(2020, 12, 10), new DateTime(2021, 01, 10), 10m, "Company Name 2" , 20.00m, "/imagePath"),
             };
 
             jobServiceMock.Setup(j => j.GetAllJobsFromByTerm("job")).Returns(expectedCollection.AsQueryable);

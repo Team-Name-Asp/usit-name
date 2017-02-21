@@ -32,10 +32,11 @@ namespace TelerikColours.Tests.Presenters.Admin.AddJobPresenterTests
             var wage = 10m;
             var companyName = "Company Name 1";
             var price = 10m;
+            var imagePath = "c:/unit-test";
 
             var addJobCustomEventArgs = new AddJobCustomEventArgs(cityId, jobTitle,
                 jobDescription, slots, startDate,
-                endDate, wage, companyName, price);
+                endDate, wage, companyName, price, imagePath);
 
 
             // Act
@@ -51,7 +52,8 @@ namespace TelerikColours.Tests.Presenters.Admin.AddJobPresenterTests
                 It.Is<decimal>(dailyWage => dailyWage == wage),
                 It.Is<string>(hiringCompanyName => hiringCompanyName == companyName),
                 It.Is<decimal>(jobPrice => jobPrice == price),
-                It.Is<int>(id => id == cityId)
+                It.Is<int>(id => id == cityId),
+                It.Is<string>(imgPath => imgPath == imagePath)
                 ), Times.Once);
         }
 

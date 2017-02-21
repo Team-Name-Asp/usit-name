@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Models.Constants;
 
@@ -6,12 +7,15 @@ namespace Models
 {
     public class Job
     {
+        private ICollection<ApplicationUser> users;
+
         public Job()
         {
+            this.users = new HashSet<ApplicationUser>();
         }
 
         public Job(int cityId, string jobTitle, string jobDescription, int slots,
-            DateTime startDate, DateTime endDate, decimal wage, string companyName, decimal price)
+            DateTime startDate, DateTime endDate, decimal wage, string companyName, decimal price, string imagePath)
             : base()
         {
             this.CityId = cityId;
@@ -23,6 +27,7 @@ namespace Models
             this.Wage = wage;
             this.CompanyName = companyName;
             this.Price = price;
+            this.ImagePath = imagePath;
         }
 
         [Key]
@@ -62,6 +67,21 @@ namespace Models
         public int CityId { get; set; }
 
         public virtual City City { get; set; }
+
+        [Required]
+        public string ImagePath { get; set; }
+
+        public virtual ICollection<ApplicationUser> Users
+        {
+            get
+            {
+                return this.users;
+            }
+            set
+            {
+                this.users = value;
+            }
+        }
 
     }
 }

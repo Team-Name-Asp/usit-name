@@ -9,6 +9,8 @@ namespace TelerikColours.Services.Contracts
     {
         bool BuyTicket(string userId, IEnumerable<PresentationFlight> flights);
 
+        void AttachJobToUser(string userId, Job job);
+
         IEnumerable<Flight> GetFlightHistory(string userId);
 
         IEnumerable<Flight> GetUpcommingFlights(string userId);
