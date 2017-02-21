@@ -19,7 +19,9 @@
                             DataValueField="Id"
                             AutoPostBack="true"
                             CssClass="form-control"
-                            OnSelectedIndexChanged="CountryFromList_SelectedIndexChanged">
+                            OnSelectedIndexChanged="CountryFromList_SelectedIndexChanged"
+                            AppendDataBoundItems="true">
+                            <asp:ListItem Selected="true" Text="Select Country" />
                         </asp:DropDownList>
 
                         <label>Departure city</label>
@@ -28,7 +30,9 @@
                             DataValueField="Id"
                             AutoPostBack="true"
                             CssClass="form-control"
-                            OnSelectedIndexChanged="CityFromList_SelectedIndexChanged">
+                            OnSelectedIndexChanged="CityFromList_SelectedIndexChanged"
+                            AppendDataBoundItems="true">
+                            <asp:ListItem Selected="true" Text="Select City" />
                         </asp:DropDownList>
                         <br />
                         <label>Departure airport</label>
@@ -52,7 +56,9 @@
                             DataValueField="Id"
                             AutoPostBack="true"
                             CssClass="form-control"
-                            OnSelectedIndexChanged="CountryToList_SelectedIndexChanged">
+                            OnSelectedIndexChanged="CountryToList_SelectedIndexChanged"
+                            AppendDataBoundItems="true">
+                            <asp:ListItem Selected="true" Text="Select Country" />
                         </asp:DropDownList>
 
                         <br />
@@ -63,7 +69,9 @@
                             DataValueField="Id"
                             AutoPostBack="true"
                             CssClass="form-control"
-                            OnSelectedIndexChanged="CityToList_SelectedIndexChanged">
+                            OnSelectedIndexChanged="CityToList_SelectedIndexChanged"
+                            AppendDataBoundItems="true">
+                            <asp:ListItem Selected="true" Text="Select City" />
                         </asp:DropDownList>
 
                         <br />
@@ -106,7 +114,7 @@
             <asp:ListView runat="server" ID="Flights" ItemType="TelerikColours.Services.Models.PresentationFlight">
                 <LayoutTemplate>
                     <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                    <asp:HyperLink runat="server" NavigateUrl ="~/TicketDetails.aspx" CssClass="button btn-success">More Info</asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="~/TicketDetails.aspx" CssClass="button btn-success">More Info</asp:HyperLink>
                 </LayoutTemplate>
 
                 <ItemTemplate>
