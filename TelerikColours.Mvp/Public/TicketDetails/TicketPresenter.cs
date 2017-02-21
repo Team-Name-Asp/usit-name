@@ -24,7 +24,7 @@ namespace TelerikColours.Mvp.Public.TicketDetails
 
         private void View_BuyTicket(object sender, BuyTicketCustomEventArgs e)
         {
-            this.userService.BuyTicket(e.UserId, e.Flights);
+            this.View.Model.HasEnoughMoney = this.userService.BuyTicket(e.UserId, e.Flights);
         }
     }
 }

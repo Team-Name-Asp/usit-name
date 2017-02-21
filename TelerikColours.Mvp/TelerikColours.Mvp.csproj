@@ -106,6 +106,7 @@
     <Compile Include="Public\SearchJob\SearchJobPresenter.cs" />
     <Compile Include="Public\SearchJob\SearchJobViewModel.cs" />
     <Compile Include="Public\TicketDetails\ITicketDetailsView.cs" />
+    <Compile Include="Public\TicketDetails\TicketDetailsViewModel.cs" />
     <Compile Include="Public\TicketDetails\TicketPresenter.cs" />
   </ItemGroup>
   <ItemGroup>

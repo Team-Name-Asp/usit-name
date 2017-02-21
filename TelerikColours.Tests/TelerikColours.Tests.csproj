@@ -125,7 +125,11 @@
     <Compile Include="Presenters\Public\SearchJobPresenterTests\View_InitSubmit_Should.cs" />
     <Compile Include="Presenters\Public\TickertDetailsPresenterTests\Constructor_Should.cs" />
     <Compile Include="Presenters\Public\TickertDetailsPresenterTests\View_BuyTIcket_Should.cs" />
+    <Compile Include="Repositories\EfRepositoryTests\All_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\Constructor_Should.cs" />
+    <Compile Include="Repositories\Mocks\dbSetMock.cs" />
+    <Compile Include="Repositories\EfRepositoryTests\GetAll_Should.cs" />
+    <Compile Include="Repositories\EfRepositoryTests\GetById_Should.cs" />
     <Compile Include="Repositories\Mocks\Dummy.cs" />
     <Compile Include="Repositories\Mocks\EfRepositoryMock.cs" />
     <Compile Include="Repositories\Mocks\QueryableDbSetMock.cs" />
@@ -144,6 +148,7 @@
     <Compile Include="Services\FlightServiceTests\GetCheapestFlights_Should.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightForUpdateShould.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightsShould.cs" />
+    <Compile Include="Services\FlightServiceTests\GetFlights_Should.cs" />
     <Compile Include="Services\FlightServiceTests\SaveUpdatedFlightShould.cs" />
     <Compile Include="Services\JobServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\JobServiceTests\GetAllJobsShould.cs" />
@@ -151,6 +156,8 @@
     <Compile Include="Services\LocationServiceTests\GetAllCitiesShould.cs" />
     <Compile Include="Services\LocationServiceTests\GetAllCountriesShoud.cs" />
     <Compile Include="Services\LocationServiceTests\GetCitiesInCountryShoud.cs" />
+    <Compile Include="Services\TicketServiceTests\Constructor_Should.cs" />
+    <Compile Include="Services\TicketServiceTests\GetTicketSales_Should.cs" />
     <Compile Include="Services\UserServiceTests\BuyTicket_Should.cs" />
     <Compile Include="Services\UserServiceTests\Constructor_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

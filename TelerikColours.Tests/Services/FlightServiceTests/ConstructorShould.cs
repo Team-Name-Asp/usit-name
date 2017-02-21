@@ -79,5 +79,19 @@ namespace TelerikColours.Tests.Services.FlightServiceTests
 
             StringAssert.Contains(expectedMessage, exception.Message);
         }
+
+        [Test]
+        public void NotThrow_WhenEverythingIsPassed()
+        {
+            // Arrange
+            var flightRepositoryStub = new Mock<IRepository<Flight>>();
+            var airportRepositoryStub = new Mock<IRepository<Airport>>();
+            var cityRepositoryStub = new Mock<IRepository<City>>();
+            var mappedFactory = new Mock<IMappedClassFactory>();
+            var unitOfWorkStub = new Mock<IUnitOfWork>();
+
+            // Act and Assert
+            Assert.DoesNotThrow(() => new FlightService(airportRepositoryStub.Object, unitOfWorkStub.Object, flightRepositoryStub.Object, cityRepositoryStub.Object, mappedFactory.Object));
+        }
     }
 }

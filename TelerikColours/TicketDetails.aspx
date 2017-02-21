@@ -21,7 +21,7 @@
             <asp:ListView runat="server" ID="Flights" ItemType="TelerikColours.Services.Models.PresentationFlight">
                 <LayoutTemplate>
                     <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
-                    <asp:Button ID="Buy" runat="server" CssClass="button btn-success" Text="Buy" OnClick ="Information_Click" />
+
                 </LayoutTemplate>
 
                 <ItemTemplate>
@@ -50,6 +50,10 @@
                     <h1>Separate</h1>
                 </ItemSeparatorTemplate>
             </asp:ListView>
+            <asp:Button ID="Buy" runat="server" CssClass="button btn-success" Text="Buy" OnClick="Information_Click" />
+            <asp:Label runat="server" ID="Success" />
+
         </div>
     </div>
+
 </asp:Content>

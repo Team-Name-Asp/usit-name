@@ -20,6 +20,8 @@ namespace TelerikColours.Tests.Presenters.TickertDetailsPresenterTests
             var userServiceMock = new Mock<IUserService>();
             var presenter = new TicketPresenter(ticketDetailsViewStub.Object, userServiceMock.Object);
 
+            ticketDetailsViewStub.Setup(t => t.Model).Returns(new TicketDetailsViewModel());
+
             IEnumerable<PresentationFlight> expectedFlights = new List<PresentationFlight>()
             {
                 new PresentationFlight(It.IsAny<int>(), It.IsAny<string>(),It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<DateTime>(), It.IsAny<DateTime>(), It.IsAny<decimal>(), It.IsAny<string>()),
