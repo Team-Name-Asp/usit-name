@@ -7,7 +7,7 @@
             <ItemTemplate>
                 <header>
                     <p class="job-image">
-                        <img src="/Images/cc.jpg" alt="Job Image" style="width: 600px; height: 150px;" />
+                        <img src="<%#: Item.ImagePath %>" alt="Job Image" style="width: 600px; height: 300px;" />
                     </p>
                     <h1 class="job-title"><%#: Item.JobTitle %></h1>
                 </header>
@@ -36,14 +36,12 @@
                     </div>
                 </div>
                 <div>
-                    <asp:Button Text="Apply" runat="server" CssClass="btn btn-success" />
+                    <asp:Button Text="Enroll" runat="server" CssClass="btn btn-success" OnClick="EnrollJob_Click"/>
                 </div>
             </ItemTemplate>
         </asp:FormView>
-
         <div class="back-link">
             <a href="/SearchJob">Back to job search</a>
         </div>
-
     </div>
 </asp:Content>

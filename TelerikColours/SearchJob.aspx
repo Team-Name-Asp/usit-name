@@ -50,7 +50,7 @@
 
                         </div>
                         <div class="col-md-8">
-                            <img src="/Images/job-default.jpg" alt="Job" style="width: 300px; height: 150px; border-radius: 4px;" />
+                            <img src="<%#: Item.ImagePath %>" alt="Job" style="width: 300px; height: 150px; border-radius: 4px;" />
                         </div>
 
                     </div>
