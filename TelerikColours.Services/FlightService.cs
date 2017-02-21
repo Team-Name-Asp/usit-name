@@ -183,7 +183,7 @@ namespace TelerikColours.Services
 
         public IEnumerable<Flight> GetCheapestFlights()
         {
-            var take = 10;
+            var take = 3;
             var date = TimeProvider.Current.GetDate();
 
             var flights = this.flightRepository.All.Where(x => x.DateOfDeparture > date && x.AvailableSeats > 0).OrderBy(x => x.Price).Take(take);

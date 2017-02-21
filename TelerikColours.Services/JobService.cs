@@ -5,6 +5,7 @@ using System.Data.Entity;
 using Models;
 using Repositories.Contracts;
 using TelerikColours.Services.Contracts;
+using TelerikColours.Services.Utils;
 
 namespace TelerikColours.Services
 {
@@ -34,6 +35,15 @@ namespace TelerikColours.Services
         public Job GetJobById(int id)
         {
             return this.jobRepository.GetById(id);
+        }
+
+        public IEnumerable<Job> GetSoonestJobs()
+        {
+            var take = 3;
+            var date = TimeProvider.Current.GetDate();
+
+            var jobs = this.jobRepository.All.Where(j => j.StartDate > date && j.Slots > 0).OrderBy(j => j.StartDate).Take(take);
+            return jobs.ToList();
         }
     }
 }

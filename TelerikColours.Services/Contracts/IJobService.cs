@@ -14,5 +14,7 @@ namespace TelerikColours.Services.Contracts
         IQueryable<Job> GetAllJobsFromByTerm(string searchedTerm);
 
         Job GetJobById(int id);
+
+        IEnumerable<Job> GetSoonestJobs();
     }
 }
