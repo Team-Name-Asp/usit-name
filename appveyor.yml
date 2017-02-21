@@ -10,6 +10,6 @@ environment:
      secure: v79xg67u4yt6Mn1Vle5tqKUi3RdVBAR1NAMtmRwCkEb/4NxixW8kR0fIUhXv/aGe
      
 after_test: 
-  - WhenItsDone\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"TelerikColours\packages\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe" -targetargs:"/domain:single  TelerikColours.Tests\bin\Debug WhenItsDone\Tests\LibTests\WhenItsDone.Services.Tests\bin\Debug\WhenItsDone.Services.Tests.dll" -output:coverage.xml
+  - TelerikColours\packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[*]*" -target:"TelerikColours\packages\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe" -targetargs:"/domain:single  TelerikColours.Tests\bin\Debug\TelerikColours.Tests.dll" -output:coverage.xml
 
-  - WhenItsDone\packages\coveralls.io.1.3.4\tools\coveralls.net.exe --opencover coverage.xml
+  - TelerikColours\packages\coveralls.io.1.3.4\tools\coveralls.net.exe --opencover coverage.xml
