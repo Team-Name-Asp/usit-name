@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddAirport.aspx.cs" Inherits="TelerikColours.AddAirport" MasterPageFile ="~/AdminMaster.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddAirport.aspx.cs" Inherits="TelerikColours.AddAirport" MasterPageFile="~/AdminMaster.master" %>
 
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolderAdminArea" runat="server">
@@ -10,7 +10,10 @@
             DataValueField="Id"
             AutoPostBack="true"
             CssClass="form-control"
-            OnSelectedIndexChanged ="CountryList_SelectedIndexChanged"/>
+            OnSelectedIndexChanged="CountryList_SelectedIndexChanged"
+            AppendDataBoundItems="true">
+            <asp:ListItem Selected="true" Text="Select Country" />
+        </asp:DropDownList>
 
         <label>City</label>
         <asp:DropDownList ID="CityList" runat="server"

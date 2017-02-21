@@ -28,7 +28,7 @@ namespace TelerikColours.Mvp.Custom.UploadJobImage
                     || uploadedFile.ContentType == "image/jpg"
                     || uploadedFile.ContentType == "image/png")
                 {
-                    if (uploadedFile.ContentLength < 102400)
+                    if (uploadedFile.ContentLength < (102400 * 2))
                     {
                         try
                         {
