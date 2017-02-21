@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using Models;
+using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -17,18 +18,27 @@ namespace TelerikColours.Tests.Presenters.Admin.AddCityPresenterTests
         public void SetCountriesOnViewModelWithExpectedCollection_WhenInitCountriesEventIsRaised()
         {
             // Arrange
-            var viewStub = new Mock<IAddCityView>();
+            var viewMock = new Mock<IAddCityView>();
             var factoryServiceStub = new Mock<IFactoryService>();
             var locationServiceStub = new Mock<ILocationService>();
-            var presenter = new AddCityPresenter(viewStub.Object, factoryServiceStub.Object, locationServiceStub.Object);
+            var presenter = new AddCityPresenter(viewMock.Object, factoryServiceStub.Object, locationServiceStub.Object);
 
+            viewMock.Setup(v => v.Model).Returns(new AddCityViewModel());
+
+            var expectedCountries = new List<Country>()
+            {
+                new Country(),
+                new Country()
+            };
+
+            locationServiceStub.Setup(l => l.GetAllCountries()).Returns(expectedCountries);
             // Act
-            
+            viewMock.Raise(v => v.InitCountries += null, EventArgs.Empty);
+
             // Assert
+
+            CollectionAssert.AreEqual(expectedCountries, viewMock.Object.Model.Countries);
         }
     }
 }
-//private void View_InitCountries(object sender, EventArgs e)
-//{
-//    this.View.Model.Countries = this.locationService.GetAllCountries();
-//}
+

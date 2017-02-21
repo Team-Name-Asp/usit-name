@@ -29,18 +29,22 @@ namespace TelerikColours.Tests.Repositories.EfRepositoryTests
             Assert.DoesNotThrow(() => new EfRepository<Dummy>(mockedDbContext.Object));
         }
 
-        //[Test]
-        //public void SetDbSet_WithCorrectSet()
-        //{
-        //    // Arrange
-        //    var mockedDbContext = new Mock<IDbContext>();
-        //    var efRepository = new EfRepository<Dummy>(mockedDbContext.Object);
+        [Test]
+        public void SetDbSet_WithCorrectSet()
+        {
+            // Arrange
+            var mockedDbContext = new Mock<IDbContext>();
 
-        //    var dbSetMock = QueryableDbSetMock.GetQueryableMockDbSet<Dummy>(new List<Dummy>() { new Dummy() });
+            var dbSetMock = QueryableDbSetMock.GetQueryableMockDbSet<Dummy>(new List<Dummy>() { new Dummy() });
 
-        //    mockedDbContext.Setup(c => c.Set<Dummy>()).Returns(dbSetMock);
-        //    // Act
-        //}
+            mockedDbContext.Setup(c => c.Set<Dummy>()).Returns(dbSetMock);
+
+            // Act
+            var efRepositoryMock = new EfRepositoryMock<Dummy>(mockedDbContext.Object);
+
+            // Assert
+            Assert.AreEqual(dbSetMock, efRepositoryMock.MyDbSet);
+        }
     }
 }
 

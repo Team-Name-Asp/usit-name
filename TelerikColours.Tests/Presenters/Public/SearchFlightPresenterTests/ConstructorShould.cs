@@ -4,7 +4,7 @@ using System;
 using TelerikColours.Mvp.Public.SearchFlight;
 using TelerikColours.Services.Contracts;
 
-namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
+namespace TelerikColours.Tests.Presenters.Public.SearchFlightPresenterTests
 {
     [TestFixture]
     public class ConstructorShould

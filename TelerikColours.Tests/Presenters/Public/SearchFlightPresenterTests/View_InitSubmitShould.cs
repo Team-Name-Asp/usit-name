@@ -7,7 +7,7 @@ using TelerikColours.Mvp.Public.SearchFlight;
 using TelerikColours.Services.Contracts;
 using TelerikColours.Services.Models;
 
-namespace TelerikColours.Tests.Presenters.SearchFlightPresenterTests
+namespace TelerikColours.Tests.Presenters.Public.SearchFlightPresenterTests
 {
     [TestFixture]
     public class View_InitSubmitShould

@@ -11,7 +11,7 @@ namespace TelerikColours
 
     [PresenterBinding(typeof(TicketSalesPresenter))]
 
-    public partial class TicketSales : MvpPage<TicketSalesViewModel>, ITIcketsSalesView
+    public partial class TicketSales : MvpPage<TicketSalesViewModel>, ITicketsSalesView
     {
         public event EventHandler<TicketSalesCustomEventArgs> InitTickets;
 

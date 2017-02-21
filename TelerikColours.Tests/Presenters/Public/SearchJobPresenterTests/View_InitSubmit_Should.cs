@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Models;
 using Moq;
 using NUnit.Framework;
@@ -10,7 +8,7 @@ using TelerikColours.Mvp.CustomEventArgs;
 using TelerikColours.Mvp.Public.SearchJob;
 using TelerikColours.Services.Contracts;
 
-namespace TelerikColours.Tests.Presenters.SearchJobPresenterTests
+namespace TelerikColours.Tests.Presenters.Public.SearchJobPresenterTests
 {
     [TestFixture]
     public class View_InitSubmit_Should

@@ -5,11 +5,11 @@ using WebFormsMvp;
 
 namespace TelerikColours.Mvp.Admin.TicketSales
 {
-    public class TicketSalesPresenter : Presenter<ITIcketsSalesView>
+    public class TicketSalesPresenter : Presenter<ITicketsSalesView>
     {
         private readonly ITicketService ticketService;
 
-        public TicketSalesPresenter(ITIcketsSalesView view, ITicketService ticketService)
+        public TicketSalesPresenter(ITicketsSalesView view, ITicketService ticketService)
             : base(view)
         {
             if(ticketService == null)

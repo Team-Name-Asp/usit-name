@@ -7,7 +7,7 @@ using Moq;
 using NUnit.Framework;
 using TelerikColours.Mvp.Public.SearchJob;
 
-namespace TelerikColours.Tests.Presenters.SearchJobPresenterTests
+namespace TelerikColours.Tests.Presenters.Public.SearchJobPresenterTests
 {
     [TestFixture]
     public class ConstructorShould

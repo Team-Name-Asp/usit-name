@@ -4,7 +4,7 @@ using WebFormsMvp;
 
 namespace TelerikColours.Mvp.Admin.TicketSales
 {
-    public interface ITIcketsSalesView: IView<TicketSalesViewModel>
+    public interface ITicketsSalesView: IView<TicketSalesViewModel>
     {
         event EventHandler<TicketSalesCustomEventArgs> InitTickets;
     }
