@@ -113,7 +113,9 @@
     <Compile Include="Presenters\Public\HomePresenterTests\View_InitialLoad_Should.cs" />
     <Compile Include="Presenters\Public\ProfilePresenterTests\Constructor_Should.cs" />
     <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitFlightHistory_Should.cs" />
+    <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitJobsHistory_Should.cs" />
     <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitUpcommingFlights_Should.cs" />
+    <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitUpcommingJobs_Should.cs" />
     <Compile Include="Presenters\Public\SearchFlightPresenterTests\ConstructorShould.cs" />
     <Compile Include="Presenters\Public\SearchFlightPresenterTests\View_InitAirportArivalShould.cs" />
     <Compile Include="Presenters\Public\SearchFlightPresenterTests\View_InitAirportDepartureShould.cs" />
