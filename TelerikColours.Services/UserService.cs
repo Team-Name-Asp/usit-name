@@ -110,5 +110,22 @@ namespace TelerikColours.Services
                 this.unitOfWork.Commit();
             }
         }
+
+        public IEnumerable<Job> GetUpcommingJobs(string userId)
+        {
+            var currentDate = TimeProvider.Current.GetDate();
+
+            var jobs = this.userRepository.All.Where(u => u.Id == userId).SelectMany(p => p.Jobs).Where(f => f.StartDate > currentDate).OrderBy(t => t.StartDate);
+
+
+            return jobs.ToList();
+        }
+
+        public IEnumerable<Job> GetJobsHistory(string userId)
+        {
+            var jobs = this.userRepository.All.Where(u => u.Id == userId).SelectMany(p => p.Jobs).OrderBy(t => t.StartDate);
+
+            return jobs.ToList();
+        }
     }
 }

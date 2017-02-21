@@ -252,6 +252,7 @@
     <Content Include="Content\bootstrap-original.css" />
     <Content Include="Content\bootstrap-original.min.css" />
     <Content Include="AddFlight.aspx" />
+    <Content Include="Controls\JobList.ascx" />
     <Content Include="DetailFlight.aspx" />
     <Content Include="Controls\UploadJobImage.ascx" />
     <Content Include="EditFlights.aspx" />
@@ -765,6 +766,13 @@
     </Compile>
     <Compile Include="AddFlight.aspx.designer.cs">
       <DependentUpon>AddFlight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JobList.ascx.cs">
+      <DependentUpon>JobList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JobList.ascx.designer.cs">
+      <DependentUpon>JobList.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\UploadJobImage.ascx.cs">
       <DependentUpon>UploadJobImage.ascx</DependentUpon>

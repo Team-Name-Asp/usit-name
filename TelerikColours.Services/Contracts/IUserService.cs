@@ -14,5 +14,10 @@ namespace TelerikColours.Services.Contracts
         IEnumerable<Flight> GetFlightHistory(string userId);
 
         IEnumerable<Flight> GetUpcommingFlights(string userId);
+
+        IEnumerable<Job> GetUpcommingJobs(string userId);
+
+        IEnumerable<Job> GetJobsHistory(string userId);
+
     }
 }

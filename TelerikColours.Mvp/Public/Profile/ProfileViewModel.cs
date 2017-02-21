@@ -1,6 +1,5 @@
 ﻿using Models;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace TelerikColours.Mvp.Public.Profile
 {
@@ -9,5 +8,9 @@ namespace TelerikColours.Mvp.Public.Profile
         public IEnumerable<Flight> FlightHistory { get; set; }
 
         public IEnumerable<Flight> UpcommingFlights { get; set; }
+
+        public IEnumerable<Job> JobsHistory { get; set; }
+
+        public IEnumerable<Job> UpcommingJobs { get; set; }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.UI.WebControls;
 
-namespace TelerikColours
+namespace TelerikColours.Controls
 {
-    public partial class FlightHistory : System.Web.UI.UserControl
+    public partial class JobList : System.Web.UI.UserControl
     {
         public string Heading
         {
@@ -19,19 +19,20 @@ namespace TelerikColours
             }
         }
 
-        private IEnumerable<Flight> flightList;
+        private IEnumerable<Job> jobList;
 
-        public IEnumerable<Flight> FlightList
+
+        public IEnumerable<Job> Jobs
         {
             set
             {
-                this.flightList = value;
-                this.Flights.DataSource = value.ToList();
-                this.Flights.DataBind();
+                this.jobList = value;
+                this.JobsLV.DataSource = value.ToList();
+                this.JobsLV.DataBind();
             }
             get
             {
-                return this.flightList;
+                return this.jobList;
             }
         }
     }

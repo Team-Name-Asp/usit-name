@@ -21,6 +21,18 @@ namespace TelerikColours.Mvp.Public.Profile
 
             this.View.InitFlightHistory += View_InitFlightHistory;
             this.View.InitUpcommingFlights += View_InitUpcommingFlights;
+            this.View.InitUpcommingJobs += View_InitUpcommingJobs;
+            this.View.InitJobsHistory += View_InitJobsHistory;
+        }
+
+        private void View_InitJobsHistory(object sender, UserCustomEventArgs e)
+        {
+            this.View.Model.JobsHistory = this.userService.GetJobsHistory(e.UserId);
+        }
+
+        private void View_InitUpcommingJobs(object sender, UserCustomEventArgs e)
+        {
+            this.View.Model.UpcommingJobs = this.userService.GetUpcommingJobs(e.UserId);
         }
 
         private void View_InitUpcommingFlights(object sender, UserCustomEventArgs e)

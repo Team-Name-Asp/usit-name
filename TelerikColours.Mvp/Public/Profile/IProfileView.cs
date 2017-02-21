@@ -8,5 +8,7 @@ namespace TelerikColours.Mvp.Public.Profile
     {
         event EventHandler<UserCustomEventArgs> InitFlightHistory;
         event EventHandler<UserCustomEventArgs> InitUpcommingFlights;
+        event EventHandler<UserCustomEventArgs> InitJobsHistory;
+        event EventHandler<UserCustomEventArgs> InitUpcommingJobs;
     }
 }

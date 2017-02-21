@@ -31,6 +31,24 @@ namespace TelerikColours {
         protected global::System.Web.UI.WebControls.LinkButton UpFlights;
         
         /// <summary>
+        /// TheJobHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton TheJobHistory;
+        
+        /// <summary>
+        /// UpJobs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton UpJobs;
+        
+        /// <summary>
         /// TheFlightHistory control.
         /// </summary>
         /// <remarks>
@@ -47,5 +65,23 @@ namespace TelerikColours {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::TelerikColours.FlightHistory UpcommingFlights;
+        
+        /// <summary>
+        /// JobHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::TelerikColours.Controls.JobList JobHistory;
+        
+        /// <summary>
+        /// UpcommingJobs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::TelerikColours.Controls.JobList UpcommingJobs;
     }
 }
