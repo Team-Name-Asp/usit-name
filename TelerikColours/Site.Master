@@ -14,7 +14,6 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <%--<link rel="stylesheet" href="Content/admin.css" type="text/css" />--%>
-
      <%--<link rel="stylesheet" href="Content/beauty/bootstrap-material-design.min.css" type="text/css" />
      <link rel="stylesheet" href="Content/beauty/ripples.min.css" type="text/css" />
       <script src="Content/ripples.min.js"></script>
@@ -64,7 +63,7 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
+                        <%--<li><a runat="server" href="~/About">About</a></li>--%>
                         <%--<li><a runat="server" href="~/Contact">Contact</a></li>--%>
                         <li><a runat="server" href="~/SearchFlight">SearchFlight</a></li>
                         <li><a runat="server" href="~/SearchJob">Search Job</a></li>

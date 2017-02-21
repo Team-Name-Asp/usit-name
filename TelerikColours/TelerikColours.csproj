@@ -220,7 +220,6 @@
     <Content Include="400.html" />
     <Content Include="404.html" />
     <Content Include="500.html" />
-    <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
     <Content Include="Account\Forgot.aspx" />
@@ -737,13 +736,6 @@
       <DependentUpon>AdminMaster.master</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\Factories\ICustomPresenterFactory.cs" />
     <Compile Include="App_Start\Factories\WebFormsMvcPresenterFactory.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
