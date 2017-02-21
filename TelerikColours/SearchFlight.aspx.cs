@@ -26,31 +26,47 @@ namespace TelerikColours
                 this.InitCountries?.Invoke(sender, e);
 
                 this.CountryFromList.DataSource = this.Model.CountriesFrom;
-                this.CountryFromList.DataBind();
+                //this.CountryFromList.DataBind();
 
 
                 this.CountryToList.DataSource = this.Model.CountriesTo;
-                this.CountryToList.DataBind();
+                //this.CountryToList.DataBind();
             }
         }
         protected void CountryFromList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var countryId = int.Parse(this.CountryFromList.SelectedValue);
+
+            int countryId = 0;
+
+            if (!int.TryParse(this.CountryFromList.SelectedValue, out countryId))
+            {
+                this.CityFromList.Items.Clear();
+                return;
+            }
+
+            //var countryId = int.Parse(this.CountryFromList.SelectedValue);
 
             this.InitCitiesFrom?.Invoke(sender, new CitiesCustomEventArgs(countryId));
             this.CityFromList.DataSource = this.Model.CitiesFrom;
-            this.CityFromList.DataBind();
+            //this.CityFromList.DataBind();
         }
 
 
         protected void CountryToList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var countryId = int.Parse(this.CountryToList.SelectedValue);
+            int countryId = 0;
+
+            if (!int.TryParse(this.CountryToList.SelectedValue, out countryId))
+            {
+                this.CityToList.Items.Clear();
+                return;
+            }
+            //var countryId = int.Parse(this.CountryToList.SelectedValue);
 
             this.InitCitiesTo?.Invoke(sender, new CitiesCustomEventArgs(countryId));
 
             this.CityToList.DataSource = this.Model.CitiesTo;
-            this.CityToList.DataBind();
+            //this.CityToList.DataBind();
         }
 
         protected void Submit_Click(object sender, EventArgs e)
@@ -73,20 +89,35 @@ namespace TelerikColours
 
         protected void CityFromList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int cityId = int.Parse(this.CityFromList.SelectedValue);
+            int cityId = 0;
+
+            if (!int.TryParse(this.CityFromList.SelectedValue, out cityId))
+            {
+                this.DepartureAirport.Items.Clear();
+                return;
+            }
+            //int cityId = int.Parse(this.CityFromList.SelectedValue);
             this.InitAirportDeparture?.Invoke(sender, new AirportsCustomEventArgs(cityId));
 
             this.DepartureAirport.DataSource = this.Model.AirportsDeparture;
-            this.DepartureAirport.DataBind();
+            //this.DepartureAirport.DataBind();
         }
 
         protected void CityToList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int cityId = int.Parse(this.CityToList.SelectedValue);
+            int cityId = 0;
+
+            if (!int.TryParse(this.CityToList.SelectedValue, out cityId))
+            {
+
+                this.ArivalAirport.Items.Clear();
+                return;
+            }
+            //int cityId = int.Parse(this.CityToList.SelectedValue);
             this.InitAirportArival?.Invoke(sender, new AirportsCustomEventArgs(cityId));
 
             this.ArivalAirport.DataSource = this.Model.AirportArival;
-            this.ArivalAirport.DataBind();
+            //this.ArivalAirport.DataBind();
         }
     }
 }

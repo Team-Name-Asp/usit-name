@@ -20,7 +20,9 @@ namespace TelerikColours.Tests.Presenters.Public.HomePresenterTests
             // Arrange
             var homeViewMock = new Mock<IHomeView>();
             var flightServiceStub = new Mock<IFlightService>();
-            var presenter = new HomePresenter(homeViewMock.Object, flightServiceStub.Object);
+            var jobServiceStub = new Mock<IJobService>();
+
+            var presenter = new HomePresenter(homeViewMock.Object, flightServiceStub.Object, jobServiceStub.Object);
 
             homeViewMock.Setup(v => v.Model).Returns(new HomeViewModel());
 
