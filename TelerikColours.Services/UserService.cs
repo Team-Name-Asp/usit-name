@@ -99,5 +99,16 @@ namespace TelerikColours.Services
 
             return flights.ToList();
         }
+
+        public void AttachJobToUser(string userId, Job job)
+        {
+            var currentUser = this.userRepository.GetById(userId);
+
+            using (this.unitOfWork)
+            {
+                currentUser.Jobs.Add(job);
+                this.unitOfWork.Commit();
+            }
+        }
     }
 }

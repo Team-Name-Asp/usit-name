@@ -22,12 +22,13 @@ namespace TelerikColours
                 this.InitCountries?.Invoke(sender, e);
 
                 this.CountryList.DataSource = this.Model.Countries;
-                this.CountryList.DataBind();
+                //this.CountryList.DataBind();
             }
         }
 
         protected void Submit_Click(object sender, EventArgs e)
         {
+
             int cityId = int.Parse(this.CityList.SelectedValue);
             string airportName = this.AirportName.Text;
 
@@ -36,7 +37,18 @@ namespace TelerikColours
 
         protected void CountryList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int countryId = int.Parse(this.CountryList.SelectedValue);
+            int countryId = 0;
+
+            if (!int.TryParse(this.CountryList.SelectedValue, out countryId))
+            {
+                //this.CityList.DataSource = null;
+                //this.CityList.DataBind();
+                //this.CityList.SelectedIndex = 0;
+                //this.CityList.Items[0].Text = null;
+                //this.CityList.Items[0].Value = null;
+                this.CityList.Items.Clear();
+                return;
+            }
 
             this.InitCities?.Invoke(sender, new CitiesCustomEventArgs(countryId));
 

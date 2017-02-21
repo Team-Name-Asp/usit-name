@@ -9,10 +9,12 @@ namespace Models
     public class ApplicationUser : IdentityUser
     {
         private ICollection<Ticket> tickets;
+        private ICollection<Job> jobs;
 
         public ApplicationUser()
         {
             this.tickets = new HashSet<Ticket>();
+            this.jobs = new HashSet<Job>();
             this.Money = 500;
         }
 
@@ -27,6 +29,18 @@ namespace Models
             set
             {
                 this.tickets = value;
+            }
+        }
+
+        public virtual ICollection<Job> Jobs
+        {
+            get
+            {
+                return this.jobs;
+            }
+            set
+            {
+                this.jobs = value;
             }
         }
 

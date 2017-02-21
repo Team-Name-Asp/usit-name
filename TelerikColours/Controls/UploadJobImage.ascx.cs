@@ -36,8 +36,8 @@ namespace TelerikColours.Controls
         protected void UploadButton_Click(object sender, EventArgs e)
         {
             //var fileName = this.FileUploadControl.PostedFile.FileName;
-            var fileName = Guid.NewGuid().ToString();
-            var imageLocation = "/Images/";
+            var fileName = Guid.NewGuid().ToString() + ".png";
+            var imageLocation = "/Images/" + fileName;
             var file = this.FileUploadControl.PostedFile;
 
             this.UploadImage?.Invoke(sender, new UploadJobImageCustomEventArgs(imageLocation, fileName, file));

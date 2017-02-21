@@ -13,7 +13,10 @@
                     DataValueField="Id"
                     AutoPostBack="true"
                     CssClass="form-control"
-                    OnSelectedIndexChanged ="CountryFromList_SelectedIndexChanged"></asp:DropDownList>
+                    OnSelectedIndexChanged ="CountryFromList_SelectedIndexChanged"
+                    AppendDataBoundItems="true">
+                    <asp:ListItem Selected="true" Text="Select Country" />
+                </asp:DropDownList>
 
                 <label>Departure city</label>
                 <asp:DropDownList ID="CityFromList" runat="server"
@@ -21,7 +24,9 @@
                     DataValueField="Id"
                     AutoPostBack="true"
                     CssClass="form-control"
-                    OnSelectedIndexChanged  ="CityFromList_SelectedIndexChanged">
+                    OnSelectedIndexChanged="CityFromList_SelectedIndexChanged"
+                    AppendDataBoundItems="true">
+                    <asp:ListItem Selected="true" Text="Select City" />
                 </asp:DropDownList>
 
                 <br />
@@ -29,7 +34,9 @@
                 <asp:DropDownList ID="AirportFromList" runat="server"
                     DataTextField="Name"
                     CssClass="form-control"
-                    DataValueField="Id">
+                    DataValueField="Id"
+                    AppendDataBoundItems="true">
+                    <asp:ListItem Selected="true" Text="Select Airport" />
                 </asp:DropDownList>
             </ContentTemplate>
         </asp:UpdatePanel>
@@ -44,7 +51,9 @@
                     DataValueField="Id"
                     AutoPostBack="true"
                     CssClass="form-control"
-                    OnSelectedIndexChanged  ="CountryToList_SelectedIndexChanged">
+                    OnSelectedIndexChanged  ="CountryToList_SelectedIndexChanged"
+                    AppendDataBoundItems="true">
+                    <asp:ListItem Selected="true" Text="Select Country" />
                 </asp:DropDownList>
 
                 <br />
@@ -55,7 +64,9 @@
                     DataValueField="Id"
                     AutoPostBack="true"
                     CssClass="form-control"
-                    OnSelectedIndexChanged  ="CityToList_SelectedIndexChanged">
+                    OnSelectedIndexChanged  ="CityToList_SelectedIndexChanged"
+                    AppendDataBoundItems="true">
+                    <asp:ListItem Selected="true" Text="Select City" />
                 </asp:DropDownList>
 
                 <br />
@@ -63,7 +74,9 @@
                 <asp:DropDownList ID="AirportToList" runat="server"
                     DataTextField="Name"
                     DataValueField="Id"
-                    CssClass="form-control">
+                    CssClass="form-control"
+                    AppendDataBoundItems="true">
+                    <asp:ListItem Selected="true" Text="Select Airport" />
                 </asp:DropDownList>
             </ContentTemplate>
         </asp:UpdatePanel>

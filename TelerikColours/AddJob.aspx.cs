@@ -53,7 +53,7 @@ namespace TelerikColours
 
 
             this.SubmitAddJob?.Invoke(sender, new AddJobCustomEventArgs(cityId, jobTitle, jobDescription, slots,
-                startDate, endDate, wage, companyName, price));
+                startDate, endDate, wage, companyName, price, imagePath));
         }
 
         protected void ValidateDateRange_ServerValidate(object source, ServerValidateEventArgs args)

@@ -6,7 +6,6 @@
         <asp:UpdatePanel ID="UpdatePanelCountriesTowns" UpdateMode="Conditional"
             runat="server" class="panel">
             <ContentTemplate>
-
                 <label>Country</label>
                 <asp:DropDownList ID="CountryList"
                     runat="server"
@@ -14,7 +13,10 @@
                     DataValueField="Id"
                     AutoPostBack="true"
                     CssClass="form-control"
-                    OnSelectedIndexChanged="CountryList_SelectedIndexChanged" />
+                    OnSelectedIndexChanged="CountryList_SelectedIndexChanged"
+                    AppendDataBoundItems="true">
+                    <asp:ListItem Selected="true" Text="Select Country" />
+                </asp:DropDownList>
 
                 <label>City</label>
                 <asp:DropDownList ID="CityList" runat="server"

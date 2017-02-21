@@ -30,5 +30,10 @@ namespace TelerikColours.Services
         {
             return this.jobRepository.All.Where(j => j.JobTitle.Contains(searchedTerm) || j.JobDescription.Contains(searchedTerm) || j.CompanyName.Contains(searchedTerm)).Include(j => j.City).OrderBy(j => j.JobTitle);
         }
+
+        public Job GetJobById(int id)
+        {
+            return this.jobRepository.GetById(id);
+        }
     }
 }

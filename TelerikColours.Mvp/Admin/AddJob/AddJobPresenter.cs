@@ -36,7 +36,7 @@ namespace TelerikColours.Mvp.Admin.AddJob
         private void View_SubmitAddJob(object sender, AddJobCustomEventArgs e)
         {
             this.factoryService.AddJob(e.JobTitle, e.JobDescription, e.Slots, e.StartDate,
-                e.EndDate, e.Wage, e.CompanyName, e.Price, e.CityId);
+                e.EndDate, e.Wage, e.CompanyName, e.Price, e.CityId, e.ImagePath);
         }
 
         private void View_InitCities(object sender, EventArgs e)

@@ -8,7 +8,7 @@ using WebFormsMvp.Web;
 namespace TelerikColours
 {
     [PresenterBinding(typeof(AddFlightPresenter))]
-    public partial class AddFlight : MvpPage<FlightViewModel>, ICreateFlightVliew 
+    public partial class AddFlight : MvpPage<FlightViewModel>, ICreateFlightVliew
     {
         public event EventHandler<CreateFlightCustomEventArgs> CreateFlight;
         public event EventHandler<AirportsCustomEventArgs> GetAllAirportsFrom;
@@ -16,8 +16,8 @@ namespace TelerikColours
         public event EventHandler<CitiesCustomEventArgs> GetAllCitiesFrom;
         public event EventHandler<CitiesCustomEventArgs> GetAllCitiesTo;
         public event EventHandler InitialLoad;
-        
- 
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -25,10 +25,10 @@ namespace TelerikColours
                 this.InitialLoad?.Invoke(sender, e);
 
                 this.CountryFromList.DataSource = this.Model.CountryFromList;
-                this.CountryFromList.DataBind();
+                //this.CountryFromList.DataBind();
 
                 this.CountryToList.DataSource = this.Model.CountryToList;
-                this.CountryToList.DataBind();
+                //this.CountryToList.DataBind();
 
                 this.AirlineList.DataSource = this.Model.AirlineList;
                 this.AirlineList.DataBind();
@@ -38,29 +38,52 @@ namespace TelerikColours
 
         protected void CityFromList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int cityId = int.Parse(this.CityFromList.SelectedValue);
+            int cityId = 0;
+
+            if (!int.TryParse(this.CityFromList.SelectedValue, out cityId))
+            {
+                this.AirportFromList.Items.Clear();
+                return;
+            }
+            //int cityId = int.Parse(this.CityFromList.SelectedValue);
             this.GetAllAirportsFrom?.Invoke(sender, new AirportsCustomEventArgs(cityId));
 
             this.AirportFromList.DataSource = this.Model.AirportFromList;
-            this.AirportFromList.DataBind();
+            //this.AirportFromList.DataBind();
         }
 
         protected void CountryToList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int countryId = int.Parse(this.CountryToList.SelectedValue);
+            int countryId = 0;
+
+            if (!int.TryParse(this.CountryToList.SelectedValue, out countryId))
+            {
+                this.CityToList.Items.Clear();
+                return;
+            }
+
+            //int countryId = int.Parse(this.CountryToList.SelectedValue);
             this.GetAllCitiesTo?.Invoke(sender, new CitiesCustomEventArgs(countryId));
 
             this.CityToList.DataSource = this.Model.CityToList;
-            this.CityToList.DataBind();
+            //this.CityToList.DataBind();
         }
 
         protected void CityToList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int cityId = int.Parse(this.CityToList.SelectedValue);
+            int cityId = 0;
+
+            if (!int.TryParse(this.CityToList.SelectedValue, out cityId))
+            {
+
+                this.AirportToList.Items.Clear();
+                return;
+            }
+            //int cityId = int.Parse(this.CityToList.SelectedValue);
             this.GetAllAirportsTo?.Invoke(sender, new AirportsCustomEventArgs(cityId));
 
             this.AirportToList.DataSource = this.Model.AirportToList;
-            this.AirportToList.DataBind();
+            //this.AirportToList.DataBind();
         }
 
         protected void Submit_Click(object sender, EventArgs e)
@@ -78,11 +101,18 @@ namespace TelerikColours
 
         protected void CountryFromList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int countryId = int.Parse(this.CountryFromList.SelectedValue);
+            int countryId = 0;
+
+            if (!int.TryParse(this.CountryFromList.SelectedValue, out countryId))
+            {
+                this.CityFromList.Items.Clear();
+                return;
+            }
+            //int countryId = int.Parse(this.CountryFromList.SelectedValue);
             this.GetAllCitiesFrom?.Invoke(sender, new CitiesCustomEventArgs(countryId));
 
             this.CityFromList.DataSource = this.Model.CityFromList;
-            this.CityFromList.DataBind();
+            //this.CityFromList.DataBind();
         }
     }
 }

@@ -1,0 +1,10 @@
+version: 1.0.{build}
+before_build:
+  - nuget restore
+build:
+  project: ./TelerikColours.sln
+  verbosity: minimal
+  
+environment:
+  COVERALLS_REPO_TOKEN:
+     secure: v79xg67u4yt6Mn1Vle5tqKUi3RdVBAR1NAMtmRwCkEb/4NxixW8kR0fIUhXv/aGe

@@ -81,6 +81,7 @@
     <Compile Include="Admin\AddFlight\FlightViewModel.cs" />
     <Compile Include="Admin\AddFlight\ICreateFlightVliew.cs" />
     <Compile Include="CustomEventArgs\DetailsFlightCustomEventArgs.cs" />
+    <Compile Include="CustomEventArgs\EnrollJobCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\FlightEditCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\FlightSortCustomEventArgs.cs" />
     <Compile Include="CustomEventArgs\SearchCitiesForFlightCustomEventArgs.cs" />
@@ -96,6 +97,10 @@
     <Compile Include="Public\Home\HomePresenter.cs" />
     <Compile Include="Public\Home\HomeViewModel.cs" />
     <Compile Include="Public\Home\IHomeView.cs" />
+    <Compile Include="CustomEventArgs\JobDetailsCustomEventArgs.cs" />
+    <Compile Include="Public\JobDetails\IJobDetailsView.cs" />
+    <Compile Include="Public\JobDetails\JobDetailsPresenter.cs" />
+    <Compile Include="Public\JobDetails\JobDetailsViewModel.cs" />
     <Compile Include="Public\Profile\IProfileView.cs" />
     <Compile Include="Public\Profile\ProfileViewModel.cs" />
     <Compile Include="Public\Profile\ProfilePresenter.cs" />
