@@ -6,7 +6,7 @@ using TelerikColours.Mvp.CustomEventArgs;
 using WebFormsMvp;
 using WebFormsMvp.Web;
 
-namespace TelerikColours
+namespace TelerikColours.Admin
 {
     [PresenterBinding(typeof(AddAirportPresenter))]
     public partial class AddAirport : MvpPage<AddAirportViewModel>, IAddAirportView

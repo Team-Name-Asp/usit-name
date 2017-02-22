@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditFlights.aspx.cs" Inherits="TelerikColours.EditFlights" MasterPageFile="~/AdminMaster.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditFlights.aspx.cs" Inherits="TelerikColours.Admin.EditFlights" MasterPageFile="~/AdminMaster.master" %>
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolderAdminArea" runat="server">
     <div class="form-group">

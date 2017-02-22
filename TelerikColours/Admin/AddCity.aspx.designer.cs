@@ -7,28 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TelerikColours {
+namespace TelerikColours.Admin {
     
     
-    public partial class EditFlights {
+    public partial class AddCity {
         
         /// <summary>
-        /// FilterExpression control.
+        /// CountriesList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox FilterExpression;
+        protected global::System.Web.UI.WebControls.DropDownList CountriesList;
         
         /// <summary>
-        /// FilterText control.
+        /// CityName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FilterText;
+        protected global::System.Web.UI.WebControls.TextBox CityName;
         
         /// <summary>
         /// Submit control.
@@ -38,14 +38,5 @@ namespace TelerikColours {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Submit;
-        
-        /// <summary>
-        /// Flights control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView Flights;
     }
 }

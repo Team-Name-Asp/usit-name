@@ -5,7 +5,7 @@ using TelerikColours.Mvp.Admin.AddCity;
 using WebFormsMvp;
 using WebFormsMvp.Web;
 
-namespace TelerikColours
+namespace TelerikColours.Admin
 {
     [PresenterBinding(typeof(AddCityPresenter))]
     public partial class AddCity : MvpPage<AddCityViewModel>, IAddCityView

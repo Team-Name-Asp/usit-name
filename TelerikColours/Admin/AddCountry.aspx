@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddCountry.aspx.cs" Inherits="TelerikColours.AddCountry" MasterPageFile ="~/AdminMaster.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddCountry.aspx.cs" Inherits="TelerikColours.Admin.AddCountry" MasterPageFile ="~/AdminMaster.master" %>
 
 
 

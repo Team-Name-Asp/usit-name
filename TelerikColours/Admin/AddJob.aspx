@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddJob.aspx.cs" Inherits="TelerikColours.AddJob" MasterPageFile="~/AdminMaster.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddJob.aspx.cs" Inherits="TelerikColours.Admin.AddJob" MasterPageFile ="~/AdminMaster.master" %>
 
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 <%@ Register Src="~/Controls/UploadJobImage.ascx" TagPrefix="cc" TagName="UploadJobPicture" %>

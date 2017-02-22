@@ -235,12 +235,12 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="AddAirline.aspx" />
-    <Content Include="AddAirport.aspx" />
-    <Content Include="AddCity.aspx" />
-    <Content Include="AddCountry.aspx" />
-    <Content Include="AddJob.aspx" />
-    <Content Include="AdminLanding.aspx" />
+    <Content Include="Admin\AddAirline.aspx" />
+    <Content Include="Admin\AddAirport.aspx" />
+    <Content Include="Admin\AddCity.aspx" />
+    <Content Include="Admin\AddCountry.aspx" />
+    <Content Include="Admin\AddJob.aspx" />
+    <Content Include="Admin\AdminLanding.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\admin-menu-style.css" />
     <Content Include="Content\admin.css" />
@@ -250,11 +250,11 @@
     <Content Include="Content\sidebar.css" />
     <Content Include="Content\bootstrap-original.css" />
     <Content Include="Content\bootstrap-original.min.css" />
-    <Content Include="AddFlight.aspx" />
+    <Content Include="Admin\AddFlight.aspx" />
     <Content Include="Controls\JobList.ascx" />
     <Content Include="DetailFlight.aspx" />
     <Content Include="Controls\UploadJobImage.ascx" />
-    <Content Include="EditFlights.aspx" />
+    <Content Include="Admin\EditFlights.aspx" />
     <Content Include="FlightList.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -686,46 +686,46 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddAirline.aspx.cs">
+    <Compile Include="Admin\AddAirline.aspx.cs">
       <DependentUpon>AddAirline.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddAirline.aspx.designer.cs">
+    <Compile Include="Admin\AddAirline.aspx.designer.cs">
       <DependentUpon>AddAirline.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddAirport.aspx.cs">
+    <Compile Include="Admin\AddAirport.aspx.cs">
       <DependentUpon>AddAirport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddAirport.aspx.designer.cs">
+    <Compile Include="Admin\AddAirport.aspx.designer.cs">
       <DependentUpon>AddAirport.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddCity.aspx.cs">
+    <Compile Include="Admin\AddCity.aspx.cs">
       <DependentUpon>AddCity.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddCity.aspx.designer.cs">
+    <Compile Include="Admin\AddCity.aspx.designer.cs">
       <DependentUpon>AddCity.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddCountry.aspx.cs">
+    <Compile Include="Admin\AddCountry.aspx.cs">
       <DependentUpon>AddCountry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddCountry.aspx.designer.cs">
+    <Compile Include="Admin\AddCountry.aspx.designer.cs">
       <DependentUpon>AddCountry.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddJob.aspx.cs">
+    <Compile Include="Admin\AddJob.aspx.cs">
       <DependentUpon>AddJob.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddJob.aspx.designer.cs">
+    <Compile Include="Admin\AddJob.aspx.designer.cs">
       <DependentUpon>AddJob.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminLanding.aspx.cs">
+    <Compile Include="Admin\AdminLanding.aspx.cs">
       <DependentUpon>AdminLanding.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminLanding.aspx.designer.cs">
+    <Compile Include="Admin\AdminLanding.aspx.designer.cs">
       <DependentUpon>AdminLanding.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminMaster.master.cs">
@@ -752,11 +752,11 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AddFlight.aspx.cs">
+    <Compile Include="Admin\AddFlight.aspx.cs">
       <DependentUpon>AddFlight.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddFlight.aspx.designer.cs">
+    <Compile Include="Admin\AddFlight.aspx.designer.cs">
       <DependentUpon>AddFlight.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controls\JobList.ascx.cs">
@@ -787,11 +787,11 @@
     <Compile Include="DetailFlight.aspx.designer.cs">
       <DependentUpon>DetailFlight.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditFlights.aspx.cs">
+    <Compile Include="Admin\EditFlights.aspx.cs">
       <DependentUpon>EditFlights.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditFlights.aspx.designer.cs">
+    <Compile Include="Admin\EditFlights.aspx.designer.cs">
       <DependentUpon>EditFlights.aspx</DependentUpon>
     </Compile>
     <Compile Include="FlightList.ascx.cs">

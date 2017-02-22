@@ -7,7 +7,7 @@ using TelerikColours.Mvp.CustomEventArgs;
 using WebFormsMvp;
 using WebFormsMvp.Web;
 
-namespace TelerikColours
+namespace TelerikColours.Admin
 {
 
     [PresenterBinding(typeof(EditFlightPresenter))]

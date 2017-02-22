@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddAirport.aspx.cs" Inherits="TelerikColours.AddAirport" MasterPageFile="~/AdminMaster.master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddAirport.aspx.cs" Inherits="TelerikColours.Admin.AddAirport" MasterPageFile="~/AdminMaster.master" %>
 
 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolderAdminArea" runat="server">

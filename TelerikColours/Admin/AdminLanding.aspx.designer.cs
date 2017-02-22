@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TelerikColours {
+namespace TelerikColours.Admin {
     
     
     public partial class AdminLanding {

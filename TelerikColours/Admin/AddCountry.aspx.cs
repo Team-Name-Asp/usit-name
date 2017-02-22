@@ -4,7 +4,7 @@ using TelerikColours.Mvp.Admin.AddCountry;
 using WebFormsMvp;
 using WebFormsMvp.Web;
 
-namespace TelerikColours
+namespace TelerikColours.Admin
 {
     [PresenterBinding(typeof(AddCountryPresenter))]
     public partial class AddCountry : MvpPage, IAddCountryView

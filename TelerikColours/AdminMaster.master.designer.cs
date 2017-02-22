@@ -7,7 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TelerikColours {
+namespace TelerikColours
+{
     
     
     public partial class AdminMaster {

@@ -7,28 +7,46 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TelerikColours {
+namespace TelerikColours.Admin {
     
     
-    public partial class AddCity {
+    public partial class AddAirport {
         
         /// <summary>
-        /// CountriesList control.
+        /// UpdatePanelCountriesTowns control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CountriesList;
+        protected global::System.Web.UI.UpdatePanel UpdatePanelCountriesTowns;
         
         /// <summary>
-        /// CityName control.
+        /// CountryList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CityName;
+        protected global::System.Web.UI.WebControls.DropDownList CountryList;
+        
+        /// <summary>
+        /// CityList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList CityList;
+        
+        /// <summary>
+        /// AirportName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AirportName;
         
         /// <summary>
         /// Submit control.

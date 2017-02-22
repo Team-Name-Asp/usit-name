@@ -7,46 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TelerikColours {
+namespace TelerikColours.Admin {
     
     
-    public partial class AddAirport {
+    public partial class EditFlights {
         
         /// <summary>
-        /// UpdatePanelCountriesTowns control.
+        /// FilterExpression control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanelCountriesTowns;
+        protected global::System.Web.UI.WebControls.ListBox FilterExpression;
         
         /// <summary>
-        /// CountryList control.
+        /// FilterText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CountryList;
-        
-        /// <summary>
-        /// CityList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CityList;
-        
-        /// <summary>
-        /// AirportName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AirportName;
+        protected global::System.Web.UI.WebControls.TextBox FilterText;
         
         /// <summary>
         /// Submit control.
@@ -56,5 +38,14 @@ namespace TelerikColours {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Submit;
+        
+        /// <summary>
+        /// Flights control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView Flights;
     }
 }
