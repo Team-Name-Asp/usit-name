@@ -119,7 +119,9 @@
     <Compile Include="Presenters\Public\HomePresenterTests\View_InitialLoad_Should.cs" />
     <Compile Include="Presenters\Public\ProfilePresenterTests\Constructor_Should.cs" />
     <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitFlightHistory_Should.cs" />
+    <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitJobsHistory_Should.cs" />
     <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitUpcommingFlights_Should.cs" />
+    <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitUpcommingJobs_Should.cs" />
     <Compile Include="Presenters\Public\SearchFlightPresenterTests\ConstructorShould.cs" />
     <Compile Include="Presenters\Public\SearchFlightPresenterTests\View_InitAirportArivalShould.cs" />
     <Compile Include="Presenters\Public\SearchFlightPresenterTests\View_InitAirportDepartureShould.cs" />
@@ -168,7 +170,9 @@
     <Compile Include="Services\UserServiceTests\Constructor_Should.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\UserServiceTests\GetFlightHistory_Should.cs" />
+    <Compile Include="Services\UserServiceTests\GetJobHistory_Should.cs" />
     <Compile Include="Services\UserServiceTests\GetUpcommingFlights_Should.cs" />
+    <Compile Include="Services\UserServiceTests\GetUpcommingJobs_Should.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
