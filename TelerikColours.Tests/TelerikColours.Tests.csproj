@@ -134,6 +134,8 @@
     <Compile Include="Presenters\Public\TickertDetailsPresenterTests\View_BuyTIcket_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\All_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\Constructor_Should.cs" />
+    <Compile Include="Repositories\EfUnitOfWorkTests\Commit_Should.cs" />
+    <Compile Include="Repositories\EfUnitOfWorkTests\Constructor_Should.cs" />
     <Compile Include="Repositories\Mocks\dbSetMock.cs" />
     <Compile Include="Repositories\EfRepositoryTests\GetAll_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\GetById_Should.cs" />
