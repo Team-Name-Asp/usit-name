@@ -116,6 +116,8 @@
     <Compile Include="Presenters\Admin\TicketSalesPresenterTests\View_InitTickets_Should.cs" />
     <Compile Include="Presenters\Public\HomePresenterTests\Constructor_Should.cs" />
     <Compile Include="Presenters\Public\HomePresenterTests\View_InitialLoad_Should.cs" />
+    <Compile Include="Presenters\Public\JobDetailsPresenterTests\Constructor_Should.cs" />
+    <Compile Include="Presenters\Public\JobDetailsPresenterTests\View_InitJob_Should.cs" />
     <Compile Include="Presenters\Public\ProfilePresenterTests\Constructor_Should.cs" />
     <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitFlightHistory_Should.cs" />
     <Compile Include="Presenters\Public\ProfilePresenterTests\View_InitJobsHistory_Should.cs" />
