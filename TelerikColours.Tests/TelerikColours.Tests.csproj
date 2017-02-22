@@ -159,7 +159,10 @@
     <Compile Include="Services\FlightServiceTests\GetFlights_Should.cs" />
     <Compile Include="Services\FlightServiceTests\SaveUpdatedFlightShould.cs" />
     <Compile Include="Services\JobServiceTests\ConstructorShould.cs" />
+    <Compile Include="Services\JobServiceTests\GetAllJobsFromByTerm_Should.cs" />
     <Compile Include="Services\JobServiceTests\GetAllJobsShould.cs" />
+    <Compile Include="Services\JobServiceTests\GetJobByIdShould.cs" />
+    <Compile Include="Services\JobServiceTests\GetSoonestJobs_Should.cs" />
     <Compile Include="Services\LocationServiceTests\ConstructorShoud.cs" />
     <Compile Include="Services\LocationServiceTests\GetAllCitiesShould.cs" />
     <Compile Include="Services\LocationServiceTests\GetAllCountriesShoud.cs" />
