@@ -15,7 +15,7 @@ namespace TelerikColours
     {
         public event EventHandler<FlightFilterCustomEventArgs> InitFlights;
         public event EventHandler<FlightEditCustomEventArgs> UpdateFlight;
-        public event EventHandler CommitChanges;
+     //   public event EventHandler CommitChanges;
 
         protected void Flights_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -30,12 +30,6 @@ namespace TelerikColours
 
         protected void Submit_Click(object sender, EventArgs e)
         {
-            //var filterType = this.FilterExpression.SelectedValue;
-            //var filterQUery = this.FilterText.Text;
-            //this.InitFlights?.Invoke(sender, new FlightSortCustomEventArgs(filterType, filterQUery));
-
-            //this.Flights.DataSource = this.Model.Flights;
-            //this.Flights.DataBind();
             this.Flights_GetData();
         }
 
@@ -43,20 +37,6 @@ namespace TelerikColours
         public void Flights_UpdateItem(int id)
         {
             this.UpdateFlight?.Invoke(null, new FlightEditCustomEventArgs(id));
-
-            Flight item = this.Model.UpdatedFlight;
-
-            if (item == null)
-            {
-                // The item wasn't found
-                ModelState.AddModelError("", String.Format("Item with id {0} was not found", id));
-                return;
-            }
-            TryUpdateModel(item);
-            if (ModelState.IsValid)
-            {
-                this.CommitChanges?.Invoke(null, null);
-            }
         }
 
 

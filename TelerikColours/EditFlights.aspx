@@ -26,9 +26,9 @@
          SelectMethod ="Flights_GetData">
         <Columns>
             <asp:CommandField ShowSelectButton="True" ShowEditButton ="true" />
-            <asp:BoundField DataField="AirportArrival.Name" HeaderText ="Arival airport" />
+            <asp:BoundField DataField="AirportArrival.Name" HeaderText ="Arival airport"  ReadOnly ="true"/>
             <asp:BoundField DataField="DateOfArrival" HeaderText ="Arival date" />
-            <asp:BoundField DataField="AirportDeparture.Name" HeaderText ="Departure airport" />
+            <asp:BoundField DataField="AirportDeparture.Name" HeaderText ="Departure airport"  ReadOnly ="true"/>
             <asp:BoundField DataField="DateOfDeparture" HeaderText ="Departure date" />
             <asp:BoundField DataField="AvailableSeats" HeaderText ="Available seats" />
             <asp:BoundField DataField="Price" HeaderText ="Price" />
