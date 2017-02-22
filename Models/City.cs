@@ -15,7 +15,7 @@ namespace Models
             this.airports = new HashSet<Airport>();
         }
         public City(string name, int countryId)
-            : base()
+            : this()
         {
             this.Name = name;
             this.CountryId = countryId;

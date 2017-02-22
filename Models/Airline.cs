@@ -16,7 +16,7 @@ namespace Models
         }
 
         public Airline(string name)
-            : base()
+            : this()
         {
             this.Name = name;
         }

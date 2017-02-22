@@ -16,7 +16,7 @@ namespace Models
         }
 
         public Airport(string name, int cityId)
-            :base()
+            :this()
         {
             this.Name = name;
             this.CityId = cityId;
