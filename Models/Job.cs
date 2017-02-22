@@ -16,7 +16,7 @@ namespace Models
 
         public Job(int cityId, string jobTitle, string jobDescription, int slots,
             DateTime startDate, DateTime endDate, decimal wage, string companyName, decimal price, string imagePath)
-            : base()
+            : this()
         {
             this.CityId = cityId;
             this.JobTitle = jobTitle;

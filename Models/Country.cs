@@ -14,7 +14,7 @@ namespace Models
         }
 
         public Country(string name)
-            : base()
+            : this()
         {
             this.Name = name;
         }

@@ -15,7 +15,7 @@ namespace Models
         }
 
         public Flight(int airlineId, int airportArrivalId, int airportDepartureId, DateTime arrivalDate, DateTime departureDate, decimal price, int availableSeats)
-            : base()
+            : this()
         {
             this.AirlineId = airlineId;
             this.AirportArrivalId = airportArrivalId;
