@@ -153,6 +153,7 @@
     <Compile Include="Services\FlightServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\FlightServiceTests\FliterFlightsShould.cs" />
     <Compile Include="Services\FlightServiceTests\GetCheapestFlights_Should.cs" />
+    <Compile Include="Services\FlightServiceTests\GetDetailedFlight_Should.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightForUpdateShould.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightsShould.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlights_Should.cs" />
