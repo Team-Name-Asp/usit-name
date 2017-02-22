@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Models;
+using System;
+using System.Web.ModelBinding;
 using TelerikColours.Mvp.CustomEventArgs;
 using TelerikColours.Services.Contracts;
 using WebFormsMvp;
@@ -17,19 +19,27 @@ namespace TelerikColours.Mvp.Admin.EditFlight
             }
 
             this.flightService = flightService;
-            this.View.InitFlights += View_InitFlights;
-            this.View.UpdateFlight += View_UpdateFlight;
-            this.View.CommitChanges += View_CommitChanges;
-        }
 
-        private void View_CommitChanges(object sender, EventArgs e)
-        {
-            this.flightService.SaveUpdatedFlight();
+            this.View.InitFlights += this.View_InitFlights;
+            this.View.UpdateFlight += this.View_UpdateFlight;
         }
 
         private void View_UpdateFlight(object sender, FlightEditCustomEventArgs e)
         {
-            this.View.Model.UpdatedFlight = this.flightService.GetFlightForUpdate(e.FlightId);
+            Flight item = this.flightService.GetFlightForUpdate(e.FlightId);
+
+            if (item == null)
+            {
+                // The item wasn't found
+                this.View.ModelState.AddModelError("", String.Format("Item with id {0} was not found", e.FlightId));
+                return;
+            }
+            this.View.TryUpdateModel(item);
+
+            if (this.View.ModelState.IsValid)
+            {
+                this.flightService.SaveUpdatedFlight();
+            }
         }
 
         private void View_InitFlights(object sender, FlightFilterCustomEventArgs e)

@@ -7,8 +7,8 @@ namespace Models
 {
     public class Flight
     {
-
         private ICollection<Ticket> tickets;
+
         public Flight()
         {
             this.tickets = new HashSet<Ticket>();
@@ -25,6 +25,7 @@ namespace Models
             this.AvailableSeats = availableSeats;
             this.Price = price;
         }
+
         [Key]
         public int Id { get; set; }
 

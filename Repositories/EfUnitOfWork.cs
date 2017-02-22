@@ -4,7 +4,7 @@ using TelerikColours.Data.Contracts;
 
 namespace Repositories
 {
-    public class EfUnitOfWork: IUnitOfWork
+    public class EfUnitOfWork : IUnitOfWork
     {
         private readonly IDbContext context;
 
@@ -12,7 +12,7 @@ namespace Repositories
         {
             if (context == null)
             {
-                throw new NullReferenceException();
+                throw new NullReferenceException("DbContext");
             }
 
             this.context = context;
@@ -20,16 +20,7 @@ namespace Repositories
 
         public void Commit()
         {
-            try
-            {
-                this.context.SaveChanges();
-
-            }
-            catch (Exception e)
-            {
-
-                throw;
-            }
+            this.context.SaveChanges();
         }
 
         public void Dispose()

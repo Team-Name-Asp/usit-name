@@ -108,11 +108,10 @@
     <Compile Include="Presenters\Admin\AddJobPresenterTests\View_InitCities_Should.cs" />
     <Compile Include="Presenters\Admin\AddJobPresenterTests\View_SubmitAddJob_Should.cs" />
     <Compile Include="Presenters\Admin\EditFlightPresenterTests\ConstructorShould.cs" />
-    <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewCommitChangesShould.cs" />
     <Compile Include="Presenters\Admin\EditFlightPresenterTests\ViewInitFlightsShould.cs" />
-    <Compile Include="Presenters\Admin\EditFlightPresenterTests\VIewUpdateFlightShould.cs" />
     <Compile Include="Presenters\Admin\FlightDetailsPresenterTests\Constructor_Should.cs" />
     <Compile Include="Presenters\Admin\FlightDetailsPresenterTests\View_InitFlight_Should.cs" />
+    <Compile Include="Presenters\Admin\EditFlightPresenterTests\View_UpdateFlight_Should.cs" />
     <Compile Include="Presenters\Admin\TicketSalesPresenterTests\Constructor_Should.cs" />
     <Compile Include="Presenters\Admin\TicketSalesPresenterTests\View_InitTickets_Should.cs" />
     <Compile Include="Presenters\Public\HomePresenterTests\Constructor_Should.cs" />
@@ -137,6 +136,8 @@
     <Compile Include="Presenters\Public\TickertDetailsPresenterTests\View_BuyTIcket_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\All_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\Constructor_Should.cs" />
+    <Compile Include="Repositories\EfUnitOfWorkTests\Commit_Should.cs" />
+    <Compile Include="Repositories\EfUnitOfWorkTests\Constructor_Should.cs" />
     <Compile Include="Repositories\Mocks\dbSetMock.cs" />
     <Compile Include="Repositories\EfRepositoryTests\GetAll_Should.cs" />
     <Compile Include="Repositories\EfRepositoryTests\GetById_Should.cs" />
@@ -156,6 +157,7 @@
     <Compile Include="Services\FlightServiceTests\ConstructorShould.cs" />
     <Compile Include="Services\FlightServiceTests\FliterFlightsShould.cs" />
     <Compile Include="Services\FlightServiceTests\GetCheapestFlights_Should.cs" />
+    <Compile Include="Services\FlightServiceTests\GetDetailedFlight_Should.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightForUpdateShould.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlightsShould.cs" />
     <Compile Include="Services\FlightServiceTests\GetFlights_Should.cs" />
